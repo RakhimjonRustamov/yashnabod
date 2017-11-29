@@ -1,0 +1,245 @@
+/*scroll effect*/
+
+#active {
+    color: #0072BC !important;
+}
+
+#navbar {
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 5;
+    border: 0;
+}
+
+.navbar-elements {
+    color: #24B24B !important;
+    font-size: 15px;
+    font-weight: bold;
+    transition: ease 0.5s;
+}
+
+.navbar-elements1 {
+    color: #24B24B !important;
+    font-size: 18px;
+    font-weight: bold;
+    transition: ease 0.5s;
+}
+
+@media screen and (max-width: 1120px) {
+    .navbar-elements1 {
+        color: #24B24B !important;
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .navbar-elements1 {
+        color: #24B24B !important;
+        font-size: 10px;
+        font-weight: bold;
+    }
+}
+
+
+
+.navbar-elements1:hover {
+    color: #0072BC !important;
+}
+
+.navbar-elements:hover {
+    color: #0072BC !important;
+}
+
+#logo {
+    width: 150px;
+    height: 34px;
+}
+
+.navbar-trans {
+
+    border: none;
+    transition: top 1s ease;
+}
+
+
+ul {
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: ease 0.5s;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.dropdown-content a {
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+    transition: ease 0.5s;
+    color: #24B24B;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+    text-decoration: none;
+
+}
+
+.dropdown-content :hover {
+    transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-content {
+    transform: scale(1.1);
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+
+
+
+/*double row*/
+
+.navbar-doublerow>.navbar {
+    display: block;
+    padding: 0px auto;
+    margin: 0px auto;
+}
+
+.navbar-doublerow .dividline {
+    margin: 5px 100px;
+    padding-top: 1px;
+    background-color: inherit;
+}
+
+
+/*top nav*/
+
+.navbar-doublerow .navbar-top ul>li>a {
+    padding: 10px auto;
+    font-size: 12px;
+}
+
+
+/*down nav*/
+
+.navbar-doublerow .navbar-down .navbar-brand {
+    padding: 0px auto;
+    float: left;
+    font-size: 32px;
+}
+
+.navbar-doublerow .navbar-down .dropdown {
+    padding: 5px;
+}
+
+.navbar-doublerow.navbar-trans.afterscroll {
+    top: -50px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#glyphicon-search {
+    font-size: 30px;
+    margin: 10px 20px 10px 10px;
+    color: #24B24B;
+}
+
+#glyphicon-search:hover {
+    color: #0072BC !important;
+}
+
+#fa-user-circle {
+    font-size: 25px;
+    margin: 10px 5px 10px 5px;
+    color: #24B24B;
+    transition: ease 0.5s;
+}
+
+#fa-user-circle:hover {
+    color: #0072BC !important;
+}
+
+#fa-globe {
+    font-size: 25px;
+    margin: 10px 5px 10px 5px;
+    color: #24B24B;
+    transition: ease 0.5s;
+}
+
+#fa-globe:hover {
+    color: #0072BC !important;
+}
+#search
+{
+    font-family: 'Andika', sans-serif;
+    color: #24B24B;
+}
+
+
+
+#glyphicon-search>form>input[type="text"] {
+    height: 35px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    color: #24B24B;
+    font-weight: bold;
+    padding: 3px;
+    padding-right: 60px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 3;
+    transition: width 2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    cursor: pointer;
+}
+
+#glyphicon-search>form>input[type="text"]:focus:hover {
+    border-bottom: 1px solid white;
+}
+
+#glyphicon-search>form>input[type="text"]:focus {
+    width: 300px;
+    z-index: 1;
+    border-bottom: 1px solid white;
+    cursor: text;
+}
+
+#glyphicon-search>form>input[type="submit"] {
+    display: inline-block;
+    color: red;
+    float: right;
+    text-indent: -10000px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .4s ease;
+}

@@ -1,0 +1,627 @@
+html>body {
+    font-family: 'Andika', sans-serif;
+    font-weight: bold;
+}
+
+
+/*----------------------------------------Container-fluid----------------------------------------*/
+
+#container-fluid {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 650px;
+}
+
+
+/*----------------------------------------Fade-container----------------------------------------*/
+
+#fade-container {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+#fade-container>h1 {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+
+#fade-container>p {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.submit-wrapper {
+    margin-top: 50px;
+}
+
+.submit-wrapper a {
+    border: 2px solid #24B24B;
+    color: white;
+    padding: 20px 25px;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.6s;
+    z-index: 1;
+}
+
+.submit-wrapper a:before,
+.submit-wrapper a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 24px;
+    height: 4px;
+    background: #24B24B;
+    margin-left: -12px;
+    margin-top: -2px;
+    transition: all 0.6s;
+}
+
+.submit-wrapper a:after {
+    left: auto;
+    right: 0;
+    margin-right: -12px;
+}
+
+.submit-wrapper a:hover:before,
+.submit-wrapper a:hover:after {
+    width: 100%;
+    transition: all 0.6s;
+    background: #fff;
+    transform: scaleY(5);
+    z-index: -1;
+}
+
+.submit-wrapper a:hover {
+    text-decoration: none;
+    background: #24B24B;
+    transition: all 0.6s;
+    color: white;
+}
+
+
+
+
+
+/*----------------------------------------Container-fluid1----------------------------------------*/
+
+#container-fluid1>h1 {
+    font-size: 32px;
+    color: #0072BC;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+#col-81>p {
+    font-size: 20px;
+    color: #0072BC;
+    margin-top: 50px;
+    text-align: justify;
+}
+
+#col-82 {
+    height: 300px;
+    margin-top: 50px;
+    background-image: url('../images/photos/building.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+/*------------------------------------- Container-fluid2 -----------------------------------*/
+
+#container-fluid2>h1 {
+    color: #0072BC;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 100px;
+}
+
+
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+
+
+/* The controlsy */
+
+.carousel-control {
+    left: -12px;
+    height: 40px;
+    width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+
+
+/* The indicators */
+
+.img-col {
+    height: 250px;
+}
+
+@media screen and (max-width: 1024px) {
+    .img-col {
+        height: 100%;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-col:hover .image {
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+.img-col:hover .middle {
+    opacity: 1;
+}
+
+.text1 {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+}
+
+.text1:hover {
+    background-color: #0072BC;
+}
+
+
+
+
+
+/*----------------------------------------Container-fluid3----------------------------------------*/
+
+#container-fluid3 {
+    margin-top: 50px;
+}
+
+#container-fluid3>h1 {
+    color: #0072BC;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cols {
+    text-align: center;
+}
+
+.circle>.fa {
+    margin-top: 50px;
+    font-size: 80px;
+    color: #0072BC;
+}
+
+.text>p {
+    color: #0072BC;
+    font-size: 15px;
+}
+
+
+
+
+/*----------------------------------------Container-fluid4----------------------------------------*/
+
+#container-fluid4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/Wallpapers/Wallpaper3.jpg');
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Andika', sans-serif; 
+
+}
+
+#container-fluid4-row {
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+
+.counter {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+
+
+}
+
+.countup-item>h3 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+
+
+
+
+/*----------------------------------------Container-fluid5----------------------------------------*/
+
+#container-fluid5 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#container-fluid5>h1 {
+    color: #0072BC;
+    font-weight: bold;
+}
+
+.news-col {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/****************************************************recent-post-col*************************************************/
+
+.widget-sidebar {
+
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.title-widget-sidebar {
+    font-size: 14pt;
+    border-bottom: 2px solid #e5ebef;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+}
+
+.title-widget-sidebar:after {
+    border-bottom: 2px solid #f1c40f;
+    width: 150px;
+    display: block;
+    position: absolute;
+    content: '';
+    padding-bottom: 10px;
+}
+
+.recent-post {
+    width: 100%;
+    height: 80px;
+    list-style-type: none;
+}
+
+.post-img img {
+    width: 100px;
+    height: 70px;
+    float: left;
+    margin-right: 15px;
+    border: 5px solid #0072BC;
+    transition: 0.5s;
+}
+
+.recent-post a {
+    text-decoration: none;
+    color: #34495E;
+    transition: 0.5s;
+}
+
+.post-img,
+.recent-post a:hover {
+    color: #F39C12;
+}
+
+.post-img img:hover {
+    border: 5px solid #24B24B;
+}
+
+
+/*/////////////////////////////////////ARCHIVES////////////////////////////*/
+
+button.accordion {
+    background-color: #0072BC;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active,
+button.accordion:hover {
+    background-color: #24B24B;
+    color: #fff;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel>p {
+    color: black;
+    font-size: 15px;
+}
+
+
+
+
+/*------------------------------------- Container-fluid6 -----------------------------------*/
+
+#container-fluid6>h1 {
+    color: #0072BC;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+#container-fluid6>.row {
+    margin-top: 100px;
+}
+
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+
+
+/* The controlsy */
+
+.carousel-control {
+    left: -12px;
+    height: 40px;
+    width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+
+.carousel-control.right {
+    right: -12px;
+}
+
+
+/* The indicators */
+
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: -10px;
+    margin-right: -19px;
+}
+
+
+/* The colour of the indicators */
+
+.carousel-indicators li {
+    background: #cecece;
+}
+
+.carousel-indicators .active {
+    background: #428bca;
+}
+
+
+
+
+
+
+
+
+
+/*------------------------------------- Container-fluid7 -----------------------------------*/
+
+#container-fluid7>h1 {
+    color: #0072BC;
+    text-align: center;
+    font-weight: bold;
+}
+
+#facebook {
+    width: 100%;
+    height: 200px;
+    background-image: url('../images/social-media/facebook.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 25px;
+    transition: ease 1s;
+}
+
+#google {
+    width: 100%;
+    height: 200px;
+    margin-top: 25px;
+    background-image: url('../images/social-media/telegram.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: ease 1s;
+}
+
+#instagram {
+    width: 100%;
+    height: 200px;
+    margin-top: 25px;
+    background-image: url('../images/social-media/instagram.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: ease 1s;
+}
+
+#telegram {
+    width: 100%;
+    height: 200px;
+    margin-top: 25px;
+    background-image: url('../images/social-media/google.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: ease 1s;
+}
+
+#facebook:hover {
+    transform: scale(1.1);
+}
+
+#google:hover {
+    transform: scale(1.1);
+}
+
+#instagram:hover {
+    transform: scale(1.1);
+}
+
+#telegram:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+/*----------------------------------------------Slideanim---------------------------------------------*/
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+.slideanim {
+    visibility: hidden;
+}
+
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+
+
+
+/*---------------------------------------------- scroll to top button---------------------------------------------*/
+
+.scrollToTop {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    background-color: #24B24B;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    top: 600px;
+    right: 10px;
+    display: none;
+    border-radius: 50px;
+    opacity: 0.8;
+}
+
+.scrollToTop:hover {
+
+    border: 2px solid #24B24B;
+    background-color: white;
+    color: #24B24B;
+    text-decoration: none;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/*------------------------------------------ dotted background -----------------------------------------------*/
+
+.dotted {
+    padding: 2.25em 1.6875em;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 5px 5px;
+    -moz-background-size: 5px 5px;
+    background-size: 5px 5px;
+}

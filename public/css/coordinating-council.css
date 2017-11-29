@@ -1,0 +1,167 @@
+
+html>body {
+    font-family: 'Andika', sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+
+
+#container-fluid-coordinating-council
+{
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('../images/Wallpapers/contact-wallpaper1.jpg');
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;	
+}
+
+
+
+/*----------------------------------------Fade-container----------------------------------------*/
+
+#fade-container
+{
+	background-color: rgba(0,0,0,0);
+	text-align: center;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+#fade-container>h1
+{	
+  font-size: 50px; 
+  color: white;
+  font-weight: bold;
+
+  
+}
+
+#fade-container>p
+{ 
+  font-size: 20px; 
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  
+}
+
+.submit-wrapper
+{
+    margin-top:50px;
+}
+.submit-wrapper a 
+{
+    border:2px solid #24B24B;
+    color:white;
+    padding:20px 25px;
+    text-decoration:none;
+    position:relative;
+    letter-spacing:8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition:all 0.6s;
+    z-index:1;
+}
+.submit-wrapper a:before,
+.submit-wrapper a:after {
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:24px;
+    height:4px;
+    background:#24B24B;
+    margin-left:-12px;
+    margin-top:-2px;
+    transition:all 0.6s;
+}
+.submit-wrapper a:after {
+    left:auto;
+    right:0;
+    margin-right:-12px;
+}
+.submit-wrapper a:hover:before,
+.submit-wrapper a:hover:after 
+{
+    width:100%;
+    transition:all 0.6s;
+    background:#fff;
+    transform:scaleY(5);
+    z-index:-1;
+}
+.submit-wrapper a:hover 
+{
+    text-decoration:none;
+    background:#24B24B;
+    transition:all 0.6s;
+    color:white;
+}
+
+
+/*----------------------------------------------------container-fluid-coordinating-council1------------------------*/
+
+#container-fluid-coordinating-council1>h1
+{
+	text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #0072BC;
+    font-weight: bold;
+}
+
+
+#container-fluid-coordinating-council1>p
+{
+
+	text-align: justify;
+    font-size: 20px;
+    color: #0072BC;
+}
+
+
+.scrollToTop
+{
+  width:50px; 
+  height:50px;
+  padding:10px; 
+  text-align:center; 
+  background-color: #24B24B; 
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  position:fixed;
+  top:600px;
+  right:10px;
+  display:none;
+  border-radius: 50px;
+  opacity: 0.8;
+}
+.scrollToTop:hover
+{
+
+  border: 2px solid #24B24B;
+  background-color: white;
+  color: #24B24B;
+  text-decoration:none;
+  opacity: 1;
+}
+
+
+
+.dotted 
+{
+      padding: 2.25em 1.6875em;
+      background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+      background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+      background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+      background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+      -webkit-background-size: 5px 5px;
+      -moz-background-size: 5px 5px;
+      background-size: 5px 5px;
+}
