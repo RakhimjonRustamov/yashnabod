@@ -28,8 +28,7 @@ Route::get('/request', 'PagesController@getRequest');
 
 //search
 Route::get('/search/all', 'PagesController@getSearch')->name('search');
-//word extention
-Route::get('request/request_template', 'PagesController@generateDocx')->name('request_template');
+
 
 
 Route::get('/admin', 'AdminController@admin');
