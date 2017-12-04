@@ -30,6 +30,9 @@
                                                 <img src="{{ asset('images/'. $resident->resident_logo)}}" height="300px" width="555px"/>
                                                 <h3><span>{{$resident->resident_name}}</span></h3>
                                             </div>
+                                            <div class="modal-body">
+                                                <p>{{$resident->resident_info}}</p>
+                                            </div>
                                             <div class="modal-footer">
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -65,6 +68,8 @@
                     <input type="text" name="resident_name" class="form-control">
                     <label>Upload Resident Logo:</label>
                     <input type="file" name="featured_image" class="form-control">
+                    <label>Resident Info</label>
+                    <textarea name="resident_info" class="form-control" placeholder="Enter Resident Information"></textarea>
                     <button type="submit" row="10" class="btn btn-success btn-block">Save Resident</button>
                 </form>
                 <div class="text-center">

@@ -22,9 +22,12 @@ class ResidentController extends Controller
     public function store(Request $request){
         $this->validate($request, array(
             'resident_name'=> 'required|max:100',
+            'resident_info'=>'required|max:2000',
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
+
         ));
         $resident= new Resident;
+        $resident->resident_info=$request->resident_info;
         $resident->resident_name=$request->resident_name;
 
         if($request->hasFile('featured_image')){

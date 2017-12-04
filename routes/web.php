@@ -27,7 +27,9 @@ Route::get('/contact', 'PagesController@getContact');
 Route::get('/request', 'PagesController@getRequest');
 
 //search
-Route::get('/search', 'PagesController@postSearch')->name('search');
+Route::get('/search/all', 'PagesController@getSearch')->name('search');
+//word extention
+Route::get('request/request_template', 'PagesController@generateDocx')->name('request_template');
 
 
 Route::get('/admin', 'AdminController@admin');
@@ -40,6 +42,16 @@ Route::delete('admin/products/{product}',array('uses' => 'ProductController@dest
 Route::get('admin/residents', 'ResidentController@index')->name('residents.index');
 Route::post('admin/residents', 'ResidentController@store')->name('residents.store');
 Route::delete('admin/residents/{resident}', array('uses' => 'ResidentController@destroy', 'as' => 'residents.destroy'));
+
+
+
+
+
+
+
+
+
+
 
 // Language set up
 Route::get('setlocale/{locale}', function($locale){

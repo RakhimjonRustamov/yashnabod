@@ -22,7 +22,7 @@ class ProductController extends Controller
     public function store(Request $request){
         $this->validate($request, array(
             'product_name'=> 'required|max:100',
-            'product_info'=>'required|max:500',
+            'product_info'=>'required|max:2000',
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
         ));
 

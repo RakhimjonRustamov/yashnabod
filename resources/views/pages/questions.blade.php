@@ -3,7 +3,6 @@
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/questionsanswers.css') }}">
 @endsection
-
 @section('content')
 
     <div class="container" id="container-fluid-questionsanswer1">

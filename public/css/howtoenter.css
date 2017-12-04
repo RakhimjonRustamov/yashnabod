@@ -5,7 +5,6 @@ html>body {
 /*----------------------------------------Container-fluid----------------------------------------*/
 
 #howtoenter-container-fluid {
-
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/Wallpapers/main_page.jpg');
     position: relative;
     background-attachment: fixed;

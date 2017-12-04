@@ -36,12 +36,14 @@
             <!-- right nav top -->
             <ul class="nav navbar-nav pull-right">
                 <li>
-                        <span class="glyphicon glyphicon-search" id="glyphicon-search">
-                             <form method="GET" action="{{ route('search') }}">
-                              <input type="text" name="search" class="form-control" value="{{ old('search') }}">
-                                 <button class="btn btn-success">Search</button>
-                             </form>
-                        </span>
+                     <span class="glyphicon glyphicon-search" id="glyphicon-search">
+            <form action="{{route('search')}}" autocomplete="off">
+             <input id="search" name="search" type="text" placeholder="Что ищем?"><input id="search_submit" value="Rechercher" type="submit">
+            </form>
+          </span>
+                        {{--<span class="glyphicon glyphicon-search" id="glyphicon-search">
+                             <input type="text" name="search"/>
+                        </span>--}}
                 </li>
                 <a href=""><i class="fa fa-user-circle" id="fa-user-circle"></i><span>Вход</span></a>
                 <a href="{{route('lang.switch', ['locale'=>'ru'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>Russian</span></a>
