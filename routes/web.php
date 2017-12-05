@@ -19,7 +19,11 @@ Route::get('/logout', 'HomeController@error')->name('error');
 Route::get('/aim', 'PagesController@getAim');
 Route::get('/staff', 'PagesController@getStaff');
 Route::get('/news', 'PagesController@getNews');
+Route::get('/zones', 'PagesController@getZones');
+Route::get('/popular-info', 'PagesController@getPopular-Info');
 Route::get('/beresident', 'PagesController@getBeresident');
+
+
 Route::get('/preference-yic', 'PagesController@getPreference');
 Route::get('/coordinated-consulting', 'PagesController@getCoordination');
 Route::get('/how-to-join', 'PagesController@getInstruction');

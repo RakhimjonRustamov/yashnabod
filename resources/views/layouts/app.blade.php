@@ -93,7 +93,7 @@
                         <a class="navbar-elements1" href="{{url('/residents')}}">Наши резиденты</a>
                     </li>
                     <li>
-                        <a class="navbar-elements1" href="html/zones.html">Зоны производства</a>
+                        <a class="navbar-elements1" href="{{url('/zones')}}">Зоны производства</a>
                     </li>
                     <li class="dropdown dropdown1">
                         <a class="navbar-elements1" data-toggle="dropdown" href="#">Пресса</a>
@@ -132,7 +132,7 @@
                         <a class="navbar-elements1" href="{{url('/residents')}}">Резиденты</a>
                     </li>
                     <li>
-                        <a class="navbar-elements1" href="html/zones.html">Зоны производства</a>
+                        <a class="navbar-elements1" href="{{url('/zones')}}">Зоны производства</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle navbar-elements1" data-toggle="dropdown" href="#">Пресса<span class="caret"></span></a>

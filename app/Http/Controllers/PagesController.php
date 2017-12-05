@@ -39,6 +39,10 @@ class PagesController extends Controller
         return view('pages.questions');
     }
 
+    public function getZones(){
+        return view('pages.zones');
+    }
+
     public function getProducts(){
         return view('pages.products');
     }
