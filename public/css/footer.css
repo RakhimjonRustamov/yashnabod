@@ -1,3 +1,9 @@
+html>body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+
 .footer 
 {   
     
@@ -26,3 +32,21 @@
     text-align: center;
 }
 
+.footer-h1
+{
+    text-align: center;
+    color: #24B24B;
+    font-weight: bold;
+}
+
+.footer-col>ul>li>a
+{
+    text-decoration: none;
+}
+
+
+
+.address
+{
+    color: #24B24B;
+}

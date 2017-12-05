@@ -1,8 +1,10 @@
-/*scroll effect*/
-
-#active {
-    color: #0072BC !important;
+html>body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
 }
+
+
+
 
 #navbar {
     background-color: rgba(0, 0, 0, 0);
@@ -10,25 +12,50 @@
     border: 0;
 }
 
-.navbar-elements {
+.navbar-elements1 {
     color: #24B24B !important;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     transition: ease 0.5s;
 }
 
-.navbar-elements1 {
+.navbar-elements1:hover {
+    color: #0072BC !important;
+}
+
+.dropdown-elements1
+{
     color: #24B24B !important;
-    font-size: 18px;
-    font-weight: bold;
+    letter-spacing: 2px;
     transition: ease 0.5s;
+    font-size: 15px;
+    padding: 0px;
+
+}
+
+@media screen and (max-width: 1120px) {
+.dropdown-elements1
+{
+
+    letter-spacing: 2px;
+
+    font-size: 10px;
+
+}
+}
+
+
+.dropdown-elements1:hover
+{
+    color: #0072BC!important;
+   
 }
 
 @media screen and (max-width: 1120px) {
     .navbar-elements1 {
         color: #24B24B !important;
         font-size: 15px;
-        font-weight: bold;
+        font-weight: bold !important;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -39,19 +66,18 @@
     }
 }
 
-
-
-.navbar-elements1:hover {
-    color: #0072BC !important;
+@media screen and (max-width: 767px) {
+    .navbar-elements1 {
+        color: #24B24B !important;
+        font-size: 20px;
+        font-weight: bold;
+    }
 }
 
-.navbar-elements:hover {
-    color: #0072BC !important;
-}
 
 #logo {
     width: 150px;
-    height: 34px;
+    height: 40px;
 }
 
 .navbar-trans {
@@ -61,54 +87,30 @@
 }
 
 
-ul {
-    padding: 0;
-}
 
-.dropdown {
-    position: relative;
-    display: inline-block;
 
-}
 
-.dropdown-content {
-    display: none;
+
+
+.dropdown-menu {
     position: absolute;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    transition: ease 0.5s;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    padding: 0px 0;
+    list-style: none;
+    background-color: rgba(250,250,250,0.99) !important;
+    color: black !important;
+
 
 }
 
-.dropdown-content a {
-    padding: 10px 10px;
-    text-decoration: none;
-    display: block;
-    transition: ease 0.5s;
-    color: #24B24B;
-}
 
-.dropdown-content a:hover {
-    background-color: white;
-    text-decoration: none;
 
-}
 
-.dropdown-content :hover {
-    transform: scale(1.1);
-}
 
-.dropdown:hover .dropdown-content {
-    transform: scale(1.1);
-    display: block;
-}
 
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
 
 
 
@@ -133,7 +135,8 @@ ul {
 /*top nav*/
 
 .navbar-doublerow .navbar-top ul>li>a {
-    padding: 10px auto;
+    padding: 10px 0px 10px 0px;
+
     font-size: 12px;
 }
 
@@ -146,8 +149,9 @@ ul {
     font-size: 32px;
 }
 
-.navbar-doublerow .navbar-down .dropdown {
-    padding: 5px;
+a.navbar-brand
+{
+    padding-top: 10px;
 }
 
 .navbar-doublerow.navbar-trans.afterscroll {
@@ -242,4 +246,242 @@ ul {
     opacity: 0;
     cursor: pointer;
     transition: opacity .4s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#other-container-fluid {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../Wallpapers/main-wallpaper.jpg');
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 650px;
+}
+
+
+
+
+
+
+#fade-container
+{
+    margin-top: 200px;
+    text-align: center;
+}
+
+#fade-container>h1
+{
+    font-size: 40px;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+#icons-row
+{
+    padding-top: 50px;
+}
+
+.icons
+{
+    color: #24B24B;
+    font-size: 50px !important;
+    padding-top: 50px;
+    position: relative;
+    transition: ease 0.5s;
+}
+
+.icon-under-text
+{
+    color: #24B24B;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 15px;
+    transition: ease 0.5s;
+}
+
+
+a:hover .icon-under-text
+{
+    color: #0072BC;
+    text-decoration: none;
+}
+
+a:hover .icons
+{
+    color: #0072BC;
+}
+
+.container-fluid-a:hover
+{
+    text-decoration: none;
+}
+
+.submit-wrapper {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.submit-wrapper a {
+    border: 2px solid #24B24B;
+    color: white;
+    padding: 20px 25px;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.6s;
+    z-index: 1;
+}
+
+.submit-wrapper a:before,
+.submit-wrapper a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 24px;
+    height: 4px;
+    background: #24B24B;
+    margin-left: -12px;
+    margin-top: -2px;
+    transition: all 0.6s;
+}
+
+.submit-wrapper a:after {
+    left: auto;
+    right: 0;
+    margin-right: -12px;
+}
+
+.submit-wrapper a:hover:before,
+.submit-wrapper a:hover:after {
+    width: 100%;
+    transition: all 0.6s;
+    background: #fff;
+    transform: scaleY(5);
+    z-index: -1;
+}
+
+.submit-wrapper a:hover {
+    text-decoration: none;
+    background: #24B24B;
+    transition: all 0.6s;
+    color: white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------Slideanim---------------------------------------------*/
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+.slideanim {
+    visibility: hidden;
+}
+
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+
+
+
+/*---------------------------------------------- scroll to top button---------------------------------------------*/
+
+.scrollToTop {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    background-color: #24B24B;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    top: 600px;
+    right: 10px;
+    display: none;
+    border-radius: 50px;
+    opacity: 0.8;
+}
+
+.scrollToTop:hover {
+
+    border: 2px solid #24B24B;
+    background-color: white;
+    color: #24B24B;
+    text-decoration: none;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/*------------------------------------------ dotted background -----------------------------------------------*/
+
+.dotted {
+    padding: 2.25em 1.6875em;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 5px 5px;
+    -moz-background-size: 5px 5px;
+    background-size: 5px 5px;
 }

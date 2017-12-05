@@ -1,7 +1,15 @@
 html>body {
-    font-family: 'Andika', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+
 
 
 /*----------------------------------------Container-fluid----------------------------------------*/
@@ -13,35 +21,112 @@ html>body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 650px;
+
 }
-
-
-/*----------------------------------------Fade-container----------------------------------------*/
-
-#fade-container {
-    background-color: rgba(0, 0, 0, 0);
-    text-align: center;
+#container-fluid-iconbar
+{
     margin-top: 200px;
-    margin-bottom: 200px;
+    list-style: none;
+    margin-left: -35px;
+    position: absolute;
 }
 
-#fade-container>h1 {
-    font-size: 50px;
-    color: white;
-    font-weight: bold;
+#container-fluid-iconbar>li
+{
+    margin-bottom: 20px;
 }
-
-
-#fade-container>p {
+.container-fluid-icon
+{
+    transition: ease 0.5s;
+}
+.container-fluid-icon:hover
+{
+     transform: scale(1.3);
+}
+#fa-facebook
+{   
     font-size: 20px;
+    color: #4267b2;
+}
+#fa-google
+{
+    font-size: 20px;
+    color: #FD3D3D;
+}
+#fa-telegram
+{   
+    font-size: 20px;
+    color: skyblue;
+}
+#fa-instagram
+{
+    font-size: 20px;
+    color: pink;
+
+}
+
+
+
+
+#fade-container
+{
+    margin-top: 200px;
+    text-align: center;
+}
+
+#fade-container>h1
+{
+    font-size: 40px;
     color: white;
+    letter-spacing: 4px;
     font-weight: bold;
-    letter-spacing: 2px;
+}
+
+#icons-row
+{
+    padding-top: 50px;
+}
+
+.icons
+{
+    color: #24B24B;
+    font-size: 50px !important;
+    padding-top: 50px;
+    position: relative;
+    transition: ease 0.5s;
+}
+
+.icon-under-text
+{
+    color: #24B24B;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 15px;
+    transition: ease 0.5s;
+}
+
+
+a:hover .icon-under-text
+{
+    color: #0072BC;
+    text-decoration: none;
+}
+
+a:hover .icons
+{
+    color: #0072BC;
+}
+
+.container-fluid-a:hover
+{
+    text-decoration: none;
 }
 
 .submit-wrapper {
     margin-top: 50px;
+    text-align: center;
 }
+
 
 .submit-wrapper a {
     border: 2px solid #24B24B;
@@ -90,7 +175,24 @@ html>body {
     background: #24B24B;
     transition: all 0.6s;
     color: white;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -103,19 +205,27 @@ html>body {
     color: #0072BC;
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
 #col-81>p {
     font-size: 20px;
     color: #0072BC;
-    margin-top: 50px;
     text-align: justify;
 }
+#readmore
+{
+    color: #24B24B;
+}
+#readmore:hover
+{
+    color: green;
+}
+
 
 #col-82 {
     height: 300px;
-    margin-top: 50px;
     background-image: url('../images/photos/building.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -129,103 +239,162 @@ html>body {
 /*------------------------------------- Container-fluid2 -----------------------------------*/
 
 #container-fluid2>h1 {
+    font-size: 32px;
     color: #0072BC;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
     font-weight: bold;
-    font-size: 32px;
-    margin-bottom: 100px;
 }
 
-
-.carousel {
-    margin-bottom: 0;
-    padding: 0 40px 30px 40px;
-}
-
-
-/* The controlsy */
-
-.carousel-control {
-    left: -12px;
-    height: 40px;
-    width: 40px;
-    background: none repeat scroll 0 0 #222222;
-    border: 4px solid #FFFFFF;
-    border-radius: 23px 23px 23px 23px;
-    margin-top: 90px;
-}
-
-
-/* The indicators */
-
-.img-col {
+.products-column
+{
     height: 250px;
-}
-
-@media screen and (max-width: 1024px) {
-    .img-col {
-        height: 100%;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-}
-
-
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
-
-.middle {
-    transition: .5s ease;
-    opacity: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 15px;
 }
-
-.img-col:hover .image {
-    filter: blur(5px);
-    transform: scale(1.1);
-}
-
-.img-col:hover .middle {
-    opacity: 1;
-}
-
-.text1 {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-    border-radius: 5px;
+.products
+{
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
     transition: ease 0.5s;
+    text-align: center;
 }
 
-.text1:hover {
-    background-color: #0072BC;
+.readmore-box
+{
+  margin: auto;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(98, 141, 181, 0.8);
+  overflow: hidden;
+  width: 90%;
+  height:0;
+  transition: .5s ease;
+}
+
+.products-column:hover .readmore-box {
+  bottom: 0;
+  height: 100%;
+}
+
+.product-text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 
+#product1
+{
 
+    background-image: url(../images/photos/artel.jpg);
+}
+
+#product2
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+#product3
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+
+#product4
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+#product5
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+
+#product6
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+#product7
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+
+#product8
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+#product9
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+
+#product10
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+#product11
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+
+#product12
+{
+
+    background-image: url(../images/photos/artel.jpg);
+}
+
+    
+                
+/* Reposition the controls slightly */
+.carousel-control {
+    width: 40px !important;
+    background-color: black !important;
+}
+/* Changes the position of the indicators */
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+    z-index: 0 !important;
+}
+/* Changes the colour of the indicators */
+.carousel-indicators li {
+    background: grey !important;
+}
+.carousel-indicators .active {
+background: green !important;
+}
 
 
 /*----------------------------------------Container-fluid3----------------------------------------*/
 
-#container-fluid3 {
-    margin-top: 50px;
-}
-
 #container-fluid3>h1 {
+    font-size: 32px;
     color: #0072BC;
-    font-size: 30px;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
@@ -234,17 +403,26 @@ html>body {
 }
 
 .circle>.fa {
-    margin-top: 50px;
     font-size: 80px;
     color: #0072BC;
+    transition: 0.5s ease;
 }
 
 .text>p {
     color: #0072BC;
     font-size: 15px;
+    transition: ease 0.5s;
 }
 
-
+.link1:hover .sub-icon
+{
+    color: #24B24B;
+}
+.link1:hover .text>p
+{
+    color: #24B24B;
+    text-decoration: none;
+}
 
 
 /*----------------------------------------Container-fluid4----------------------------------------*/
@@ -256,7 +434,6 @@ html>body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Andika', sans-serif; 
 
 }
 
@@ -286,18 +463,20 @@ html>body {
 
 /*----------------------------------------Container-fluid5----------------------------------------*/
 
-#container-fluid5 {
-    margin-top: 100px;
-    text-align: center;
-}
+
 
 #container-fluid5>h1 {
+    font-size: 32px;
     color: #0072BC;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
 .news-col {
     margin-top: 20px;
+    text-align: justify;
 }
 
 
@@ -310,7 +489,6 @@ html>body {
 .widget-sidebar {
 
     padding: 20px;
-    margin-top: 30px;
 }
 
 .title-widget-sidebar {
@@ -410,15 +588,14 @@ button.accordion:after {
 /*------------------------------------- Container-fluid6 -----------------------------------*/
 
 #container-fluid6>h1 {
+    font-size: 32px;
     color: #0072BC;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
     font-weight: bold;
-    margin-top: 100px;
 }
 
-#container-fluid6>.row {
-    margin-top: 100px;
-}
 
 .carousel {
     margin-bottom: 0;
@@ -474,8 +651,11 @@ button.accordion:after {
 /*------------------------------------- Container-fluid7 -----------------------------------*/
 
 #container-fluid7>h1 {
+    font-size: 32px;
     color: #0072BC;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
@@ -493,7 +673,7 @@ button.accordion:after {
     width: 100%;
     height: 200px;
     margin-top: 25px;
-    background-image: url('../images/social-media/telegram.jpg');
+    background-image: url('../images/social-media/google.jpg');
     background-size: cover;
     background-position: center;
     transition: ease 1s;
@@ -513,7 +693,7 @@ button.accordion:after {
     width: 100%;
     height: 200px;
     margin-top: 25px;
-    background-image: url('../images/social-media/google.jpg');
+    background-image: url('../images/social-media/telegram.jpg');
     background-size: cover;
     background-position: center;
     transition: ease 1s;
@@ -535,93 +715,3 @@ button.accordion:after {
     transform: scale(1.1);
 }
 
-
-
-
-
-
-
-/*----------------------------------------------Slideanim---------------------------------------------*/
-
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateY(70%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-
-@-webkit-keyframes slide {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(70%);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-    }
-}
-
-.slideanim {
-    visibility: hidden;
-}
-
-.slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-}
-
-
-
-/*---------------------------------------------- scroll to top button---------------------------------------------*/
-
-.scrollToTop {
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    text-align: center;
-    background-color: #24B24B;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    position: fixed;
-    top: 600px;
-    right: 10px;
-    display: none;
-    border-radius: 50px;
-    opacity: 0.8;
-}
-
-.scrollToTop:hover {
-
-    border: 2px solid #24B24B;
-    background-color: white;
-    color: #24B24B;
-    text-decoration: none;
-    opacity: 1;
-}
-
-
-
-
-
-
-
-/*------------------------------------------ dotted background -----------------------------------------------*/
-
-.dotted {
-    padding: 2.25em 1.6875em;
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
-    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
-    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
-    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 100%);
-    -webkit-background-size: 5px 5px;
-    -moz-background-size: 5px 5px;
-    background-size: 5px 5px;
-}

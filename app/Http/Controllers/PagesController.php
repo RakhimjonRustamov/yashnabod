@@ -7,8 +7,20 @@ use App\Resident;
 use Illuminate\Http\Request;
 class PagesController extends Controller
 {
+    public function getAim(){
+        return view('pages.aim');
+    }
+
     public function getPreference(){
         return view('pages.preference-yic');
+    }
+
+    public function getStaff(){
+        return view('pages.staff');
+    }
+
+    public function getBeresident(){
+        return view('pages.beresident');
     }
 
     public function getNews(){
@@ -45,25 +57,25 @@ class PagesController extends Controller
     }
 
     public function getSearch(Request $request){
-    $posts = Post::where('title', 'LIKE', "%$request->search%")
-        ->orWhere('body', 'LIKE', "%$request->search%")
-        ->orWhere('slug', 'LIKE', "%$request->search%")
-        ->orderBy('id', 'desc')
-            ->paginate(8,['*'], 'posts');
+        $posts = Post::where('title', 'LIKE', "%$request->search%")
+            ->orWhere('body', 'LIKE', "%$request->search%")
+            ->orWhere('slug', 'LIKE', "%$request->search%")
+            ->orderBy('id', 'desc')
+                ->paginate(8,['*'], 'posts');
 
-    $products=Product::where('product_name', 'LIKE', "%$request->search%")
-        ->orWhere('product_info', 'LIKE', "%$request->search%")
-        ->orderBy('id', 'desc')
-        ->paginate(8,['*'], 'products');
+        $products=Product::where('product_name', 'LIKE', "%$request->search%")
+            ->orWhere('product_info', 'LIKE', "%$request->search%")
+            ->orderBy('id', 'desc')
+            ->paginate(8,['*'], 'products');
 
-    $residents=Resident::where('resident_name', 'LIKE', "%$request->search%")
-        ->orderBy('id', 'desc')
-        ->paginate(8, ['*'], 'residents');
+        $residents=Resident::where('resident_name', 'LIKE', "%$request->search%")
+            ->orderBy('id', 'desc')
+            ->paginate(8, ['*'], 'residents');
 
-    return view('search')
-        ->withPosts($posts)
-        ->withProducts($products)
-        ->withResidents($residents);
+        return view('search')
+            ->withPosts($posts)
+            ->withProducts($products)
+            ->withResidents($residents);
     }
 
 }
