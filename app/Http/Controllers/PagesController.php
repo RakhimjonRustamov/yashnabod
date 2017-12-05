@@ -23,6 +23,10 @@ class PagesController extends Controller
         return view('pages.beresident');
     }
 
+    public function getPopularInfo(){
+        return view('pages.popular');
+    }
+
     public function getNews(){
         return view('pages.news');
     }

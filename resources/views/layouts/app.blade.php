@@ -100,7 +100,7 @@
                         <ul class="dropdown-menu dropdown-menu1">
                             <li><a class="dropdown-elements1" href="{{url('/news')}}">Новости</a></li>
                             <li class="divider"></li>
-                            <li><a class="dropdown-elements1" href="html/popular-info.html">СМИ о нас</a></li>
+                            <li><a class="dropdown-elements1" href="{{url('/popular-info')}}">СМИ о нас</a></li>
                         </ul>
                     </li>
                     <li>
@@ -138,7 +138,7 @@
                         <a class="dropdown-toggle navbar-elements1" data-toggle="dropdown" href="#">Пресса<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a class="navbar-elements1" href="{{url('/news')}}">Новости</a></li><li class="divider"></li>
-                            <li><a class="navbar-elements1" href="html/popular-info.html">СМИ о нас</a></li><li class="divider"></li>
+                            <li><a class="navbar-elements1" href="{{url('/popular-info')}}">СМИ о нас</a></li><li class="divider"></li>
                         </ul>
                     </li>
 
@@ -152,21 +152,58 @@
 </nav>
 <!-- ///////////////////////////////////////// end navbar //////////////////////////////////////  -->
 
-
 <!-- ////////////////////////////////// container-fluid /////////////////////////////////////////////////// -->
-<div class="container-fluid" id="container-fluid">
-    <!-- ////////////////////////////////// fade container ///////////////////////////////////////// -->
+<div class="container-fluid " id="container-fluid">
+    <ul class="hidden-xs" id="container-fluid-iconbar">
+        <li><a href=""><i class="fa fa-facebook-square container-fluid-icon" id="fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-google-plus-square container-fluid-icon" id="fa-google" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-telegram container-fluid-icon" id="fa-telegram" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-instagram container-fluid-icon" id="fa-instagram" aria-hidden="true"></i></a></li>
+    </ul>
     <div class="container" id="fade-container">
-        <h1>Yashnabod Innovation Center</h1>
-        <p>Инновационный центр, где созданы лучшие условия для деятельности и развития IT компаний в Узбекистане
-        </p>
+        <h1>Инновационный технопарк "Яшнабад"<br>Мы приближаем будущее</h1>
         <div class="row">
             <div class="submit-wrapper">
-                <a href="#">@lang('main.language')</a>
+                <a href="#">Подать заявку</a>
+            </div>
+        </div>
+        <div class="row hidden-sm hidden-xs" id="icons-row">
+            <div class="col-md-3">
+                    <span>
+                        <a href="html/normative.html" class="container-fluid-a">
+                        <i class="fa fa-gavel icons" aria-hidden="true"></i>
+                        <p class="icon-under-text">Нормативно правовая <br> база</p>
+                        </a>
+                    </span>
+            </div>
+            <div class="col-md-3">
+                    <span>
+                        <a href="html/reception.html" class="container-fluid-a">
+                        <i class="fa fa-pencil-square-o icons" aria-hidden="true"></i>
+                        <p class="icon-under-text">Записаться на прием <br> в дирекцию</p>
+                        </a>
+
+                    </span>
+            </div>
+            <div class="col-md-3">
+                    <span>
+                        <a href="html/questionsanswers.html" class="container-fluid-a">
+                        <i class="fa fa-question-circle-o icons" aria-hidden="true"></i>
+                        <p class="icon-under-text">FAQ</p>
+                        </a>
+
+                    </span>
+            </div>
+            <div class="col-md-3">
+                    <span>
+                        <a href="html/reester.html" class="container-fluid-a">
+                        <i class="fa fa-table icons" aria-hidden="true"></i>
+                        <p class="icon-under-text">Реестр</p>
+                        </a>
+                    </span>
             </div>
         </div>
     </div>
-    <!-- ///////////////////////////////// end fade container //////////////////////////////////////////-->
 </div>
 <!--///////////////////////////////////////// end container-fluid ////////////////////////////////////// -->
 
@@ -219,7 +256,7 @@
                 <h2 class="footer-h1">Пресса</h2>
                 <ul>
                     <li><a href="{{url('/news')}}">Новости</a></li>
-                    <li><a href="">СМИ о нас</a></li>
+                    <li><a href="{{url('/popular-info')}}">СМИ о нас</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-col">

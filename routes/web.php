@@ -20,7 +20,7 @@ Route::get('/aim', 'PagesController@getAim');
 Route::get('/staff', 'PagesController@getStaff');
 Route::get('/news', 'PagesController@getNews');
 Route::get('/zones', 'PagesController@getZones');
-Route::get('/popular-info', 'PagesController@getPopular-Info');
+Route::get('/popular-info', 'PagesController@getPopularInfo');
 Route::get('/beresident', 'PagesController@getBeresident');
 
 
