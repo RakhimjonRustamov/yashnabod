@@ -199,26 +199,26 @@
             <div class="col-md-2 footer-col">
                 <h2 class="footer-h1">О нас</h2>
                 <ul>
-                    <li><a href="">Почему Яшнабад?</a></li>
-                    <li><a href="">Главная информация</a></li>
-                    <li><a href="">Кординационный совет</a></li>
-                    <li><a href="">Наши продукции</a></li>
-                    <li><a href="">Сотрудники</a></li>
+                    <li><a href="{{url('/preference-yic')}}">Почему Яшнабад?</a></li>
+                    <li><a href="{{url('/aim')}}">Главная информация</a></li>
+                    <li><a href="{{url('/coordinated-consulting')}}">Кординационный совет</a></li>
+                    <li><a href="{{url('/products')}}">Наши продукции</a></li>
+                    <li><a href="{{url('/staff')}}">Сотрудники</a></li>
                 </ul>
             </div>
             <div class="col-md-2 footer-col">
                 <h2 class="footer-h1">Регистрация</h2>
                 <ul>
-                    <li><a href="">Как стать резидентом?</a></li>
-                    <li><a href="">Как вступить?</a></li>
-                    <li><a href="">Вопросы и ответы</a></li>
-                    <li><a href="">Подать заявку</a></li>
+                    <li><a href="{{url('beresident')}}">Как стать резидентом?</a></li>
+                    <li><a href="{{url('/how-to-join')}}">Как вступить?</a></li>
+                    <li><a href="{{url('/questions')}}">Вопросы и ответы</a></li>
+                    <li><a href="{{url('request')}}">Подать заявку</a></li>
                 </ul>
             </div>
             <div class="col-md-2 footer-col">
                 <h2 class="footer-h1">Пресса</h2>
                 <ul>
-                    <li><a href="">Новости</a></li>
+                    <li><a href="{{url('/news')}}">Новости</a></li>
                     <li><a href="">СМИ о нас</a></li>
                 </ul>
             </div>
