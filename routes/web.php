@@ -59,8 +59,10 @@ Route::get('/contact', 'PagesController@getContact');
 Route::post('contact', 'PagesController@postContact')->name('contact');
 //search
 Route::get('/search/all', 'PagesController@getSearch')->name('search');
-
+//offer
 Route::get('/request', 'PagesController@getRequest');
+Route::post('/request', 'OfferController@postOffer')->name('offer.request');
+
 
 Route::get('/admin', 'AdminController@admin');
 Route::resource('admin/posts', 'PostController');

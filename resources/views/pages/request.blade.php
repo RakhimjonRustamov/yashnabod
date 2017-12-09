@@ -9,8 +9,7 @@
         <h1>Подать заявку</h1>
         <div class="container" id="container">
             <div class="row">
-
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="{{route('offer.request')}}" method="POST" enctype="multipart/form-data">
                     <div class="col-md-5 ">
                     <div class="bgwhite">
                         <div class="img-request">
@@ -18,23 +17,23 @@
                         </div>
                         <h4>Представьтесь</h4>
                         <div class="form-group">
-                            <input required="required" class="form-control" placeholder="Имя " type="text" id="first_name" name="first_name" value="">
+                            <input required="required" class="form-control" placeholder="Имя " type="text" id="first_name" name="name">
                             <div class="bar"></div>
                         </div>
                         <div class="form-group">
-                            <input required="required" class="form-control" placeholder="Фамилия " type="text" id="sur_name" name="sur_name" value="">
+                            <input required="required" class="form-control" placeholder="Фамилия " type="text" id="sur_name" name="surname">
                             <div class="bar"></div>
                         </div>
                         <div class="form-group">
-                            <input required="required" class="form-control" placeholder="Название должности " type="text" id="position_name" name="position_name" value="">
+                            <input required="required" class="form-control" placeholder="Название должности " type="text" id="position_name" name="position">
                             <div class="bar"></div>
                         </div>
                         <div class="form-group">
-                            <input required="required" class="form-control" placeholder="Организация " type="text" id="organisation" name="organisation" value="">
+                            <input required="required" class="form-control" placeholder="Организация " type="text" id="organisation" name="organization">
                             <div class="bar"></div>
                         </div>
                         <div class="form-group">
-                            <select name="region" id="ap_region" class="form-control" required="">
+                            <select name="region" id="ap_region" class="form-control" required="required">
                                 <option value="">Регион</option>
                                 <option value="6" id="6">Ташкент</option>
                                 <option value="7" id="7">Ташкентская область </option>
@@ -57,7 +56,7 @@
                     <div class="bgwhite">
                         <h4>Контакты</h4>
                         <div class="form-group">
-                            <input required="required" class="form-control" type="email" id="email" placeholder="Э-почта" name="email" value="">
+                            <input required="required" class="form-control" type="email" id="email" placeholder="Э-почта" name="email">
                             <div class="bar"></div>
                         </div>
                         <div class="form-group phone_num">
@@ -70,10 +69,8 @@
                 </div>
                 <div class="col-md-7 ">
                     <div class="info ">
-
+                        <input type="file" name="documents" class="form-control" required="required">
                     </div>
-
-                    <a href="{{url('/download')}}">ZIPP</a>
                     <div class="row ">
                         <div class="col-md-6 ">
                         </div>
@@ -93,6 +90,9 @@
                 <button type="submit" class="button send_req"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Отправить заявку</button>
                 </div>
                 </form>
+
+                    // Form dan tashqarida tursa yaxshiro Designni ozgartirasizda
+                <a href="{{url('/download')}}">FILE ZIIIIIPPPPPP</a>
             </div>
         </div>
     </div>
