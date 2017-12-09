@@ -76,12 +76,7 @@ Route::get('admin/receptions', 'ReceptionController@index')->name('receptions.in
 Route::delete('admin/receptions/{reception}', array('uses' => 'ReceptionController@destroy', 'as' => 'receptions.destroy'));
 
 
-
-
-
-
-
-
+Route::get('/download', 'HomeController@downloadZip');
 
 
 // Language set up

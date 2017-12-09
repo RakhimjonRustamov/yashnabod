@@ -11,7 +11,6 @@
             <div class="row">
 
                 <form action="" method="POST" enctype="multipart/form-data">
-                    {{csrf_field()}}
                     <div class="col-md-5 ">
                     <div class="bgwhite">
                         <div class="img-request">
@@ -73,28 +72,10 @@
                     <div class="info ">
 
                     </div>
+
+                    <a href="{{url('/download')}}">ZIPP</a>
                     <div class="row ">
                         <div class="col-md-6 ">
-                            <div class="link ">
-                                <a class="form-control form-group download " href="documents/{{$downloads[0]->documentation}}" download="{{$downloads[0]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
-                            </div>
-                            <div class="link ">
-                                <a class="form-control form-group download " href="documents/{{$downloads[1]->documentation}}" download="{{$downloads[1]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
-                            </div>
-                            <div class="link ">
-                                <a class="form-control form-group download " href="documents/{{$downloads[2]->documentation}}" download="{{$downloads[2]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 ">
-                            <div class="link ">
-                                <a class="form-control form-group download " href="documents/{{$downloads[3]->documentation}}" download="{{$downloads[3]->documentation}}"><i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму Бизнес Плана "</a>
-                            </div>
-                            <div class="link ">
-                                <a class="form-control form-group download " href="documents/{{$downloads[4]->documentation}}" download="{{$downloads[4]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
-                            </div>
-                            <div class="link ">
-                                <a class="form-control form-group download " href="documents/{{$downloads[5]->documentation}}" download="{{$downloads[5]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
-                            </div>
                         </div>
                     </div>
 

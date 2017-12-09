@@ -2,7 +2,6 @@
 namespace App\Http\Controllers;
 use Mail;
 use Session;
-use App\Document;
 use App\Post;
 use App\Product;
 use App\Resident;
@@ -105,8 +104,7 @@ class PagesController extends Controller
     }
 
     public function getRequest(){
-        $downloads=Document::all();
-        return view('pages.request')->withDownloads($downloads);
+        return view('pages.request');
     }
 
     // Контакты
