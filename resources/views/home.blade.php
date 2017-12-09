@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','IndexPage')
 
 @section('content')
 
@@ -11,7 +12,7 @@
                 </div>
                 <div class="col-md-9" id="col-81">
                     <p>Технопарк — Это территориальная, научная, технологическая и техническая база для реализации инновационных проектов. Технопарк- имущественный комплекс, в котором объединены научно-исследовательские институты, объекты индустрии, деловые центры, выставочные площадки, учебные заведения, а также обслуживающие объекты: средства транспорта, подъездные пути, жилые поселки, охрана. Международная ассоциация технологических парков даёт своё определение объекту инновационной инфраструктуры. По мнению ассоциации, технопарк — это организация, управляемая специалистами, главной целью которых является увеличение благосостояния местного сообщества посредством продвижения инновационной культуры, а также состязательности инновационного бизнеса и научных организаций. Для достижения этих целей технопарк стимулирует и управляет потоками знаний и технологий между университетами, научно-исследовательскими институтами, компаниями и рынками. Он упрощает создание и рост инновационным компаниям с помощью инкубационных процессов и процессов выведения новых компаний из существующих (spin-off processes). Технопарк помимо высококачественных площадей обеспечивает другие услуги...
-                        <a href="html/whyYIC.html" id="readmore">
+                        <a href="{{url('/preference-yic')}}" id="readmore">
                             < Читать дальше>
                         </a>
                     </p>
@@ -175,7 +176,7 @@
             <div class="row">
                 <div class="col-md-2 cols">
                     <div class="sub-div">
-                        <a href="html/taxes.html" class="link1">
+                        <a href="{{url('/taxes')}}" class="link1">
                             <div class="circle">
                                 <span class="fa fa-calendar sub-icon"></span>
                             </div>
@@ -187,7 +188,7 @@
                 </div>
                 <div class="col-md-2 cols">
                     <div class="sub-div">
-                        <a href="html/credits.html" class="link1">
+                        <a href="{{url('/credits')}}" class="link1">
                             <div class="circle">
                                 <span class="fa fa-credit-card sub-icon"></span>
                             </div>
@@ -199,7 +200,7 @@
                 </div>
                 <div class="col-md-2 cols">
                     <div class="sub-div">
-                        <a href="html/areas.html" class="link1">
+                        <a href="{{url('/areas')}}" class="link1">
                             <div class="circle">
                                 <span class="fa fa-map sub-icon"></span>
                             </div>
@@ -211,7 +212,7 @@
                 </div>
                 <div class="col-md-2 cols">
                     <div class="sub-div">
-                        <a href="html/promotion.html" class="link1">
+                        <a href="{{url('/promotion')}}" class="link1">
                             <div class="circle">
                                 <span class="fa fa-handshake-o sub-icon"></span>
                             </div>
@@ -223,7 +224,7 @@
                 </div>
                 <div class="col-md-2 cols">
                     <div class="sub-div">
-                        <a href="html/sponsorship.html" class="link1">
+                        <a href="{{url('/sponsorship')}}" class="link1">
                             <div class="circle">
                                 <span class="fa fa-money sub-icon"></span>
                             </div>
@@ -235,7 +236,7 @@
                 </div>
                 <div class="col-md-2 cols">
                     <div class="sub-div">
-                        <a href="html/copyright.html" class="link1">
+                        <a href="{{url('/copyright')}}" class="link1">
                             <div class="circle">
                                 <span class="fa fa-shield sub-icon"></span>
                             </div>
@@ -278,168 +279,54 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="row">
+                        @foreach($posts as $post)
                         <div class="col-md-6 col-sm-12 news-col">
                             <div class="post">
                                 <div class="post-img-content">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive" />
-                                    <span class="post-title"><b>Make a Image Blur Effects With</b><br /></span>
+                                    <img src="{{asset('images/'.$post->image)}}" class="img-responsive" />
+                                    <span class="post-title"><b>{{$post->title}}</b><br /></span>
                                 </div>
                                 <div class="content">
                                     <div class="author">
-                                        By <b>Bhaumik</b> |
-                                        <time datetime="2014-01-20">January 20th, 2014</time>
+                                        <small><i class="fa fa-calendar" data-original-title="" title=""></i></small>
+                                        <time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time>
                                     </div>
                                     <div>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    {{substr($post->body, 0, 245)}}{{strlen($post->body)>50 ? "...":""}}
                                     </div>
                                     <div>
-                                        <a href="html/news.html" class="btn btn-primary btn-sm">Read more</a>
+                                        <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-12 news-col">
-                            <div class="post">
-                                <div class="post-img-content">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive" />
-                                    <span class="post-title"><b>Make a Image Blur Effects With</b><br /></span>
-                                </div>
-                                <div class="content">
-                                    <div class="author">
-                                        By <b>Bhaumik</b> |
-                                        <time datetime="2014-01-20">January 20th, 2014</time>
-                                    </div>
-                                    <div>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                    <div>
-                                        <a href="html/news.html" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 news-col">
-                            <div class="post">
-                                <div class="post-img-content">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive" />
-                                    <span class="post-title"><b>Make a Image Blur Effects With</b><br /></span>
-                                </div>
-                                <div class="content">
-                                    <div class="author">
-                                        By <b>Bhaumik</b> |
-                                        <time datetime="2014-01-20">January 20th, 2014</time>
-                                    </div>
-                                    <div>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                    <div>
-                                        <a href="html/news.html" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 news-col">
-                            <div class="post">
-                                <div class="post-img-content">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive" />
-                                    <span class="post-title"><b>Make a Image Blur Effects With</b><br /></span>
-                                </div>
-                                <div class="content">
-                                    <div class="author">
-                                        By <b>Bhaumik</b> |
-                                        <time datetime="2014-01-20">January 20th, 2014</time>
-                                    </div>
-                                    <div>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                    <div>
-                                        <a href="html/news.html" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 news-col">
-                            <div class="post">
-                                <div class="post-img-content">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive" />
-                                    <span class="post-title"><b>Make a Image Blur Effects With</b><br /></span>
-                                </div>
-                                <div class="content">
-                                    <div class="author">
-                                        By <b>Bhaumik</b> |
-                                        <time datetime="2014-01-20">January 20th, 2014</time>
-                                    </div>
-                                    <div>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                    <div>
-                                        <a href="html/news.html" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 news-col">
-                            <div class="post">
-                                <div class="post-img-content">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive" />
-                                    <span class="post-title"><b>Make a Image Blur Effects With</b><br /></span>
-                                </div>
-                                <div class="content">
-                                    <div class="author">
-                                        By <b>Bhaumik</b> |
-                                        <time datetime="2014-01-20">January 20th, 2014</time>
-                                    </div>
-                                    <div>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                    <div>
-                                        <a href="html/news.html" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
+
+
+
                 <!--///////////////////////////////////////////////////// RECENT POST  ///////////////////////////////////////////-->
                 <div class="col-lg-4">
                     <div class="widget-sidebar">
                         <h2 class="title-widget-sidebar">// Последние новости</h2>
                         <div class="content-widget-sidebar">
                             <ul>
+                                @foreach($posts as $post)
                                 <li class="recent-post">
                                     <div class="post-img">
-                                        <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive">
+                                        <a href="{{url('/news/'.$post->slug)}}"><img src="{{asset('images/'.$post->image)}}" class="img-responsive"></a>
                                     </div>
-                                    <a href="html/news.html"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                                    <a href="{{url('/news/'.$post->slug)}}"><h5>{{$post->title}}</h5></a>
                                     <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> </small></p>
                                 </li>
                                 <hr>
-                                <li class="recent-post">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive">
-                                    </div>
-                                    <a href="html/news.html"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i></small></p>
-                                </li>
-                                <hr>
-                                <li class="recent-post">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive">
-                                    </div>
-                                    <a href="html/news.html"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i></small></p>
-                                </li>
-                                <hr>
-                                <li class="recent-post">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive">
-                                    </div>
-                                    <a href="html/news.html"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i></small></p>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
+
                     <div class="widget-sidebar">
                         <h2 class="title-widget-sidebar">// Архив</h2>
                         <div class="last-post">
@@ -555,6 +442,4 @@
         </div>
     </div>
     <!--//////////////////////////////////////////// end container-fluid7 /////////////////////////////////////////////////////////  -->
-
-
 @endsection

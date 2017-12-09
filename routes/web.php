@@ -14,14 +14,34 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Нome
 Route::get('/', 'HomeController@index')->name('home');
+
 Route::get('/logout', 'HomeController@error')->name('error');
 Route::get('/aim', 'PagesController@getAim');
 Route::get('/staff', 'PagesController@getStaff');
-Route::get('/news', 'PagesController@getNews');
+
+//News
+Route::get('/news/{slug}', ['as'=>'news.single', 'uses'=>'BlogController@getSingleNews'])->where('slug', '[\w\d\_\-]+');
+Route::get('/news', 'BlogController@getNews');
+//News
+
 Route::get('/zones', 'PagesController@getZones');
 Route::get('/popular-info', 'PagesController@getPopularInfo');
 Route::get('/beresident', 'PagesController@getBeresident');
+Route::get('/normative', 'PagesController@getNormative');
+Route::get('/reester', 'PagesController@getReester');
+
+
+//Возможности
+Route::get('/areas', 'PagesController@getAreas');
+Route::get('/copyright', 'PagesController@getCopyRight');
+Route::get('/credits', 'PagesController@getCredits');
+Route::get('/promotion', 'PagesController@getPromotion');
+Route::get('/sponsorship', 'PagesController@getSponsorship');
+Route::get('/taxes', 'PagesController@getTaxes');
+//Возможности
 
 
 Route::get('/preference-yic', 'PagesController@getPreference');
@@ -30,13 +50,17 @@ Route::get('/how-to-join', 'PagesController@getInstruction');
 Route::get('/questions', 'PagesController@getQuestions');
 Route::get('/residents', 'PagesController@getResidents');
 Route::get('/products', 'PagesController@getProducts');
-Route::get('/contact', 'PagesController@getContact');
-Route::get('/request', 'PagesController@getRequest');
 
+// reception
+Route::get('/reception', 'PagesController@getReception');
+Route::post('reception', 'ReceptionController@postReception')->name('reception');
+// contact
+Route::get('/contact', 'PagesController@getContact');
+Route::post('contact', 'PagesController@postContact')->name('contact');
 //search
 Route::get('/search/all', 'PagesController@getSearch')->name('search');
 
-
+Route::get('/request', 'PagesController@getRequest');
 
 Route::get('/admin', 'AdminController@admin');
 Route::resource('admin/posts', 'PostController');

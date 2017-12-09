@@ -21,23 +21,24 @@
                 <h2 id="contact-us">Связаться с нами</h2>
                 <!--          Main informatiom  end       -->
                 <!--        Form start                  -->
-                <form>
+                <form action="{{route('contact')}}" method="POST">
+                    {{csrf_field()}}
                     <div class="row row-contacts">
                         <div class="col-md-6" class="contacts-form">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Имя:*" required name="first-name">
+                                <input type="text" class="form-control" placeholder="Имя:*" name="name" required="required">
                             </div>
                         </div>
                         <div class="col-md-6" class="contacts-form">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email:*" required name="email">
+                                <input type="email" class="form-control" placeholder="Email:*" name="email" required="required">
                             </div>
                         </div>
                     </div>
                     <div class="row row-contacts">
                         <div class="col-md-12" class="contacts-form">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Тема:*" required name="Theme">
+                                <input type="text" class="form-control" placeholder="Тема:*" name="subject" required="required">
                             </div>
                         </div>
                     </div>
@@ -49,11 +50,6 @@
                         </div>
                     </div>
                     <div class="row row-contacts">
-                        <div class="col-md-8" class="contacts-form">
-                            <div class="form-group" id="form-enter-code">
-                                <input type="text" class="form-control" placeholder="Введите код с картинки" required name="enter code">
-                            </div>
-                        </div>
                         <div class="col-md-4" class="contacts-form">
                             <button type="submit" class="btn" id="contact-us-button">Отправить</button>
                         </div>

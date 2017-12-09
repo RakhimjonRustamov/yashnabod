@@ -1,5 +1,7 @@
 <?php
 namespace App\Http\Controllers;
+use Mail;
+use Session;
 use App\Document;
 use App\Post;
 use App\Product;
@@ -27,8 +29,42 @@ class PagesController extends Controller
         return view('pages.popular');
     }
 
-    public function getNews(){
-        return view('pages.news');
+    public function getNormative(){
+        return view('pages.normative');
+    }
+
+    public function getReception(){
+        return view('pages.reception');
+    }
+
+    //Возможности
+    public function getAreas(){
+        return view('pages.areas');
+    }
+
+    public function getCopyRight(){
+        return view('pages.copyright');
+    }
+
+    public function getCredits(){
+        return view('pages.credits');
+    }
+
+    public function getPromotion(){
+        return view('pages.promotion');
+    }
+
+    public function getSponsorship(){
+        return view('pages.sponsorship');
+    }
+
+    public function getTaxes(){
+        return view('pages.taxes');
+    }
+    //Возможности
+
+    public function getReester(){
+        return view('pages.reester');
     }
 
     public function getCoordination(){
@@ -64,12 +100,39 @@ class PagesController extends Controller
         return view('pages.request')->withDownloads($downloads);
     }
 
+    // Контакты
+    public function postContact(Request $request)
+    {
+        $this->validate($request, array(
+            'name' => 'required|max:120',
+            'email' => 'required|email',
+            'subject' => 'required|max:120',
+            'message' => 'required|min:3'
+        ));
+        $data=array(
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'subject'=>$request->subject,
+            'bodyMessage'=>$request->message
+        );
+
+
+        Mail::send('emails.contact', $data, function($message)use ($data){
+            $message->from($data['email']);
+            $message->to('omonibrokhimov96@gmail.com');
+            $message->subject($data['subject']);
+        });
+        Session::flash('success', '  ваше письмо успешно отправлено');
+        return redirect(route('contact'));
+    }
+
+
     public function getSearch(Request $request){
         $posts = Post::where('title', 'LIKE', "%$request->search%")
             ->orWhere('body', 'LIKE', "%$request->search%")
             ->orWhere('slug', 'LIKE', "%$request->search%")
             ->orderBy('id', 'desc')
-                ->paginate(8,['*'], 'posts');
+            ->paginate(8,['*'], 'posts');
 
         $products=Product::where('product_name', 'LIKE', "%$request->search%")
             ->orWhere('product_info', 'LIKE', "%$request->search%")

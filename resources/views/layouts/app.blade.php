@@ -42,8 +42,6 @@
             </form>
           </span>
                 </li>
-                <a href=""><i class="fa fa-user-circle" id="fa-user-circle"></i><span>Вход</span></a>
-                <a href=""><i class="fa fa-user-circle" id="fa-user-circle"></i><span>Вход</span></a>
                 <a href="{{route('lang.switch', ['locale'=>'ru'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>Russian</span></a>
                 <a href="{{route('lang.switch', ['locale'=>'en'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>English</span></a>
                 <a href="{{route('lang.switch', ['locale'=>'uz'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>Uzbek</span></a>
@@ -164,13 +162,13 @@
         <h1>Инновационный технопарк "Яшнабад"<br>Мы приближаем будущее</h1>
         <div class="row">
             <div class="submit-wrapper">
-                <a href="#">Подать заявку</a>
+                <a href="{{url('/request')}}">Подать заявку</a>
             </div>
         </div>
         <div class="row hidden-sm hidden-xs" id="icons-row">
             <div class="col-md-3">
                     <span>
-                        <a href="html/normative.html" class="container-fluid-a">
+                        <a href="{{url('/normative')}}" class="container-fluid-a">
                         <i class="fa fa-gavel icons" aria-hidden="true"></i>
                         <p class="icon-under-text">Нормативно правовая <br> база</p>
                         </a>
@@ -178,7 +176,7 @@
             </div>
             <div class="col-md-3">
                     <span>
-                        <a href="html/reception.html" class="container-fluid-a">
+                        <a href="{{url('/reception')}}" class="container-fluid-a">
                         <i class="fa fa-pencil-square-o icons" aria-hidden="true"></i>
                         <p class="icon-under-text">Записаться на прием <br> в дирекцию</p>
                         </a>
@@ -187,7 +185,7 @@
             </div>
             <div class="col-md-3">
                     <span>
-                        <a href="html/questionsanswers.html" class="container-fluid-a">
+                        <a href="{{url('/questions')}}" class="container-fluid-a">
                         <i class="fa fa-question-circle-o icons" aria-hidden="true"></i>
                         <p class="icon-under-text">FAQ</p>
                         </a>
@@ -196,7 +194,7 @@
             </div>
             <div class="col-md-3">
                     <span>
-                        <a href="html/reester.html" class="container-fluid-a">
+                        <a href="{{url('/reester')}}" class="container-fluid-a">
                         <i class="fa fa-table icons" aria-hidden="true"></i>
                         <p class="icon-under-text">Реестр</p>
                         </a>
