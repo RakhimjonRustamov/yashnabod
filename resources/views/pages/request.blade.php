@@ -9,7 +9,10 @@
         <h1>Подать заявку</h1>
         <div class="container" id="container">
             <div class="row">
-                <div class="col-md-5 ">
+
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                    <div class="col-md-5 ">
                     <div class="bgwhite">
                         <div class="img-request">
                             <img src="https://muic.uz/uploads/pages/31a31e35a9347c92ec7cb35a83d01cf1.png" alt="">
@@ -61,7 +64,7 @@
                         <div class="form-group phone_num">
                             <label class="label">Номер телефона</label>
                             <div class="numcode">+998</div>
-                            <input required="required" " class="form-control " type="tel " id="phone " name="phone " value=" ">
+                            <input class="form-control" type="tel" id="phone" name="phone"  required="required"/>
                             <div class="bar "></div>
                         </div>
                     </div>
@@ -73,30 +76,44 @@
                     <div class="row ">
                         <div class="col-md-6 ">
                             <div class="link ">
-                                <a class="form-control form-group download " href="documents/{{$downloads[0]->documentation}}" download="{{$downloads[0]->documentation}}"> <i class="fa fa-download " aria-hidden="true "></i> Скачать "Форму заявления "</a>
+                                <a class="form-control form-group download " href="documents/{{$downloads[0]->documentation}}" download="{{$downloads[0]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
+                            </div>
+                            <div class="link ">
+                                <a class="form-control form-group download " href="documents/{{$downloads[1]->documentation}}" download="{{$downloads[1]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
+                            </div>
+                            <div class="link ">
+                                <a class="form-control form-group download " href="documents/{{$downloads[2]->documentation}}" download="{{$downloads[2]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
                             </div>
                         </div>
                         <div class="col-md-6 ">
                             <div class="link ">
-                                <a class="form-control form-group download " href="documents/{{$downloads[1]->documentation}}" download="{{$downloads[1]->documentation}}"><i class="fa fa-download " aria-hidden="true "></i> Скачать "Форму Бизнес Плана "</a>
+                                <a class="form-control form-group download " href="documents/{{$downloads[3]->documentation}}" download="{{$downloads[3]->documentation}}"><i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму Бизнес Плана "</a>
+                            </div>
+                            <div class="link ">
+                                <a class="form-control form-group download " href="documents/{{$downloads[4]->documentation}}" download="{{$downloads[4]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
+                            </div>
+                            <div class="link ">
+                                <a class="form-control form-group download " href="documents/{{$downloads[5]->documentation}}" download="{{$downloads[5]->documentation}}"> <i class="fa fa-download " aria-hidden="true"></i> Скачать "Форму заявления "</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="pull-left captcha-input-2 ">
-                        <input required="required " type="text " maxlength="100 " class="form-control " onkeypress=" " name="captcha " id="captcha " placeholder="Введите код с картинки ">
+                        <input required="required" type="text" maxlength="100 " class="form-control " onkeypress=" " name="captcha " id="captcha " placeholder="Введите код с картинки ">
                         <div class="bar "></div>
                     </div>
                     <div class="captcha-main ">
-                        <div id="captcha_contacts " class="span3 field " ">
+                        <div id="captcha_contacts " class="span3 field" >
                     </div>
                     <div id="captcha_contacts_button" class="span3 field">
                         <a href="#" id="refresh_captcha_contacts"><i class="fa fa-refresh ref_button" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <button type="submit" class="button send_req"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Отправить заявку</button>
+                </div>
+                </form>
             </div>
         </div>
     </div>
-    </div>
+
 @endsection
