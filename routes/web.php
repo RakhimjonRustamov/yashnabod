@@ -72,7 +72,8 @@ Route::delete('admin/products/{product}',array('uses' => 'ProductController@dest
 Route::get('admin/residents', 'ResidentController@index')->name('residents.index');
 Route::post('admin/residents', 'ResidentController@store')->name('residents.store');
 Route::delete('admin/residents/{resident}', array('uses' => 'ResidentController@destroy', 'as' => 'residents.destroy'));
-
+Route::get('admin/receptions', 'ReceptionController@index')->name('receptions.index');
+Route::delete('admin/receptions/{reception}', array('uses' => 'ReceptionController@destroy', 'as' => 'receptions.destroy'));
 
 
 

@@ -37,6 +37,7 @@
                         <li class="{{ Request::is('admin/residents')?"active":""}}" ><a href="{{ url('admin/residents')}}">Residents</a></li>
                         <li class="{{ Request::is('admin/products')?"active":""}}" ><a href="{{ url('admin/products')}}">Products</a></li>
                         <li class="{{ Request::is('admin/posts')?"active":""}}" ><a href="{{ url('admin/posts')}}">Posts</a></li>
+                        <li class="{{ Request::is('admin/receptions')?"active":""}}" ><a href="{{ url('admin/receptions')}}">Receptions</a></li>
                         <li class="{{ Request::is('admin/posts/create')?"active":""}}" ><a href="{{ url('admin/posts/create')}}">Add New Post</a></li>
                     </ul>
 

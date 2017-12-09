@@ -19,10 +19,10 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-{
-    $posts=Post::orderBy('id', 'desc')->paginate(5);
-    return view('posts.index')->withPosts($posts);
-}
+    {
+        $posts=Post::orderBy('id', 'desc')->paginate(5);
+        return view('posts.index')->withPosts($posts);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -79,18 +79,6 @@ class PostController extends Controller
         $post=Post::find($id);
         return view('posts.index')->withShowPost($post);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
     /**
      * Update the specified resource in storage.
      *

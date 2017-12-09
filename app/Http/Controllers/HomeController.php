@@ -11,8 +11,4 @@ class HomeController extends Controller
         $posts=Post::orderBy('id', 'desc')->paginate(6);
         return view('home')->withPosts($posts);
     }
-
-    public function getIndexPosts(){
-
-    }
 }

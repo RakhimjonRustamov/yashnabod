@@ -37,6 +37,11 @@ class PagesController extends Controller
         return view('pages.reception');
     }
 
+
+
+
+
+
     //Возможности
     public function getAreas(){
         return view('pages.areas');
@@ -62,6 +67,10 @@ class PagesController extends Controller
         return view('pages.taxes');
     }
     //Возможности
+
+
+
+
 
     public function getReester(){
         return view('pages.reester');
@@ -126,6 +135,9 @@ class PagesController extends Controller
         return redirect(route('contact'));
     }
 
+
+
+    // search
 
     public function getSearch(Request $request){
         $posts = Post::where('title', 'LIKE', "%$request->search%")

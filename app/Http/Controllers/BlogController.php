@@ -12,8 +12,6 @@ class BlogController extends Controller
         $this->middleware('auth',['except'=>['getNews', 'getSingleNews']]);
     }
     public  function getSingle($slug){
-        // fetch from the DB
-        // passed post object
         $post=Post::where('slug', '=', $slug)->first();
         return view('blog.single')->withPost($post);
     }
