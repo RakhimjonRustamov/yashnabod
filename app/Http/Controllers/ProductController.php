@@ -21,35 +21,71 @@ class ProductController extends Controller
     }
     public function store(Request $request){
         $this->validate($request, array(
-            'product_name'=> 'required|max:100',
-            'product_info'=>'required|max:2000',
+            'product_name_uz'=> 'required|max:300',
+            'product_name_ru'=> 'required|max:300',
+            'product_info_uz'=>'required',
+            'product_info_ru'=>'required',
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
         ));
 
         $product= new Product;
-        $product->product_info=$request->product_info;
-        $product->product_name=$request->product_name;
+        $product->product_info_uz=$request->product_info_uz;
+        $product->product_name_uz=$request->product_name_uz;
+        $product->product_info_ru=$request->product_info_ru;
+        $product->product_name_ru=$request->product_name_ru;
 
 
         if($request->hasFile('featured_image')){
             $image=$request->file('featured_image');
             $filename=time().'.'.$image->getClientOriginalExtension();
-            $location=public_path('images/'. $filename);
+            $location=public_path('images/products/'. $filename);
             Image::make($image)->resize(800,400)->save($location);
             $product->product_image=$filename;
         }
         $product->save();
-        Session::flash('success', 'The product was successfully saved');
+        Session::flash('success', ' Продукт был успешно сохранен');
         return redirect()->route('products.index');
     }
+
+    public function update(Request $request){
+        $this->validate($request, array(
+            'product_name_uz'=> 'required|max:300',
+            'product_name_ru'=> 'required|max:300',
+            'product_info_uz'=>'required',
+            'product_info_ru'=>'required',
+            'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
+        ));
+
+        $product= new Product;
+        $product->product_info_uz=$request->product_info_uz;
+        $product->product_name_uz=$request->product_name_uz;
+        $product->product_info_ru=$request->product_info_ru;
+        $product->product_name_ru=$request->product_name_ru;
+
+
+        if($request->hasFile('featured_image')){
+            $image=$request->file('featured_image');
+            $filename=time().'.'.$image->getClientOriginalExtension();
+            $location=public_path('images/products/'. $filename);
+            Image::make($image)->resize(800,400)->save($location);
+            $product->product_image=$filename;
+            $oldFileName='images/products/'.$product->product_image;
+
+            Storage::delete($oldFileName);
+        }
+        $product->save();
+        Session::flash('success', ' Продукт был успешно сохранен');
+        return redirect()->route('products.index');
+    }
+
 
     public function destroy($id)
     {
         $product=Product::find($id);
-        $photo ='/'.$product->product_image;
+        $photo ='/products/'.$product->product_image;
         Storage::delete($photo);
         $product->delete();
-        Session::flash('success', "The product was successfully deleted");
+        Session::flash('success', " Продукт был успешно удален");
         return redirect()->route('products.index');
     }
 

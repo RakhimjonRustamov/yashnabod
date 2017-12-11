@@ -43,23 +43,29 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array(
-            'title'=> 'required|max:100',
-            'slug'=>'required|alpha_dash|min:5|max:100|unique:posts,slug',
-            'body'=>'required',
+            'title_uz'=> 'required|max:300',
+            'title_ru'=> 'required|max:300',
+            'body_uz'=>'required',
+            'body_ru'=>'required',
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
         ));
 
         $post = new Post;
-        $post->title=$request->title;
-        $post->slug=$request->slug;
-        $post->body=$request->body;
+        $post->title_uz=$request->title_uz;
+        $post->title_ru=$request->title_ru;
+        $post->body_uz=$request->body_uz;
+        $post->body_ru=$request->body_ru;
+
+        $slug = str_slug($post->title_uz, '-');
+        $count = Post::whereRaw("slug RLIKE '^{$slug}(-[0-9]+)?$'")->count();
+        $post->slug = $count ? ($slug.'-'.$count) : $slug;
 
         // image upload to website
 
         if($request->hasFile('featured_image')){
             $image=$request->file('featured_image');
             $filename=time().'.'.$image->getClientOriginalExtension();
-            $location=public_path('images/'. $filename);
+            $location=public_path('images/posts/'. $filename);
             Image::make($image)->resize(800,400)->save($location);
             $post->image=$filename;
         }
@@ -89,22 +95,28 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, array(
-            'title'=>'required|max:160',
-            'slug'=>'required|alpha_dash|min:5|max:100|unique:posts,slug,'.$id,
-            'body'=>'required',
-            'featured_image'=> 'required|mimes:jpeg,png,jpg,gif,svg'
+            'title_uz'=> 'required|max:300',
+            'title_ru'=> 'required|max:300',
+            'body_uz'=>'required',
+            'body_ru'=>'required',
+            'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
         ));
         // Save the data to the database
         $post=Post::find($id);
-        $post->title=$request->input('title');
-        $post->slug=$request->input('slug');
-        $post->body=$request->body;
+        $post->title_uz=$request->title_uz;
+        $post->title_ru=$request->title_ru;
+        $post->body_uz=$request->body_uz;
+        $post->body_ru=$request->body_ru;
+
+        $slug = str_slug($post->title_uz, '-');
+        $count = Post::whereRaw("slug RLIKE '^{$slug}(-[0-9]+)?$'")->count();
+        $post->slug = $count ? ($slug.'-'.$count) : $slug;
 
         if($request->hasFile('featured_image')){
             // add the new photos
             $image=$request->file('featured_image');
             $filename=time().'.'.$image->getClientOriginalExtension();
-            $location=public_path('images/'. $filename);
+            $location=public_path('images/posts/'. $filename);
             Image::make($image)->resize(800,400)->save($location);
             $oldFileName='/'.$post->image;
             // update the database
@@ -127,7 +139,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post=Post::find($id);
-        $photo ='/'.$post->image;
+        $photo ='/posts/'.$post->image;
         Storage::delete($photo);
         $post->delete();
         Session::flash('success', "The post was successfully deleted");

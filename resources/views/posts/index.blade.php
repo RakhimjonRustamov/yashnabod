@@ -17,10 +17,10 @@
     @include('partials._message')
     <div class="row">
         <div class="col-md-10">
-            <h1 align="center">All Posts</h1>
+            <h1 align="center">Все новости</h1>
         </div>
         <div class="col-md-2">
-            <a href="{{route('posts.create')}}" class="btn btn-success btn-block"><span class=" glyphicon glyphicon-plus"></span>Create New Post</a>
+            <a href="{{route('posts.create')}}" class="btn btn-success btn-block"><span class=" glyphicon glyphicon-plus"></span>Создать новость</a>
         </div>
     </div>
     <div class="row">
@@ -28,9 +28,9 @@
             <table class="table">
                 <thead>
                 <th>#</th>
-                <th>Title</th>
-                <th>Body</th>
-                <th>Craeted At</th>
+                <th>Заглавие</th>
+                <th>Содержание</th>
+                <th>Создан в</th>
                 </thead>
                 <tbody>
                 @foreach($posts as $post)

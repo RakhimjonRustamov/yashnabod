@@ -71,8 +71,11 @@ Route::get('admin/blog/{slug}', ['as'=>'blog.single', 'uses'=>'BlogController@ge
 Route::get('admin/products', 'ProductController@index')->name('products.index');
 Route::post('/admin/products', 'ProductController@store')->name('products.store');
 Route::delete('admin/products/{product}',array('uses' => 'ProductController@destroy', 'as' => 'products.destroy'));
+Route::put('admin/products/{product}', 'ProductController@update')->name('products.update');
+
 Route::get('admin/residents', 'ResidentController@index')->name('residents.index');
 Route::post('admin/residents', 'ResidentController@store')->name('residents.store');
+Route::put('admin/residents/{resident}', 'ResidentController@update')->name('residents.update');
 Route::delete('admin/residents/{resident}', array('uses' => 'ResidentController@destroy', 'as' => 'residents.destroy'));
 Route::get('admin/receptions', 'ReceptionController@index')->name('receptions.index');
 Route::delete('admin/receptions/{reception}', array('uses' => 'ReceptionController@destroy', 'as' => 'receptions.destroy'));
