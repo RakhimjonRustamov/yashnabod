@@ -10,6 +10,7 @@
         <div class="container" id="container">
             <div class="row">
                 <form action="{{route('offer.request')}}" method="POST" enctype="multipart/form-data">
+                    {{csrf_field()}}
                     <div class="col-md-5 ">
                     <div class="bgwhite">
                         <div class="img-request">
@@ -69,28 +70,16 @@
                 </div>
                 <div class="col-md-7 ">
                     <div class="info ">
-                        <input type="file" name="documents" class="form-control" required="required">
+                        <input type="file" name="documents" class="form-control" required="required" value="">
                     </div>
                     <div class="row ">
                         <div class="col-md-6 ">
                         </div>
                     </div>
-
-                    <div class="pull-left captcha-input-2 ">
-                        <input required="required" type="text" maxlength="100 " class="form-control " onkeypress=" " name="captcha " id="captcha " placeholder="Введите код с картинки ">
-                        <div class="bar "></div>
-                    </div>
-                    <div class="captcha-main ">
-                        <div id="captcha_contacts " class="span3 field" >
-                    </div>
-                    <div id="captcha_contacts_button" class="span3 field">
-                        <a href="#" id="refresh_captcha_contacts"><i class="fa fa-refresh ref_button" aria-hidden="true"></i></a>
-                    </div>
-                </div>
                 <button type="submit" class="button send_req"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Отправить заявку</button>
                 </div>
                 </form>
-
+                @include('partials._message')
                     // Form dan tashqarida tursa yaxshiro Designni ozgartirasizda
                 <a href="{{url('/download')}}">FILE ZIIIIIPPPPPP</a>
             </div>

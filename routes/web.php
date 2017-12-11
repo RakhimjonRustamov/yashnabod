@@ -60,7 +60,7 @@ Route::post('contact', 'PagesController@postContact')->name('contact');
 //search
 Route::get('/search/all', 'PagesController@getSearch')->name('search');
 //offer
-Route::get('/request', 'PagesController@getRequest');
+Route::get('/request', 'PagesController@getRequest')->name('pages.request');
 Route::post('/request', 'OfferController@postOffer')->name('offer.request');
 
 
@@ -77,9 +77,13 @@ Route::delete('admin/residents/{resident}', array('uses' => 'ResidentController@
 Route::get('admin/receptions', 'ReceptionController@index')->name('receptions.index');
 Route::delete('admin/receptions/{reception}', array('uses' => 'ReceptionController@destroy', 'as' => 'receptions.destroy'));
 
+Route::get('admin/employees', 'EmployeeController@index')->name('employees.index');
+Route::post('admin/employees', 'EmployeeController@store')->name('employees.store');
+Route::delete('admin/employees/{employee}', array('uses'=>'EmployeeController@destroy', 'as'=>'employees.destroy'));
+
+
 
 Route::get('/download', 'HomeController@downloadZip');
-
 
 // Language set up
 Route::get('setlocale/{locale}', function($locale){

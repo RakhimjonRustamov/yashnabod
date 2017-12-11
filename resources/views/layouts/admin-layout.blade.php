@@ -39,6 +39,7 @@
                         <li class="{{ Request::is('admin/posts')?"active":""}}" ><a href="{{ url('admin/posts')}}">Posts</a></li>
                         <li class="{{ Request::is('admin/receptions')?"active":""}}" ><a href="{{ url('admin/receptions')}}">Receptions</a></li>
                         <li class="{{ Request::is('admin/posts/create')?"active":""}}" ><a href="{{ url('admin/posts/create')}}">Add New Post</a></li>
+                        <li class="{{ Request::is('admin/empoyees')?"active":""}}" ><a href="{{ url('admin/employees')}}">Employees</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
