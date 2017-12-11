@@ -57,15 +57,17 @@
                                         </div>
                                         <div class="modal-body">
                                             {!! Form::model($post, ['route'=> ['posts.update', $post->id], 'method'=>'PUT', 'files'=>true])!!}
-                                            {{ Form::label('title', 'Title:')}}
-                                            {{ Form::text('title', null, ['class'=>'form-control'])}}
-                                            {{ Form::label('slug', 'Slug:') }}
-                                            {{ Form::text('slug', null, array('class'=>'form-control', 'required'=>'', 'minlength'=>'5', 'maxlength'=>'100')) }}
+                                            {{ Form::label('title_uz', 'Title_Uz:')}}
+                                            {{ Form::text('title_uz', null, ['class'=>'form-control'])}}
+                                            {{ Form::label('title_ru', 'Title_Ru:')}}
+                                            {{ Form::text('title_ru', null, ['class'=>'form-control'])}}
                                             <label name="featured_image" style="margin-top:10px"> Upload New Image</label>
                                             <input type="file" name="featured_image">
-                                            <img src="{{ asset('images/'. $post->image)}}" height="60" width="80"/>
-                                            <p>{{ Form::label('body', 'Body:')}}</p>
-                                            {{ Form::textarea('body', null, ['class'=>'form-control'])}}
+                                            <img src="{{ asset('images/posts/'. $post->image)}}" height="60" width="80"/>
+                                            <p>{{ Form::label('body_uz', 'Body_Uz:')}}</p>
+                                            {{ Form::textarea('body_uz', null, ['class'=>'form-control'])}}
+                                            <p>{{ Form::label('body_ru', 'Body_Ru:')}}</p>
+                                            {{ Form::textarea('body_ru', null, ['class'=>'form-control'])}}
                                         </div>
                                         <div class="modal-footer">
                                             <div class="row">
