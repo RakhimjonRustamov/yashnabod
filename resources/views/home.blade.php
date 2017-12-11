@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('title','IndexPage')
 
+@section('stylesheets')
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
+
+@endsection
+
 @section('content')
 
     <!-- /////////////////////////////////////// container-fluid1 ////////////////////////////////////////// -->

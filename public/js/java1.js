@@ -154,5 +154,16 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function()
+{
+    $('#Carousel').carousel({
+        interval: 3000
+    }),
+        $('#Carousel1').carousel({
+            interval: 3000
+        })
+});
+
+
 
 

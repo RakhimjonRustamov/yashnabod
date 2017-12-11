@@ -17,8 +17,7 @@ html>body {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
-    font-weight: bold
-    
+    font-weight: bold;
 }
 
 
@@ -73,71 +72,3 @@ html>body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-
-
-#product1
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-
-#product2
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-#product3
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-
-#product4
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-#product5
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-
-#product6
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-#product7
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-
-#product8
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-#product9
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-
-#product10
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-#product11
-{
-
-    background-image: url(../photos/artel.jpg);
-}
-
-#product12
-{
-
-    background-image: url(../photos/artel.jpg);
-}   
