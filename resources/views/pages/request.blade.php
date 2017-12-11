@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-content')
 @section('title'| 'Apply Now')@stop
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/application.css') }}">
