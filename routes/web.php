@@ -77,14 +77,16 @@ Route::get('admin/residents', 'ResidentController@index')->name('residents.index
 Route::post('admin/residents', 'ResidentController@store')->name('residents.store');
 Route::put('admin/residents/{resident}', 'ResidentController@update')->name('residents.update');
 Route::delete('admin/residents/{resident}', array('uses' => 'ResidentController@destroy', 'as' => 'residents.destroy'));
+
 Route::get('admin/receptions', 'ReceptionController@index')->name('receptions.index');
 Route::delete('admin/receptions/{reception}', array('uses' => 'ReceptionController@destroy', 'as' => 'receptions.destroy'));
 
 Route::get('admin/employees', 'EmployeeController@index')->name('employees.index');
 Route::post('admin/employees', 'EmployeeController@store')->name('employees.store');
 Route::delete('admin/employees/{employee}', array('uses'=>'EmployeeController@destroy', 'as'=>'employees.destroy'));
+Route::put('admin/employees/{employee}', 'EmployeeController@update')->name('employees.update');
 
-
+Route::get('admin/offers', 'OfferController@index')->name('offers.index');
 
 Route::get('/download', 'HomeController@downloadZip');
 

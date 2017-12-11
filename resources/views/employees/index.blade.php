@@ -1,9 +1,8 @@
 @extends('layouts.admin-layout')
-@section('title', '| All Employees')
+@section('title', '|Bсе сотрудники')
 <style>
     .mybtn1 li{
         display:inline-block;
-
     }
     .mybtn{
         margin-left:10px;
@@ -16,9 +15,9 @@
             <table class="table">
                 <thead>
                 <th>#</th>
-                <th>Employee Name</th>
-                <th>Employee Position</th>
-                <th>Craeted At</th>
+                <th>Имя сотрудника</th>
+                <th>Должность сотрудника</th>
+                <th>Создан в</th>
                 <th></th>
                 </thead>
                 <tbody>
@@ -26,8 +25,8 @@
                     <tr>
                         <div class="col-md-8">
                             <td>{{ $employee->id}}</td>
-                            <td>{{ $employee->full_name}}</td>
-                            <td>{{ $employee->position }}</td>
+                            <td>{{ $employee->full_name_ru}}</td>
+                            <td>{{ $employee->position_ru }}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($employee->created_at))}}</td>
                             <td>
                             <td>
@@ -39,9 +38,9 @@
                                         <!-- Modal content-->
                                         <div class="modal-content">
                                             <div class="modal-body">
-                                                <img src="{{ asset('images/'. $employee->image)}}" height="300px" width="555px"/>
-                                                <h3><span>{{$employee->full_name}}</span></h3>
-                                                <p>{{$employee->position}}</p>
+                                                <img src="{{ asset('images/employees/'. $employee->image)}}" height="300px" width="555px"/>
+                                                <h3><span>{{$employee->full_name_ru}}</span></h3>
+                                                <p>{{$employee->position_ru}}</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <div class="row">
@@ -61,6 +60,44 @@
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit-{{ $employee->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="edit-{{ $employee->id }}" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                {!! Form::model($employee, ['route'=> ['employees.update', $employee->id], 'method'=>'PUT', 'files'=>true])!!}
+                                                {{ Form::label('full_name_uz', 'Xodimning Ismi:')}}
+                                                {{ Form::text('full_name_uz', null, ['class'=>'form-control'])}}
+                                                {{ Form::label('full_name_ru', 'Имя сотрудника:') }}
+                                                {{ Form::text('full_name_ru', null, array('class'=>'form-control', 'required'=>'')) }}
+                                                <label name="featured_image" style="margin-top:10px">Загрузить новое изображение</label>
+                                                <input type="file" name="featured_image">
+                                                <img src="{{ asset('images/employees/'. $employee->image)}}" height="60" width="80"/>
+                                                <p>{{ Form::label('position_uz', 'Xodim Lavozimi:')}}</p>
+                                                {{ Form::textarea('position_uz', null, ['class'=>'form-control'])}}
+                                                <p>{{ Form::label('position_ru', 'Должность сотрудника:')}}</p>
+                                                {{ Form::textarea('position_ru', null, ['class'=>'form-control'])}}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        {{ Form::submit('Сохранить изменения', ['class'=>'btn btn-success btn-block'])}}
+                                                        {!! Form::close()!!}
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Отмена</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
                         </div>
                     </tr>
                 @endforeach
@@ -71,16 +108,18 @@
         <!-- Begining of FORM -->
         <div class="col-md-4">
             <div>
-                <h1 align="center">Create New Employee</h1>
+                <h1 align="center">Создать нового сотрудника</h1>
                 <form action="{{ route('employees.store')}}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                    <label>Employee Name:</label>
-                    <input type="text" name="full_name" class="form-control">
-                    <label>Upload Featured Image:</label>
+                    <label>Имя сотрудника:</label>
+                    <input type="text" name="full_name_uz" placeholder="Узбек" required="required" class="form-control">
+                    <input type="text" name="full_name_ru" placeholder="Pусский" required="required" class="form-control">
+                    <label>Загрузить изображение:</label>
                     <input type="file" name="featured_image" class="form-control">
-                    <label>Employee Position</label>
-                    <input name="position" class="form-control" placeholder="Enter Employee Position">
-                    <button type="submit" row="10" class="btn btn-success btn-block">Save Employee</button>
+                    <label>Должность сотрудника</label>
+                    <input name="position_uz" class="form-control" rows="7" placeholder="Узбек" required="required">
+                    <input name="position_ru" class="form-control" rows="7" placeholder="Pусский" required="required">
+                    <button type="submit" class="btn btn-success btn-block">Сохранить сотрудника</button>
                 </form>
             </div>
             <div class="text-center">

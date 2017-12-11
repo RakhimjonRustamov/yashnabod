@@ -118,7 +118,7 @@ class PostController extends Controller
             $filename=time().'.'.$image->getClientOriginalExtension();
             $location=public_path('images/posts/'. $filename);
             Image::make($image)->resize(800,400)->save($location);
-            $oldFileName='/'.$post->image;
+            $oldFileName='/posts/'.$post->image;
             // update the database
             $post->image=$filename;
 

@@ -47,7 +47,7 @@ class ProductController extends Controller
         return redirect()->route('products.index');
     }
 
-    public function update(Request $request){
+    public function update(Request $request, $id){
         $this->validate($request, array(
             'product_name_uz'=> 'required|max:300',
             'product_name_ru'=> 'required|max:300',
@@ -56,7 +56,7 @@ class ProductController extends Controller
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
         ));
 
-        $product= new Product;
+        $product=Product::find($id);
         $product->product_info_uz=$request->product_info_uz;
         $product->product_name_uz=$request->product_name_uz;
         $product->product_info_ru=$request->product_info_ru;
@@ -69,7 +69,7 @@ class ProductController extends Controller
             $location=public_path('images/products/'. $filename);
             Image::make($image)->resize(800,400)->save($location);
             $product->product_image=$filename;
-            $oldFileName='images/products/'.$product->product_image;
+            $oldFileName='/products/'.$product->product_image;
 
             Storage::delete($oldFileName);
         }

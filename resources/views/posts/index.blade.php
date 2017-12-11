@@ -37,8 +37,8 @@
                     <tr>
                         <div class="col-md-8">
                         <td>{{ $post->id}}</td>
-                        <td>{{ strip_tags($post->title)}}</td>
-                        <td>{{ substr(strip_tags($post->body), 0, 50)}}{{ strlen(strip_tags($post->body)) >50 ? "...":""}}</td>
+                        <td>{{ strip_tags($post->title_ru)}}</td>
+                        <td>{{ substr(strip_tags($post->body_ru), 0, 50)}}{{ strlen(strip_tags($post->body_ru)) >50 ? "...":""}}</td>
                         <td>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</td>
                         </div>
                         <div class="col-md-4">
@@ -61,12 +61,12 @@
                                             {{ Form::text('title_uz', null, ['class'=>'form-control'])}}
                                             {{ Form::label('title_ru', 'Title_Ru:')}}
                                             {{ Form::text('title_ru', null, ['class'=>'form-control'])}}
-                                            <label name="featured_image" style="margin-top:10px"> Upload New Image</label>
+                                            <label name="featured_image" style="margin-top:10px"> Загрузить новое изображение</label>
                                             <input type="file" name="featured_image">
                                             <img src="{{ asset('images/posts/'. $post->image)}}" height="60" width="80"/>
-                                            <p>{{ Form::label('body_uz', 'Body_Uz:')}}</p>
+                                            <p>{{ Form::label('body_uz', 'Узбекский:')}}</p>
                                             {{ Form::textarea('body_uz', null, ['class'=>'form-control'])}}
-                                            <p>{{ Form::label('body_ru', 'Body_Ru:')}}</p>
+                                            <p>{{ Form::label('body_ru', 'Pусский:')}}</p>
                                             {{ Form::textarea('body_ru', null, ['class'=>'form-control'])}}
                                         </div>
                                         <div class="modal-footer">

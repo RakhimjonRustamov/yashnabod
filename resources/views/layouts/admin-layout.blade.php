@@ -40,6 +40,7 @@
                         <li class="{{ Request::is('admin/receptions')?"active":""}}" ><a href="{{ url('admin/receptions')}}">Receptions</a></li>
                         <li class="{{ Request::is('admin/posts/create')?"active":""}}" ><a href="{{ url('admin/posts/create')}}">Add New Post</a></li>
                         <li class="{{ Request::is('admin/empoyees')?"active":""}}" ><a href="{{ url('admin/employees')}}">Employees</a></li>
+                        <li class="{{ Request::is('admin/offers')?"active":""}}" ><a href="{{ url('admin/offers')}}">Offers</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -47,7 +48,7 @@
                             <a href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                Logout
+                                Bыйти
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}

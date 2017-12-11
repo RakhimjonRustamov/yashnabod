@@ -47,7 +47,7 @@ class ResidentController extends Controller
     }
 
 
-    public function update(Request $request){
+    public function update(Request $request, $id){
         $this->validate($request, array(
             'resident_name_uz'=> 'required|max:300',
             'resident_name_ru'=> 'required|max:300',
@@ -56,7 +56,7 @@ class ResidentController extends Controller
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
 
         ));
-        $resident= new Resident;
+        $resident=Resident::find($id);
         $resident->resident_info_uz=$request->resident_info_uz;
         $resident->resident_info_ru=$request->resident_info_ru;
         $resident->resident_name_uz=$request->resident_name_uz;
@@ -67,7 +67,7 @@ class ResidentController extends Controller
             $filename=time().'.'.$image->getClientOriginalExtension();
             $location=public_path('images/residents/'. $filename);
             Image::make($image)->resize(800,400)->save($location);
-            $oldFileName='images/residents/'.$resident->resident_logo;
+            $oldFileName='/residents/'.$resident->resident_logo;
             // update the database
             $resident->resident_logo=$filename;
 

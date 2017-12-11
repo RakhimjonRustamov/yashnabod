@@ -107,7 +107,7 @@
                     <label>Resident Name:</label>
                     <input type="text" name="resident_name_uz" class="form-control" placeholder="Узбек" required="required">
                     <input type="text" name="resident_name_ru" class="form-control" placeholder="Pусский" required="required">
-                    <label>Upload Resident Logo:</label>
+                    <label>Загрузить новое изображение</label>
                     <input type="file" name="featured_image" class="form-control">
                     <label>Resident Info</label>
                     <textarea name="resident_info_uz" class="form-control" rows="7" placeholder="Узбек" required="required"></textarea>
