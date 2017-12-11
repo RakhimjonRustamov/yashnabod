@@ -8,17 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
+    @yield('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
-    @yield('stylesheets')
     @yield('scripts')
 
     <script type='text/javascript' src='{{asset('js/jquery-3.2.1.min.js')}}'></script>
-    <script type='text/javascript' src='{{asset('js/bootstrap.min.js')}}'></script>
+    <script type='text/javascript' src='{{  asset('js/bootstrap.min.js')}}'></script>
     <link href="https://fonts.googleapis.com/css?family=Andika|Comfortaa" rel="stylesheet">
 </head>
 <!--///////////////////////////////////// body start /////////////////////////////////////////// -->
@@ -39,21 +37,17 @@
         <div class="container">
             <!-- left nav top -->
             <ul class="nav navbar-nav pull-left">
-                <li><a href="+998909930686"><span class="navbar-elements">ЕСТЬ ВОПРОСЫ? ЗВОНИТЕ: <b>+963000000000</b></span></a></li>
+                <li><a href="#"><span class="navbar-elements1">ЕСТЬ ВОПРОСЫ? ЗВОНИТЕ: <b>+963000000000</b></span></a></li>
             </ul>
             <!-- right nav top -->
             <ul class="nav navbar-nav pull-right">
                 <li>
-                     <span class="glyphicon glyphicon-search" id="glyphicon-search">
+                        <span class="glyphicon glyphicon-search" id="glyphicon-search">
             <form action="{{route('search')}}" autocomplete="off">
              <input id="search" name="search" type="text" placeholder="Что ищем?"><input id="search_submit" value="Rechercher" type="submit">
             </form>
           </span>
-                    {{--<span class="glyphicon glyphicon-search" id="glyphicon-search">
-                         <input type="text" name="search"/>
-                    </span>--}}
                 </li>
-                <a href=""><i class="fa fa-user-circle" id="fa-user-circle"></i><span>Вход</span></a>
                 <a href="{{route('lang.switch', ['locale'=>'ru'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>Russian</span></a>
                 <a href="{{route('lang.switch', ['locale'=>'en'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>English</span></a>
                 <a href="{{route('lang.switch', ['locale'=>'uz'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>Uzbek</span></a>
@@ -72,32 +66,86 @@
                 <a class="navbar-brand" href="#myPage"><img src="{{asset('images/photos/logo.png')}}" id="logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li class="dropdown dropdown1">
+                        <a class="navbar-elements1" data-toggle="dropdown" href="#">О нас </a>
+                        <ul class="dropdown-menu dropdown-menu1">
+                            <li><a class="dropdown-elements1" href="{{url('/preference-yic')}}" style="">Почему Яшнабад</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdown-elements1" href="{{url('/aim')}}">Главная информация</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdown-elements1" href="{{url('/coordinated-consulting')}}">Координационный Совет</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdown-elements1" href="{{url('/products')}}">Наши продукции</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdown-elements1" href="{{url('/staff')}}">Сотрудники</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown1">
+                        <a class="navbar-elements1" data-toggle="dropdown" href="#">Регистрация</a>
+                        <ul class="dropdown-menu dropdown-menu1">
+                            <li><a class="dropdown-elements1" href="{{url('beresident')}}">Как стать резидентом?</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdown-elements1" href="{{url('/how-to-join')}}">Как вступить?</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdown-elements1" href="{{url('/questions')}}">Вопросы и ответы</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdown-elements1" href="{{url('request')}}">Подать заявку</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="navbar-elements1" href="{{url('/residents')}}">Наши резиденты</a>
+                    </li>
+                    <li>
+                        <a class="navbar-elements1" href="{{url('/zones')}}">Зоны производства</a>
+                    </li>
+                    <li class="dropdown dropdown1">
+                        <a class="navbar-elements1" data-toggle="dropdown" href="#">Пресса</a>
+                        <ul class="dropdown-menu dropdown-menu1">
+                            <li><a class="dropdown-elements1" href="{{url('/news')}}">Новости</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdown-elements1" href="{{url('/popular-info')}}">СМИ о нас</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="navbar-elements1" href="{{url('/contact')}}">Контакты</a>
+                    </li>
+                </ul>
+                <!--////////////////////////////////////////////////// mobile navbar ///////////////////////////////////////-->
+                <ul class="nav navbar-nav navbar-right visible-xs">
                     <li class="dropdown">
-                        <a class="navbar-elements1" data-toggle="dropdown" href="#">О нас</a>
-                        <ul class="dropdown-content">
-                            <a href="{{url('/preference-yic')}}">Почему Яшнабод</a>
-                            <a href="{{url('/news')}}">Новости</a>
-                            <a href="{{url('/coordinated-consulting')}}">Координационный Совет</a>
+                        <a class="dropdown-toggle navbar-elements1" data-toggle="dropdown" href="#">О нас<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="navbar-elements1" href="{{url('/preference-yic')}}">Почему Яшнабад</a></li><li class="divider"></li>
+                            <li><a class="navbar-elements1" href="{{url('/aim')}}">Главная информация</a></li><li class="divider"></li>
+                            <li><a class="navbar-elements1" href="{{url('/coordinated-consulting')}}">Координационный Совет</a></li><li class="divider"></li>
+                            <li><a class="navbar-elements1" href="{{url('/products')}}">Наши продукции</a></li><li class="divider"></li>
+                            <li><a class="navbar-elements1" href="{{url('/staff')}}">Сотрудники</a></li><li class="divider"></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="navbar-elements1" data-toggle="dropdown" href="#">Регистрация</a>
-                        <ul class="dropdown-content">
-                            <a href="{{url('/how-to-join')}}">Как вступить?</a>
-                            <a href="{{url('/questions')}}">Вопросы и ответы</a>
-                            <a href="{{url('request')}}">Подать заявку</a>
+                        <a class="dropdown-toggle navbar-elements1" data-toggle="dropdown" href="#">Регистрация<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="navbar-elements1" href="{{url('beresident')}}">Как стать резидентом?</a></li><li class="divider"></li>
+                            <li><a class="navbar-elements1" href="{{url('/how-to-join')}}">Как вступить?</a></li><li class="divider"></li>
+                            <li><a class="navbar-elements1" href="{{url('/questions')}}">Вопросы и ответы</a></li><li class="divider"></li>
+                            <li><a class="navbar-elements1" href="{{url('request')}}">Подать заявку</a></li><li class="divider"></li>
                         </ul>
                     </li>
                     <li>
                         <a class="navbar-elements1" href="{{url('/residents')}}">Резиденты</a>
                     </li>
+                    <li>
+                        <a class="navbar-elements1" href="{{url('/zones')}}">Зоны производства</a>
+                    </li>
                     <li class="dropdown">
-                        <a class="navbar-elements1" data-toggle="dropdown" href="">Зоны производства</a>
-                        <ul class="dropdown-content">
-                            <a href="{{url('/products')}}">Наши продукции</a>
+                        <a class="dropdown-toggle navbar-elements1" data-toggle="dropdown" href="#">Пресса<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="navbar-elements1" href="{{url('/news')}}">Новости</a></li><li class="divider"></li>
+                            <li><a class="navbar-elements1" href="{{url('/popular-info')}}">СМИ о нас</a></li><li class="divider"></li>
                         </ul>
                     </li>
+
                     <li>
                         <a class="navbar-elements1" href="{{url('/contact')}}">Контакты</a>
                     </li>
@@ -110,7 +158,7 @@
 
 
 <!-- ////////////////////////////////// container-fluid /////////////////////////////////////////////////// -->
-<div class="container-fluid" id="container-fluid">
+<div class="container-fluid" id="other-container-fluid">
     <!-- ////////////////////////////////// fade container ///////////////////////////////////////// -->
     <div class="container" id="fade-container">
         <h1>Yashnabod Innovation Center</h1>
@@ -167,5 +215,6 @@
 </footer>
 <!--/////////////////////////////////////////////// end Footer /////////////////////////////////////////////////////////////  -->
 <a href="#" class="scrollToTop"> <span class="fa fa-arrow-up"></span></a>
+<script src="{{asset('js/java1.js')}}"></script>
 </body>
 </html>

@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('title','IndexPage')
 
+@section('stylesheets')
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
+
+@endsection
+
 @section('content')
 
     <!-- /////////////////////////////////////// container-fluid1 ////////////////////////////////////////// -->
@@ -39,7 +45,7 @@
                                 <div class="item active">
                                     <div class="row">
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product1">
+                                            <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
@@ -48,7 +54,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product2">
+                                            <div class="products thumbnail" style="background-image: url('{{asset('images/photos/artel.jpg')}}')">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
@@ -57,7 +63,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product3">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
@@ -66,47 +72,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product4">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product5">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product6">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product7">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product8">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
@@ -119,7 +85,7 @@
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product9">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
@@ -128,7 +94,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product10">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
@@ -137,7 +103,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product11">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
@@ -146,7 +112,47 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" id="product12">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
+                                            </div>
+                                            <div class="readmore-box">
+                                                <a href="html/products-single.html">
+                                                    <div class="product-text">Hello World</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
+                                            </div>
+                                            <div class="readmore-box">
+                                                <a href="html/products-single.html">
+                                                    <div class="product-text">Hello World</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
+                                            </div>
+                                            <div class="readmore-box">
+                                                <a href="html/products-single.html">
+                                                    <div class="product-text">Hello World</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
+                                            </div>
+                                            <div class="readmore-box">
+                                                <a href="html/products-single.html">
+                                                    <div class="product-text">Hello World</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
@@ -327,60 +333,7 @@
                         </div>
                     </div>
 
-                    <div class="widget-sidebar">
-                        <h2 class="title-widget-sidebar">// Архив</h2>
-                        <div class="last-post">
-                            <button class="accordion">Октябрь</button>
-                            <div class="panel">
-                                <li class="recent-post">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive">
-                                    </div>
-                                    <a href="html/news.html"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i>Октябрь</small></p>
-                                </li>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="last-post">
-                            <button class="accordion">Сентябрь</button>
-                            <div class="panel">
-                                <li class="recent-post">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive">
-                                    </div>
-                                    <a href="html/news.html"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i>Сентябрь</small></p>
-                                </li>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="last-post">
-                            <button class="accordion">Август</button>
-                            <div class="panel">
-                                <li class="recent-post">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive">
-                                    </div>
-                                    <a href="html/news.html"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i>Август</small></p>
-                                </li>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="last-post">
-                            <button class="accordion">Июнь</button>
-                            <div class="panel">
-                                <li class="recent-post">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/Wallpapers/Wallpaper1.jpg')}}" class="img-responsive">
-                                    </div>
-                                    <a href="html/news.html"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i>Июнь</small></p>
-                                </li>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -397,13 +350,55 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <div class="row">
-                                    <div class="col-md-2"><a href="html/residents-single.html" class="thumbnail"><img src="{{asset('images/photos/artel.jpg')}}" alt="Image" style="max-width:100%;"></a></div>
-                                    <div class="col-md-2"><a href="html/residents-single.html" class="thumbnail"><img src="{{asset('images/photos/artel.jpg')}}" alt="Image" style="max-width:100%;"></a></div>
-                                    <div class="col-md-2"><a href="html/residents-single.html" class="thumbnail"><img src="{{asset('images/photos/artel.jpg')}}" alt="Image" style="max-width:100%;"></a></div>
-                                    <div class="col-md-2"><a href="html/residents-single.html" class="thumbnail"><img src="{{asset('images/photos/artel.jpg')}}" alt="Image" style="max-width:100%;"></a></div>
-                                    <div class="col-md-2"><a href="html/residents-single.html" class="thumbnail"><img src="{{asset('images/photos/artel.jpg')}}" alt="Image" style="max-width:100%;"></a></div>
-                                    <div class="col-md-2"><a href="html/residents-single.html" class="thumbnail"><img src="{{asset('images/photos/artel.jpg')}}" alt="Image" style="max-width:100%;"></a></div>
-                                </div>
+                                    <div class="col-md-2 residents-column">
+                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        </div>
+                                        <div class="readmore-box-residents">
+                                            <a href="html/products-single.html">
+                                                <div class="product-text">Читать дальше</div>                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 residents-column">
+                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        </div>
+                                        <div class="readmore-box-residents">
+                                            <a href="html/products-single.html">
+                                                <div class="product-text">Читать дальше</div>                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 residents-column">
+                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        </div>
+                                        <div class="readmore-box-residents">
+                                            <a href="html/products-single.html">
+                                                <div class="product-text">Читать дальше</div>                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 residents-column">
+                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        </div>
+                                        <div class="readmore-box-residents">
+                                            <a href="html/products-single.html">
+                                                <div class="product-text">Читать дальше</div>                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 residents-column">
+                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        </div>
+                                        <div class="readmore-box-residents">
+                                            <a href="html/products-single.html">
+                                                <div class="product-text">Читать дальше</div>                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 residents-column">
+                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        </div>
+                                        <div class="readmore-box-residents">
+                                            <a href="html/products-single.html">
+                                                <div class="product-text">Читать дальше</div>                                            </a>
+                                        </div>
+                                    </div>
+                                    </div>
                                 <!--.row-->
                             </div>
                         </div>
