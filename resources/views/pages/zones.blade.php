@@ -6,6 +6,9 @@
 @endsection
 
 @section('content')
+@section('page-title')
+<h1>Зоны производства</h1>
+@endsection
 
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid-zones">

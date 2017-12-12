@@ -17,7 +17,7 @@
 
     <script type='text/javascript' src='{{asset('js/jquery-3.2.1.min.js')}}'></script>
     <script type='text/javascript' src='{{  asset('js/bootstrap.min.js')}}'></script>
-    <link href="https://fonts.googleapis.com/css?family=Andika|Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 <!--///////////////////////////////////// body start /////////////////////////////////////////// -->
 
@@ -216,5 +216,6 @@
 <!--/////////////////////////////////////////////// end Footer /////////////////////////////////////////////////////////////  -->
 <a href="#" class="scrollToTop"> <span class="fa fa-arrow-up"></span></a>
 <script src="{{asset('js/java1.js')}}"></script>
+<script src="{{asset('js/java.js')}}"></script>
 </body>
 </html>

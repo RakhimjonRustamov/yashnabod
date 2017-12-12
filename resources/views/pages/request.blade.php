@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+@section('page-title')
+<h1>Подать заявку</h1>
+@endsection
     <div class="container-fluid dotted" id="application-container-fluid1">
         <h1>Подать заявку</h1>
         <div class="container" id="container">

@@ -6,6 +6,9 @@
 @endsection
 
 @section('content')
+@section('page-title')
+<h1>Сотрудники</h1>
+@endsection
     <div class="container-fluid dotted">
         <div class="container" id="staff-container-fluid1">
             <h1>Сотрудники</h1>

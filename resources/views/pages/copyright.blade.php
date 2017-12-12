@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/copyright.css')}}">
 @endsection
 @section('content')
+@section('page-title')
+<h1>Защита авторских прав на объекты<br>интеллектуальной собственности</h1>
+@endsection
 
     <div class="container-fluid container-fluid-copyright dotted" >
         <div class="container" >

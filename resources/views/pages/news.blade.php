@@ -4,6 +4,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/news.css') }}">
 @endsection
 @section('content')
+@section('page-title')
+<h1>Новости</h1>
+@endsection
 
     <div class="container dotted" id="news-container-fluid1">
         <h1>Новости</h1>

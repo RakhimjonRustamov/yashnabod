@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/credits.css')}}">
 @endsection
 @section('content')
+@section('page-title')
+<h1>Льготное кредитование</h1>
+@endsection
 
     <div class="container-fluid container-fluid-credits dotted" >
         <div class="container" >

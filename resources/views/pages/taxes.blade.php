@@ -5,7 +5,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/taxes.css')}}">
 @endsection
 @section('content')
-
+@section('page-title')
+<h1>«Налоговые каникулы»<br> для резидентов технопарка</h1>
+@endsection
 
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid-taxes">

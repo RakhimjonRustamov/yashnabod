@@ -4,6 +4,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/beresident.css')}}">
 @endsection
 @section('content')
+@section('page-title')
+<h1>Как стать резидентом?</h1>
+@endsection
 
     <div class="container-fluid container-fluid-beresident dotted" >
         <div class="container" >

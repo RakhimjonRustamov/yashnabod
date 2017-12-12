@@ -5,7 +5,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/areas.css')}}">
 @endsection
 @section('content')
-
+@section('page-title')
+<h1>Доступные производственные площади</h1>
+@endsection
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid-areas">
             <h1>Доступные производственные площади</h1>

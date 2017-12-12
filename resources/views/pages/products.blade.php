@@ -8,6 +8,9 @@
 @endsection
 
 @section('content')
+@section('page-title')
+<h1>Наши продукции</h1>
+@endsection
     <div class="container dotted" id="products-container-fluid1">
         <h1>Наши продукции</h1>
         <div class="row">

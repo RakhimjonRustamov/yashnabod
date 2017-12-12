@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/sponsorship.css')}}">
 @endsection
 @section('content')
+@section('page-title')
+<h1>Привлечение спонсоров и инвесторов<br>для реализации проектов</h1>
+@endsection
 
     <div class="container-fluid container-fluid-sponsorship dotted">
         <div class="container">

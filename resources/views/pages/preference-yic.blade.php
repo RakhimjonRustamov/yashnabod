@@ -5,7 +5,7 @@
 @endsection
 @section('content')
        @section('page-title')
-        <h1>Sulton Ikromov</h1>
+        <h1>Почему Яшнабад?</h1>
        @endsection
                 <div class="container-fluid dotted">
                     <div class="container" id="why-container-fluid1">

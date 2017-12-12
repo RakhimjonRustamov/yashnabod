@@ -261,7 +261,7 @@ a.navbar-brand
 
 #other-container-fluid {
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../Wallpapers/main-wallpaper.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/Wallpapers/main-wallpaper.jpg');
     position: relative;
     background-attachment: fixed;
     background-position: center;

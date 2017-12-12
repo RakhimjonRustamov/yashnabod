@@ -13,15 +13,13 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
 
-
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     @yield('scripts')
 
     <script type='text/javascript' src='{{asset('js/jquery-3.2.1.min.js')}}'></script>
     <script type='text/javascript' src='{{asset('js/bootstrap.min.js')}}'></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 </head>
 <!--///////////////////////////////////// body start /////////////////////////////////////////// -->

@@ -4,6 +4,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/contact.css') }}">
 @endsection
 @section('content')
+@section('page-title')
+<h1>Контакты</h1>
+@endsection
     <div class="container-fluid dotted" id="container-fluid-contacts1">
         <h1>Контакты</h1>
         <div class="row" id="row-contacts">

@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/promotion.css')}}">
 @endsection
 @section('content')
+@section('page-title')
+<h1>Содействие в прохождении<br>разрешительных процедур</h1>
+@endsection
 
     <div class="container-fluid container-fluid-promotion dotted" >
         <div class="container" >

@@ -4,6 +4,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/questionsanswers.css') }}">
 @endsection
 @section('content')
+@section('page-title')
+<h1>Вопросы и ответы</h1>
+@endsection
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid-questionsanswer1">
             <h1>Вопросы и ответы</h1>
