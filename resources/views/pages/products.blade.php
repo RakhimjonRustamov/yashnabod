@@ -15,7 +15,7 @@
         <h1>Наши продукции</h1>
         <div class="row">
             <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail">
+                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
                 </div>
                 <div class="readmore-box">
                     <a href="">
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail">
+                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
                 </div>
                 <div class="readmore-box">
                     <a href="">

@@ -8,12 +8,14 @@
 <h1>Новости</h1>
 @endsection
 
-    <div class="container dotted" id="news-container-fluid1">
+<div class="container-fluid  dotted">
+    <div class="container" id="news-container-fluid1">
         <h1>Новости</h1>
         <div class="row">
-            <div class="col-md-8">
-                <div class="news-photo">
-                    <img class="img-responsive thumbnail" src="{{asset('images/Wallpapers/Wallpaper3.jpg')}}">
+            <div class="col-md-8 " >
+                <div class="news-column">
+                    <div class="news thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                    </div>
                 </div>
                 <div class="news-text">
                     <p>Технопарк — Это территориальная, научная, технологическая и техническая база для реализации инновационных проектов. Технопарк- имущественный комплекс, в котором объединены научно-исследовательские институты, объекты индустрии, деловые центры, выставочные площадки, учебные заведения, а также обслуживающие объекты: средства транспорта, подъездные пути, жилые поселки, охрана. Международная ассоциация технологических парков даёт своё определение объекту инновационной инфраструктуры. По мнению ассоциации, технопарк — это организация, управляемая специалистами, главной целью которых является увеличение благосостояния местного сообщества посредством продвижения инновационной культуры, а также состязательности инновационного бизнеса и научных организаций. Для достижения этих целей технопарк стимулирует и управляет потоками знаний и технологий между университетами, научно-исследовательскими институтами, компаниями и рынками. Он упрощает создание и рост инновационным компаниям с помощью инкубационных процессов и процессов выведения новых компаний из существующих (spin-off processes). Технопарк помимо высококачественных площадей обеспечивает другие услуги..</p>
@@ -26,95 +28,52 @@
                     <div class="content-widget-sidebar">
                         <ul>
                             <li class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper3.jpg')}}" class="img-responsive">
+                               <a href="">
+                                <div class="news-column1">
+                                    <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                    </div>
                                 </div>
-                                <a href="#"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> </small></p>
+                                <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                               </a>
                             </li>
                             <hr>
                             <li class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper3.jpg')}}" class="img-responsive">
-                                </div>
-                                <a href="#"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i></small></p>
+                                <a href="">
+                                    <div class="news-column1">
+                                        <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        </div>
+                                    </div>
+                                    <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                                </a>
                             </li>
                             <hr>
                             <li class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper3.jpg')}}" class="img-responsive">
-                                </div>
-                                <a href="#"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i></small></p>
+                                <a href="">
+                                    <div class="news-column1">
+                                        <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        </div>
+                                    </div>
+                                    <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                                </a>
                             </li>
                             <hr>
                             <li class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper3.jpg')}}" class="img-responsive">
-                                </div>
-                                <a href="#"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i></small></p>
+                                <a href="">
+                                    <div class="news-column1">
+                                        <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        </div>
+                                    </div>
+                                    <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                                </a>
                             </li>
+                            <hr>
                         </ul>
                     </div>
                 </div>
-                <div class="widget-sidebar">
-                    <h2 class="title-widget-sidebar">// Архив</h2>
-                    <div class="last-post">
-                        <button class="accordion">Октябрь</button>
-                        <div class="panel">
-                            <li class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper3.jpg')}}" class="img-responsive">
-                                </div>
-                                <a href="#"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i>Октябрь</small></p>
-                            </li>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="last-post">
-                        <button class="accordion">Сентябрь</button>
-                        <div class="panel">
-                            <li class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper3.jpg')}}" class="img-responsive">
-                                </div>
-                                <a href="#"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i>Сентябрь</small></p>
-                            </li>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="last-post">
-                        <button class="accordion">Август</button>
-                        <div class="panel">
-                            <li class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper3.jpg')}}" class="img-responsive">
-                                </div>
-                                <a href="#"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i>Август</small></p>
-                            </li>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="last-post">
-                        <button class="accordion">Июнь</button>
-                        <div class="panel">
-                            <li class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{asset('images/Wallpapers/Wallpaper3.jpg')}}" class="img-responsive">
-                                </div>
-                                <a href="#"><h5>Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i>Июнь</small></p>
-                            </li>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
+</div>
 
 @endsection
