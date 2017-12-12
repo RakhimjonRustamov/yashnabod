@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-content')
 @section('title'| 'News Single')@stop
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/news.css') }}">

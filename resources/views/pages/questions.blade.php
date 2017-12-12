@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-content')
 @section('title'| 'Preference-yic')@stop
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/questionsanswers.css') }}">

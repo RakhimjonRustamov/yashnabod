@@ -161,9 +161,9 @@
 <div class="container-fluid" id="other-container-fluid">
     <!-- ////////////////////////////////// fade container ///////////////////////////////////////// -->
     <div class="container" id="fade-container">
-        <h1>Yashnabod Innovation Center</h1>
-        <p>Инновационный центр, где созданы лучшие условия для деятельности и развития IT компаний в Узбекистане
-        </p>
+        <h1>@yield('page-title')</h1>
+        <hr width="400px">
+        <hr width="50px">
         <div class="row">
             <div class="submit-wrapper">
                 <a href="#">@lang('main.language')</a>

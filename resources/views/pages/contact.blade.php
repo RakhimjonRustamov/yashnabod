@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-content')
 @section('title'| 'Contact')@stop
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/contact.css') }}">

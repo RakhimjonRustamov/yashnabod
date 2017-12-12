@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-content')
 @section('title'| 'Coordination')@stop
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/coordinating-council.css') }}">

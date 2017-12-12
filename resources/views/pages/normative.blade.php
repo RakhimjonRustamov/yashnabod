@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-content')
 @section('title', 'Normative')
 
 @section('stylesheets')
