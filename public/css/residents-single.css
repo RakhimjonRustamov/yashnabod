@@ -1,0 +1,34 @@
+html>body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+#products-single
+{
+	background-image: url(../photos/artel.jpg););
+	background-repeat:no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 300px;
+    width: 100%;
+}
+
+
+#products-single-container>h1
+{
+	font-size: 32px;
+    color: #0072BC;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold
+}
+
+.product-information
+{
+  color: #727A7E;
+  font-size: 17px;
+  text-align: justify;
+}
+
+

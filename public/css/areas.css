@@ -1,0 +1,45 @@
+html>body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+
+#areas-container-fluid
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/Wallpapers/news-wallpaper1.jpg');
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 650px;
+}
+#container-fluid-areas
+{
+    color: #727A7E;
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+#container-fluid-areas>h1
+{
+    font-size: 32px;
+    color: #0072BC;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.interval-areas
+{
+    margin-bottom: 10px;
+}
+.interval-areas-inner
+{
+    margin-bottom: 10px;
+}
+#interval-areas-inner
+{
+    padding-left: 18px;
+}
+

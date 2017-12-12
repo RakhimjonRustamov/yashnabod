@@ -1,0 +1,41 @@
+html>body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+
+
+#staff-container-fluid1>h1
+{
+	font-size: 32px;
+    color: #0072BC;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+tr,th
+{
+	text-align: center !important;
+	vertical-align: middle;
+}
+
+.my-image{
+	text-align:center; 
+	width: 150px;
+	height: 150px;
+}
+.table
+{
+  padding-top: 140px;
+  color: #727A7E;
+  font-size: 17px;
+  text-align: justify;
+}
+.table>tbody>tr>td
+{
+	vertical-align: middle !important;
+}
+

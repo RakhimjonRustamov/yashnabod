@@ -1,0 +1,28 @@
+html>body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+
+#container-fluid-reception
+{
+    color: #727A7E;
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+#container-fluid-reception>h1
+{
+    font-size: 32px;
+    color: #0072BC;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold
+}
+.icon-reception
+{
+    margin-left: 5px;
+}
+
+

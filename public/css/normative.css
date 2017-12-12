@@ -1,0 +1,27 @@
+html>body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+
+/*----------------------------------------Container-fluid1----------------------------------------*/
+#normative-container-fluid1
+{
+	margin-bottom: 50px;
+}
+#normative-container-fluid1>h1 {
+    font-size: 32px;
+    color: #0072BC;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#normative-container-fluid1>ul
+{
+	color: #727A7E;
+    font-size: 17px;
+    text-align: justify;
+}
+
+

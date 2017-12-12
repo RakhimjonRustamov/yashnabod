@@ -1,0 +1,31 @@
+html>body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+
+.container-fluid-credits
+{
+	color: #727A7E;
+	font-size: 17px;
+	text-align: justify;
+	margin-bottom: 30px;
+}
+.title
+{
+	font-size: 32px;
+    color: #0072BC;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold
+}
+#interval-credits
+{
+	margin-bottom: 20px;
+	padding-left: 18px;
+}
+.interval-credits
+{
+	margin-bottom: 10px;
+}
