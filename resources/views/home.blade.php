@@ -283,61 +283,182 @@
         <div class="container" id="container-fluid5">
             <h1>Новости</h1>
             <div class="row">
-                <div class="col-lg-8">
+
+                <div class="col-md-8">
                     <div class="row">
-                        @foreach($posts as $post)
-                        <div class="col-md-6 col-sm-12 news-col">
-                            <div class="post">
-                                <div class="post-img-content">
-                                    <img src="{{asset('images/'.$post->image)}}" class="img-responsive" />
-                                    <span class="post-title"><b>{{$post->title}}</b><br /></span>
-                                </div>
-                                <div class="content">
-                                    <div class="author">
-                                        <small><i class="fa fa-calendar" data-original-title="" title=""></i></small>
-                                        <time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time>
-                                    </div>
-                                    <div>
-                                    {{substr($post->body, 0, 245)}}{{strlen($post->body)>50 ? "...":""}}
-                                    </div>
-                                    <div>
-                                        <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
+                        <div class="col-md-6 col-sm-12 news-column">
+
+                            <div class="news thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
                             </div>
+                            <div class="content">
+                                <time datetime="2014-01-20"><h3>02/20/2014</h3></time>
+                                <p class="news-text">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                </p>
+
+                            </div>
+                            <div class="hidden-md hidden-lg">
+                                <button class="btn btn-primary pull-right">Читать дальше</button>
+                            </div>
+
+
                         </div>
-                        @endforeach
+                        <div class="col-md-6 col-sm-12 news-column">
+
+                            <div class="news thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                            </div>
+                            <div class="content">
+                                <time datetime="2014-01-20"><h3>02/20/2014</h3></time>
+                                <p class="news-text" >
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                </p>
+
+                            </div>
+                            <div class="hidden-md hidden-lg">
+                                <button class="btn btn-primary pull-right">Читать дальше</button>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-sm-12 news-column">
+
+                            <div class="news thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                            </div>
+                            <div class="content">
+                                <time datetime="2014-01-20"><h3>02/20/2014</h3></time>
+                                <p class="news-text" >
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                </p>
+                                <div class="hidden-md hidden-lg">
+                                    <button class="btn btn-primary pull-right">Читать дальше</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-sm-12 news-column">
+
+                            <div class="news thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                            </div>
+                            <div class="content">
+                                <time datetime="2014-01-20"><h3>02/20/2014</h3></time>
+                                <p class="news-text" >
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                </p>
+                                <div class="hidden-md hidden-lg">
+                                    <button class="btn btn-primary pull-right">Читать дальше</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
-                    {!! $posts->links()!!}
                 </div>
-
-
-
-                <!--///////////////////////////////////////////////////// RECENT POST  ///////////////////////////////////////////-->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <div class="widget-sidebar">
                         <h2 class="title-widget-sidebar">// Последние новости</h2>
                         <div class="content-widget-sidebar">
                             <ul>
-                                @foreach($posts as $post)
                                 <li class="recent-post">
-                                    <div class="post-img">
-                                        <a href="{{url('/news/'.$post->slug)}}"><img src="{{asset('images/'.$post->image)}}" class="img-responsive"></a>
-                                    </div>
-                                    <a href="{{url('/news/'.$post->slug)}}"><h5>{{$post->title}}</h5></a>
-                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> </small></p>
+                                    <a href="">
+                                        <div class="news-column1">
+                                            <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                            </div>
+                                        </div>
+                                        <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                                    </a>
+
                                 </li>
                                 <hr>
-                                @endforeach
+                                <li class="recent-post">
+                                    <a href="">
+                                        <div class="news-column1">
+                                            <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                            </div>
+                                        </div>
+                                        <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                                    </a>
+                                </li>
+                                <hr>
+                                <li class="recent-post">
+                                    <a href="">
+                                        <div class="news-column1">
+                                            <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                            </div>
+                                        </div>
+                                        <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                                    </a>
+                                </li>
+                                <hr>
+                                <li class="recent-post">
+                                    <a href="">
+                                        <div class="news-column1">
+                                            <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                            </div>
+                                        </div>
+                                        <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                                    </a>
+                                </li>
+                                <hr>
                             </ul>
                         </div>
                     </div>
-
 
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+                <!--                <div class="col-lg-8">-->
+                <!--                    <div class="row">-->
+                <!--                        @foreach($posts as $post)-->
+                <!--                            <div class="col-md-6 col-sm-12 news-col">-->
+                <!--                                <div class="news thumbnail" style="background-image: url('{{url('/images/'.$post->title)}}')">-->
+                <!--                                </div>-->
+                <!--                                <div class="content">-->
+                <!--                                    <time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time>-->
+                <!--                                    <p class="news-text" style="position: relative;">-->
+                <!--                                        {{substr($post->body, 0, 245)}}{{strlen($post->body)>50 ? "...":""}}-->
+                <!--                                    </p>-->
+                <!--                                    <div>-->
+                <!--                                        <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        @endforeach-->
+                <!--                    </div>-->
+                <!--                    {!! $posts->links()!!}-->
+                <!--                </div>-->
+
+                <!--///////////////////////////////////////////////////// RECENT POST  ///////////////////////////////////////////-->
+<!--                <div class="col-lg-4">-->
+<!--                    <div class="widget-sidebar">-->
+<!--                        <h2 class="title-widget-sidebar">// Последние новости</h2>-->
+<!--                        <div class="content-widget-sidebar">-->
+<!--                            <ul>-->
+<!--                                @foreach($posts as $post)-->
+<!--                                <li class="recent-post">-->
+<!--                                    <div class="post-img">-->
+<!--                                        <a href="{{url('/news/'.$post->slug)}}"><img src="{{asset('images/'.$post->image)}}" class="img-responsive"></a>-->
+<!--                                    </div>-->
+<!--                                    <a href="{{url('/news/'.$post->slug)}}"><h5>{{$post->title}}</h5></a>-->
+<!--                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> </small></p>-->
+<!--                                </li>-->
+<!--                                <hr>-->
+<!--                                @endforeach-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!---->
+<!---->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
     <!-- ///////////////////////////////////////////// end container-fluid5 ////////////////////////////////////////////  -->
     <!-- ///////////////////////////////////////////// container-fluid6 /////////////////////////////////////////////////  -->
     <div class="container-fluid dotted">
@@ -405,6 +526,10 @@
                     </div>
                 </div>
             </div>
+
+
+
+
         </div>
     </div>
     <!--//////////////////////////////////////////// end container-fluid6 /////////////////////////////////////////////////////////  -->
