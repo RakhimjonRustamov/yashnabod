@@ -11,7 +11,8 @@
 @section('page-title')
 <h1>Наши продукции</h1>
 @endsection
-    <div class="container dotted" id="products-container-fluid1">
+<div class="container-fluid dotted">
+    <div class="container" id="products-container-fluid1">
         <h1>Наши продукции</h1>
         <div class="row">
             <div class="col-md-3 col-sm-3 col-md-3 products-column">
@@ -90,6 +91,7 @@
             </div>
         </div>
     </div>
+</div>
 
 @endsection
 
