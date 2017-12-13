@@ -14,7 +14,7 @@
             <div class="row">
                 <form action="{{route('offer.request')}}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
-                    <div class="col-md-5 ">
+                    <div class="col-md-6 ">
                     <div class="bgwhite">
                         <div class="img-request">
                             <img src="https://muic.uz/uploads/pages/31a31e35a9347c92ec7cb35a83d01cf1.png" alt="">
@@ -71,20 +71,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7 ">
-                    <div class="info ">
+                <div class="col-md-6">
+                    <h4 class="text-justify"><b>Для получения статуса резидента инновационного технопарка “Яшнабад”, инициаторами инновационных проектов представляюстя в Дирекцию инновационного технопарка “Яшнабад” следующие документы:
+                        </b></h4>
+                    <ul>
+                        <li>Паспорт инновационного проекта</li>
+                        <li>Аннотация к инновационному проекту</li>
+                        <li>Презентация инновационного проекта</li>
+                        <li>Заявления на получение статуса резидента</li>
+                    </ul>
+                    <div style="text-align: center">
+                        <a href="{{url('/download')}}">
+                            <button class="btn-default"> Скачать файлы (шаблоны) для отправки заявки
+                                <i class="fa fa-download" aria-hidden="true"></i>
+                            </button>
+                        </a>
+                    </div>
+
+                    @include('partials._message')
+
+
                         <input type="file" name="documents" class="form-control" required="required" value="">
-                    </div>
-                    <div class="row ">
-                        <div class="col-md-6 ">
-                        </div>
-                    </div>
+
+
+
                 <button type="submit" class="button send_req"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Отправить заявку</button>
                 </div>
                 </form>
-                @include('partials._message')
-                    // Form dan tashqarida tursa yaxshiro Designni ozgartirasizda
-                <a href="{{url('/download')}}">FILE ZIIIIIPPPPPP</a>
+
             </div>
         </div>
     </div>
