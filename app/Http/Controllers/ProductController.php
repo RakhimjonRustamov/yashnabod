@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Storage;
-use Session;
+
 use App\Product;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use Storage;
+use Session;
 
 class ProductController extends Controller
 {
@@ -21,8 +22,8 @@ class ProductController extends Controller
     }
     public function store(Request $request){
         $this->validate($request, array(
-            'product_name_uz'=> 'required|max:300',
-            'product_name_ru'=> 'required|max:300',
+            'product_name_uz'=> 'required',
+            'product_name_ru'=> 'required',
             'product_info_uz'=>'required',
             'product_info_ru'=>'required',
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
@@ -48,35 +49,36 @@ class ProductController extends Controller
     }
 
     public function update(Request $request, $id){
-        $this->validate($request, array(
-            'product_name_uz'=> 'required|max:300',
-            'product_name_ru'=> 'required|max:300',
-            'product_info_uz'=>'required',
-            'product_info_ru'=>'required',
-            'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
-        ));
+    $this->validate($request, array(
+        'product_name_uz'=> 'required',
+        'product_name_ru'=> 'required',
+        'product_info_uz'=>'required',
+        'product_info_ru'=>'required',
+        'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
+    ));
 
-        $product=Product::find($id);
-        $product->product_info_uz=$request->product_info_uz;
-        $product->product_name_uz=$request->product_name_uz;
-        $product->product_info_ru=$request->product_info_ru;
-        $product->product_name_ru=$request->product_name_ru;
+    $product=Product::find($id);
+    $product->product_info_uz=$request->product_info_uz;
+    $product->product_name_uz=$request->product_name_uz;
+    $product->product_info_ru=$request->product_info_ru;
+    $product->product_name_ru=$request->product_name_ru;
 
 
-        if($request->hasFile('featured_image')){
-            $image=$request->file('featured_image');
-            $filename=time().'.'.$image->getClientOriginalExtension();
-            $location=public_path('images/products/'. $filename);
-            Image::make($image)->resize(800,400)->save($location);
-            $product->product_image=$filename;
-            $oldFileName='/products/'.$product->product_image;
+    if($request->hasFile('featured_image')){
+        $image=$request->file('featured_image');
+        $filename=time().'.'.$image->getClientOriginalExtension();
+        $location=public_path('images/products/'. $filename);
+        Image::make($image)->resize(800,400)->save($location);
+        $oldFileName='/products/'.$product->product_image;
 
-            Storage::delete($oldFileName);
-        }
-        $product->save();
-        Session::flash('success', ' Продукт был успешно сохранен');
-        return redirect()->route('products.index');
+        $product->product_image=$filename;
+
+        Storage::delete($oldFileName);
     }
+    $product->save();
+    Session::flash('success', ' Продукт был успешно сохранен');
+    return redirect()->route('products.index');
+}
 
 
     public function destroy($id)

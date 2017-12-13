@@ -20,7 +20,6 @@
                 <th>Position</th>
                 <th>Region</th>
                 <th>Email</th>
-                <th>Project Info</th>
                 <th>Created At</th>
                 <th></th>
                 <th></th>
@@ -35,36 +34,14 @@
                             <td>{{ $offer->position}}</td>
                             <td>{{ $offer->region}}</td>
                             <td>{{ $offer->email}}</td>
-                            <td>{{ substr(strip_tags($offer->project_info), 0, 20)}}{{ strlen(strip_tags($offer->project_info)) >20 ? "...":""}}</td>
+                            <td>{{ date('M j, Y H:ia',strtotime($offer->created_at))}}</td>
+                            <td><button></button></td>
                             <td>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#{{ $offer->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>View</button>
-                                <!-- Modal -->
-                                <div class="modal fade" id="{{ $offer->id }}" role="dialog">
-                                    <div class="modal-dialog">
-
-                                        <!-- Modal content-->
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <h3><span>{{$offer->name}}</span></h3>
-                                                <p>{{$offer->project_info}}</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <form action="{{url('admin/offers/'.$offer->id)}}" method='post'>
-                                                            {{ method_field('DELETE') }}
-                                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                            <button type="submit" class="btn btn-danger btn-block mybtn">Delete</button>
-                                                        </form>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <form action="{{url('admin/offers/'.$offer->id)}}" method='post'>
+                                    {{ method_field('DELETE') }}
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <button type="submit" class="btn btn-danger btn-block mybtn">Delete</button>
+                                </form>
                             </td>
                         </div>
                     </tr>
@@ -73,8 +50,4 @@
             </table>
         </div>
     </div>
-
-
-
-
 @endsection

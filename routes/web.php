@@ -87,6 +87,15 @@ Route::delete('admin/employees/{employee}', array('uses'=>'EmployeeController@de
 Route::put('admin/employees/{employee}', 'EmployeeController@update')->name('employees.update');
 
 Route::get('admin/offers', 'OfferController@index')->name('offers.index');
+Route::delete('admin/offers/{offer}', array('uses'=>'OfferController@destroy', 'as'=>'offers.destroy'));
+
+Route::get('admin/popularity', 'PopularityController@index')->name('popularity.index');
+Route::post('admin/popularity', 'PopularityController@store')->name('popularity.store');
+Route::delete('admin/popularity/{popularity}', array('uses'=>'PopularityController@destroy', 'as'=>'popularity.destroy'));
+Route::put('admin/popularity/{popularity}', 'PopularityController@update')->name('popularity.update');
+
+
+
 
 Route::get('/download', 'HomeController@downloadZip');
 

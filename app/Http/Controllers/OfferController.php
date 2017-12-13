@@ -22,12 +22,12 @@ class OfferController extends Controller
         $this->validate($request, array(
             'name'=>'required|max:20',
             'surname'=>'required|max:20',
-            'position'=>'required|max:100',
-            'organization'=>'required|max:120',
+            'position'=>'required|max:300',
+            'organization'=>'required|max:300',
             'region'=>'required',
             'email'=>'required|email',
             'phone'=>'required|min:9|numeric',
-            'documents'=>'required|mimes:zip,rar|size:max:16000',
+            'documents'=>'required|mimes:zip,rar|max:30720',
         ));
 
         $offer= new Offer;
@@ -46,8 +46,16 @@ class OfferController extends Controller
             $offer->documents=$fileName;
         }
         $offer->save();
-        Session::flash('success', 'The offer was successfully saved');
+        Session::flash('success', 'Запрос был успешно сохранен');
         return redirect()->route('pages.request');
+    }
+
+    public function destroy($id)
+    {
+        $offer=Offer::find($id);
+        $offer->delete();
+        Session::flash('success', "Запрос был успешно удален");
+        return redirect()->route('offers.index');
     }
 
 }

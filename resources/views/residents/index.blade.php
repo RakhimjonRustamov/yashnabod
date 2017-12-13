@@ -21,7 +21,7 @@
                             <td>{{ strip_tags($resident->resident_name_ru)}}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($resident->created_at))}}</td>
                             <td>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#{{ $resident->id}}" id="b2"><span class="glyphicon glyphicon-eye-open"></span>View</button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $resident->id}}" id="b2"><span class="glyphicon glyphicon-eye-open"></span>View</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="{{ $resident->id }}" role="dialog">
                                     <div class="modal-dialog">
@@ -54,7 +54,7 @@
                                 </div>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit-{{ $resident->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $resident->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="edit-{{ $resident->id }}" role="dialog">
                                     <div class="modal-dialog">

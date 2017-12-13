@@ -32,7 +32,7 @@
                             <td>{{ date('M j, Y H:ia',strtotime($product->created_at))}}</td>
                             <td>
                             <td>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#{{ $product->id}}" id="b2"><span class="glyphicon glyphicon-eye-open"></span>View</button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $product->id}}" id="b2"><span class="glyphicon glyphicon-eye-open"></span>View</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="{{ $product->id }}" role="dialog">
                                     <div class="modal-dialog">
@@ -63,7 +63,7 @@
                                 </div>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit-{{ $product->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $product->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="edit-{{ $product->id }}" role="dialog">
                                     <div class="modal-dialog">
@@ -120,7 +120,7 @@
                     <label>Product Info</label>
                     <textarea name="product_info_uz" class="form-control" rows="7" placeholder="Узбек" required="required"></textarea>
                     <textarea name="product_info_ru" class="form-control" rows="7" placeholder="Pусский" required="required"></textarea>
-                    <button type="submit" row="10" class="btn btn-success btn-block">Сохранить продукт</button>
+                    <button type="submit" class="btn btn-success btn-block">Сохранить продукт</button>
                 </form>
             </div>
             <div class="text-center">
