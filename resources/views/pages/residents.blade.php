@@ -12,81 +12,19 @@
     <div class="container" id="products-container-fluid1">
         <h1>Наши резиденты</h1>
         <div class="row">
+            @foreach($residents as $resident)
             <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                <div class="products thumbnail" style="background-image: url('{{ asset('images/residents/'. $resident->resident_logo)}}')">
                 </div>
                 <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
+                    <a href="{{url('residents/'.$resident->id)}}">
+                        <div class="product-text">{{$resident->resident_info_uz}}</div>
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        {{$residents->links()}}
     </div>
 </div>
 @endsection

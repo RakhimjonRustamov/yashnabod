@@ -49,6 +49,9 @@ Route::get('/coordinated-consulting', 'PagesController@getCoordination');
 Route::get('/how-to-join', 'PagesController@getInstruction');
 Route::get('/questions', 'PagesController@getQuestions');
 Route::get('/residents', 'PagesController@getResidents');
+Route::get('/residents/{resident}', 'PagesController@getSingleResident')->name('getSingleResident');
+
+
 Route::get('/products', 'PagesController@getProducts');
 
 // reception

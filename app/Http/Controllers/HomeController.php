@@ -9,8 +9,8 @@ class HomeController extends Controller
 {
     public function index()
     {   $residents=Resident::orderBy('id', 'desc')->take(6)->get();
-        $products=Product::orderBy('id', 'desc')->paginate(4);
-        $posts=Post::orderBy('id', 'desc')->paginate(4);
+        $products=Product::orderBy('id', 'desc')->take(4)->get();
+        $posts=Post::orderBy('id', 'desc')->take(4)->get();
         return view('home')->withPosts($posts)->withProducts($products)->withResidents($residents);
     }
     public function downloadZip(){

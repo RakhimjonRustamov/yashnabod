@@ -196,7 +196,6 @@
 
                 <div class="col-md-8">
                     <div class="row">
-
                         @foreach($posts as $post)
                         <div class="col-md-6 col-sm-12 news-column">
                             <div class="news thumbnail" style="background-image: url('{{asset('images/posts/'.$post->image)}}') ">
@@ -236,62 +235,11 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
-                {{$posts->links()}}
             </div>
         </div>
     </div>
 
-
-
-
-                <!--                <div class="col-lg-8">-->
-                <!--                    <div class="row">-->
-                <!--                        @foreach($posts as $post)-->
-                <!--                            <div class="col-md-6 col-sm-12 news-col">-->
-                <!--                                <div class="news thumbnail" style="background-image: url('{{url('/images/'.$post->title)}}')">-->
-                <!--                                </div>-->
-                <!--                                <div class="content">-->
-                <!--                                    <time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time>-->
-                <!--                                    <p class="news-text" style="position: relative;">-->
-                <!--                                        {{substr($post->body, 0, 245)}}{{strlen($post->body)>50 ? "...":""}}-->
-                <!--                                    </p>-->
-                <!--                                    <div>-->
-                <!--                                        <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>-->
-                <!--                                    </div>-->
-                <!--                                </div>-->
-                <!--                            </div>-->
-                <!--                        @endforeach-->
-                <!--                    </div>-->
-                <!--
-                <!--                </div>-->
-
-                <!--///////////////////////////////////////////////////// RECENT POST  ///////////////////////////////////////////-->
-<!--                <div class="col-lg-4">-->
-<!--                    <div class="widget-sidebar">-->
-<!--                        <h2 class="title-widget-sidebar">// Последние новости</h2>-->
-<!--                        <div class="content-widget-sidebar">-->
-<!--                            <ul>-->
-<!--                                @foreach($posts as $post)-->
-<!--                                <li class="recent-post">-->
-<!--                                    <div class="post-img">-->
-<!--                                        <a href="{{url('/news/'.$post->slug)}}"><img src="{{asset('images/'.$post->image)}}" class="img-responsive"></a>-->
-<!--                                    </div>-->
-<!--                                    <a href="{{url('/news/'.$post->slug)}}"><h5>{{$post->title}}</h5></a>-->
-<!--                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> </small></p>-->
-<!--                                </li>-->
-<!--                                <hr>-->
-<!--                                @endforeach-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!---->
-<!---->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 
     <!-- ///////////////////////////////////////////// end container-fluid5 ////////////////////////////////////////////  -->
     <!-- ///////////////////////////////////////////// container-fluid6 /////////////////////////////////////////////////  -->

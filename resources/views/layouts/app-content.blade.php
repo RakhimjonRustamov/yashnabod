@@ -63,7 +63,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#myPage"><img src="{{asset('images/photos/logo.png')}}" id="logo"></a>
+                <a class="navbar-brand" href="#myPage"><img src="{{asset('images/photos/yash.png')}}" id="logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right hidden-xs">
@@ -184,7 +184,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <img src="{{asset('images/photos/logo.png')}}" id="footer-logo">
+                <img src="{{asset('images/photos/yash.png')}}" id="footer-logo">
                 <p>
                     <br> © 2017 Yashnabod Innovation Center.
                     <br> Все права защищены.

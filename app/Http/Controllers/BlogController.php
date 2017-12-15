@@ -3,7 +3,6 @@ namespace App\Http\Controllers;
 use App\Post;
 use DateTime;
 use Illuminate\Http\Request;
-use Zend\Validator\Date;
 
 class BlogController extends Controller
 {
@@ -17,7 +16,9 @@ class BlogController extends Controller
     }
 
     public function getNews(){
-        return view('pages.news');
+        $posts=Post::orderBy('id'. 'desc')->take(4);
+        $post=Post::orderBy('id', 'desc')->take(1);
+        return view('pages.news')->withPost($post)->withPosts($posts);
     }
 
     public function getSingleNews($slug){
