@@ -202,9 +202,10 @@
                             <div class="news thumbnail" style="background-image: url('{{asset('images/posts/'.$post->image)}}') ">
                             </div>
                             <div class="content">
-                                <time datetime="2014-01-20"><h3><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></h3></time>
+                                <time datetime="2014-01-20"><h5><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></h5></time>
                                 <p class="news-text">
-                                    {{substr($post->body, 0, 245)}}{{strlen($post->body)>50 ? "...":""}}</p>
+                                    {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
+                                </p>
                             </div>
                             <div class="hidden-md hidden-lg">
                                 <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>
@@ -303,55 +304,17 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <div class="row">
+                                    @foreach($residents as $resident)
                                     <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/residents/'. $resident->resident_logo)}}')">
                                         </div>
                                         <div class="readmore-box-residents">
                                             <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
+                                                <div class="product-text">{{$resident->resident_info_uz}}</div>                                            </a>
                                         </div>
                                     </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    </div>
+                                    @endforeach
+                                </div>
                                 <!--.row-->
                             </div>
                         </div>

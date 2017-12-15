@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index()
-    {   $residents=Resident::orderBy('id', 'desc')->paginate(0);
+    {   $residents=Resident::orderBy('id', 'desc')->take(6)->get();
         $products=Product::orderBy('id', 'desc')->paginate(4);
         $posts=Post::orderBy('id', 'desc')->paginate(6);
-        return view('home')->withPosts($posts)->withProducts($products);
+        return view('home')->withPosts($posts)->withProducts($products)->withResidents($residents);
     }
     public function downloadZip(){
         $docs=glob(public_path('documents/*'));

@@ -28,7 +28,7 @@
                         <div class="col-md-8">
                             <td>{{ $product->id}}</td>
                             <td>{{ strip_tags($product->product_name_ru)}}</td>
-                            <td>{{ substr(strip_tags($product->product_info_ru), 0, 50)}}{{ strlen(strip_tags($product->product_info_ru)) >20 ? "...":""}}</td>
+                            <td>{{ substr(strip_tags($product->product_info_ru), 0, 20)}}{{ strlen(strip_tags($product->product_info_ru)) >20 ? "...":""}}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($product->created_at))}}</td>
                             <td>
                             <td>
