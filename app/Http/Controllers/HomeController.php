@@ -1,14 +1,17 @@
 <?php
 namespace App\Http\Controllers;
 use App\Post;
+use App\Product;
+use App\Resident;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
-    {
+    {   $residents=Resident::orderBy('id', 'desc')->paginate(0);
+        $products=Product::orderBy('id', 'desc')->paginate(4);
         $posts=Post::orderBy('id', 'desc')->paginate(6);
-        return view('home')->withPosts($posts);
+        return view('home')->withPosts($posts)->withProducts($products);
     }
     public function downloadZip(){
         $docs=glob(public_path('documents/*'));

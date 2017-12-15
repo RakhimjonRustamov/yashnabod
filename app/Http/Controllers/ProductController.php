@@ -12,14 +12,22 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except'=>'productsIndex']);
     }
 
+    // this index function display all products to admin panel
     public function index()
     {
         $products=Product::orderBy('id', 'desc')->paginate(8);
         return view('products.index')->withProducts($products);
     }
+
+
+    // this index function display all products to home page
+    public function productsIndex(){
+
+    }
+
     public function store(Request $request){
         $this->validate($request, array(
             'product_name_uz'=> 'required',
