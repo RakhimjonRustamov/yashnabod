@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Session;
+use Storage;
 use App\Offer;
 use Illuminate\Http\Request;
 
@@ -42,7 +43,7 @@ class OfferController extends Controller
         if($request->hasFile('documents')){
             $file=$request->file('documents');
             $fileName=time().'.'.$file->getClientOriginalExtension();
-            $request->documents->move(public_path('/offers'), $fileName);
+            $request->documents->move(public_path('/images/offers'), $fileName);
             $offer->documents=$fileName;
         }
         $offer->save();
@@ -50,12 +51,22 @@ class OfferController extends Controller
         return redirect()->route('pages.request');
     }
 
+
+    public function download($id){
+        $offer=Offer::find($id);
+        $filename=$offer->documents;
+        return response()->download(public_path('/images/offers/'.$filename));
+    }
+
     public function destroy($id)
     {
         $offer=Offer::find($id);
+        $document='/offers/'.$offer->documents;
+        Storage::delete($document);
         $offer->delete();
         Session::flash('success', "Запрос был успешно удален");
         return redirect()->route('offers.index');
     }
+
 
 }

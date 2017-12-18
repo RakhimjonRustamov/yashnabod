@@ -31,7 +31,6 @@
                             <td>{{ substr(strip_tags($product->product_info_ru), 0, 20)}}{{ strlen(strip_tags($product->product_info_ru)) >20 ? "...":""}}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($product->created_at))}}</td>
                             <td>
-                            <td>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $product->id}}" id="b2"><span class="glyphicon glyphicon-eye-open"></span>View</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="{{ $product->id }}" role="dialog">
@@ -56,7 +55,7 @@
                                                    <div class="col-md-6">
                                                    <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
                                                    </div>
-                                                   </div>
+                                               </div>
                                             </div>
                                         </div>
                                     </div>
@@ -105,6 +104,8 @@
                  </tbody>
                 </table>
         </div>
+
+
 
         <!-- Begining of FORM -->
         <div class="col-md-4">

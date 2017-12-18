@@ -11,7 +11,6 @@
                 <th>Created At </th>
                 <th></th>
                 <th></th>
-
                 </thead>
                 <tbody>
                 @foreach($residents as $resident)
@@ -56,7 +55,7 @@
                             <td>
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $resident->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
                                 <!-- Modal -->
-                                <div class="modal fade" id="edit-{{ $resident->id }}" role="dialog">
+                                <div class="modal fade" id="edit-{{$resident->id}}" role="dialog">
                                     <div class="modal-dialog">
 
                                         <!-- Modal content-->
@@ -97,7 +96,6 @@
             </table>
             {!! $residents->links()!!}
         </div>
-
         <!-- Begining of FORM -->
         <div class="col-md-4">
             <div>

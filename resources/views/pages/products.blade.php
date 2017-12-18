@@ -1,7 +1,5 @@
 @extends('layouts.app-content')
-@section('title'| 'Products')
-
-
+@section('title'| 'Products')@stop
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/products.css') }}">

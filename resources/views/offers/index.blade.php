@@ -35,7 +35,7 @@
                             <td>{{ $offer->region}}</td>
                             <td>{{ $offer->email}}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($offer->created_at))}}</td>
-                            <td><button></button></td>
+                            <td><a href="{{url('admin/offers/download/'.$offer->id)}}" class="btn btn-primary">Download</a>
                             <td>
                                 <form action="{{url('admin/offers/'.$offer->id)}}" method='post'>
                                     {{ method_field('DELETE') }}

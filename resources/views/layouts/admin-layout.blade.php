@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>Admin</title>
+
     <!-- Styles -->
     <link rel="shortcut icon" href="{{ asset('images/photos/tuftalogo.png')}}" type="image/png">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet" type="text/css">
+
     @yield('stylesheets')
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+
     @yield('scripts')
 </head>
 <body  style="background-color:#e6e6ff;">
 <div class="container-fluid">
-    <div id="app">
         <nav class="navbar navbar-inverse ">
             <div class="container-fluid">
                 <!-- LOGO -->
@@ -59,12 +66,7 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
-    </div>
-    <!-- Scripts -->
-    <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    @yield('content')
 
 </div>
 </body>

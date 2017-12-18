@@ -84,20 +84,12 @@
 
 
 
-                        <div class="col-md-12">
-                            <div class="link ">
-                                <a class="form-control form-group btn-primary download " href="{{url('/download')}}">
-                                    <i class="fa fa-download " aria-hidden="true "></i> Скачать файлы (шаблоны) для отправки заявок
-                                </a>
-                            </div>
-                        </div>
-
 
                     <div class="col-lg-12 col-sm-12 col-12">
                         <div class="input-group">
                             <label class="input-group-btn">
                                 <span class="btn btn-primary"><i class="fa fa-folder-open" aria-hidden="true"></i>
-                                    Browse<input type="file" style="display: none;" multiple>
+                                    Browse<input type="file" name="documents" style="display: none;" multiple>
                                 </span>
                             </label>
                             <input type="text" class="form-control" readonly>
@@ -105,10 +97,16 @@
                     </div>
                     @include('partials._message')
 
-
-
-
                 <button type="submit" class="button send_req"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Отправить заявку</button>
+
+                    <div class="col-md-12">
+                        <div class="link ">
+                            <a class="form-control form-group btn-primary download " href="{{url('/download')}}">
+                                <i class="fa fa-download " aria-hidden="true "></i> Скачать файлы (шаблоны) для отправки заявок
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
                 </form>
 

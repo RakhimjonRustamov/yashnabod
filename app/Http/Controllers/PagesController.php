@@ -146,18 +146,23 @@ class PagesController extends Controller
     // search
 
     public function getSearch(Request $request){
-        $posts = Post::where('title', 'LIKE', "%$request->search%")
-            ->orWhere('body', 'LIKE', "%$request->search%")
+        $posts = Post::where('title_uz', 'LIKE', "%$request->search%")
+            ->orWhere('title_ru', 'LIKE', "%$request->search%")
+            ->orWhere('body_uz', 'LIKE', "%$request->search%")
+            ->orWhere('body_ru', 'LIKE', "%$request->search%")
             ->orWhere('slug', 'LIKE', "%$request->search%")
             ->orderBy('id', 'desc')
             ->paginate(8,['*'], 'posts');
 
-        $products=Product::where('product_name', 'LIKE', "%$request->search%")
-            ->orWhere('product_info', 'LIKE', "%$request->search%")
+        $products=Product::where('product_name_uz', 'LIKE', "%$request->search%")
+            ->orWhere('product_name_ru', 'LIKE', "%$request->search%")
+            ->orWhere('product_info_uz', 'LIKE', "%$request->search%")
+            ->orWhere('product_info_ru', 'LIKE', "%$request->search%")
             ->orderBy('id', 'desc')
             ->paginate(8,['*'], 'products');
 
-        $residents=Resident::where('resident_name', 'LIKE', "%$request->search%")
+        $residents=Resident::where('resident_name_uz', 'LIKE', "%$request->search%")
+            ->orWhere('resident_name_ru', 'LIKE', "%$request->search%")
             ->orderBy('id', 'desc')
             ->paginate(8, ['*'], 'residents');
 
