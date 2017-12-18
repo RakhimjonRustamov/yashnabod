@@ -36,7 +36,6 @@ html>body {
 
 
 
-
 /*------------------------------------- application1 -------------------------------------*/
 
 #application-container-fluid1>h1 {
@@ -319,7 +318,20 @@ a#refresh_captcha_contacts {
     color: #fff;
     cursor: pointer;
     margin: 5px 0 0;
+    margin-top: 20px;
     background: #1a9f29;
     transition: all 300ms ease-out;
 }
 
+#request-rule>p{
+    color: #727A7E;
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+#request-rule>ul>li{
+    color: #727A7E;
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 30px;
+}

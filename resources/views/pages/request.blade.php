@@ -71,27 +71,40 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h4 class="text-justify"><b>Для получения статуса резидента инновационного технопарка “Яшнабад”, инициаторами инновационных проектов представляюстя в Дирекцию инновационного технопарка “Яшнабад” следующие документы:
-                        </b></h4>
+                <div class="col-md-6" id="request-rule">
+                    <p class="text-justify"><b>Для получения статуса резидента инновационного технопарка “Яшнабад”, инициаторами инновационных проектов представляюстя в Дирекцию инновационного технопарка “Яшнабад” следующие документы:
+                        </b></p>
                     <ul>
                         <li>Паспорт инновационного проекта</li>
                         <li>Аннотация к инновационному проекту</li>
                         <li>Презентация инновационного проекта</li>
                         <li>Заявления на получение статуса резидента</li>
                     </ul>
-                    <div style="text-align: center">
-                        <a href="{{url('/download')}}">
-                            <button class="btn-default"> Скачать файлы (шаблоны) для отправки заявки
-                                <i class="fa fa-download" aria-hidden="true"></i>
-                            </button>
-                        </a>
-                    </div>
 
+
+
+
+                        <div class="col-md-12">
+                            <div class="link ">
+                                <a class="form-control form-group btn-primary download " href="{{url('/download')}}">
+                                    <i class="fa fa-download " aria-hidden="true "></i> Скачать файлы (шаблоны) для отправки заявок
+                                </a>
+                            </div>
+                        </div>
+
+
+                    <div class="col-lg-12 col-sm-12 col-12">
+                        <div class="input-group">
+                            <label class="input-group-btn">
+                                <span class="btn btn-primary"><i class="fa fa-folder-open" aria-hidden="true"></i>
+                                    Browse<input type="file" style="display: none;" multiple>
+                                </span>
+                            </label>
+                            <input type="text" class="form-control" readonly>
+                        </div>
+                    </div>
                     @include('partials._message')
 
-
-                        <input type="file" name="documents" class="form-control" required="required" value="">
 
 
 
