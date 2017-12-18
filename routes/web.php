@@ -56,7 +56,10 @@ Route::get('/request', 'PagesController@getRequest')->name('pages.request');
 Route::post('/request', 'OfferController@postOffer')->name('offer.request');
 
 
-Route::get('/admin', 'AdminController@admin');
+Route::get('/admin', 'AdminController@admin')->name('admin');
+Route::post('/admin', 'AdminController@counter')->name('counter.store');
+Route::put('/admin/counter/{id}', 'AdminController@updateCounter')->name('counter.update');
+
 Route::resource('admin/posts', 'PostController');
 Auth::routes();
 Route::get('admin/blog/{slug}', ['as'=>'blog.single', 'uses'=>'BlogController@getSingle'])->where('slug', '[\w\d\_\-]+');
