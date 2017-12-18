@@ -21,6 +21,7 @@ class PagesController extends Controller
     }
 
     public function getBeresident(){
+
         return view('pages.beresident');
     }
 
@@ -92,11 +93,18 @@ class PagesController extends Controller
     }
 
     public function getProducts(){
-        return view('pages.products');
+        $products=Product::orderBy('id', 'desc')->paginate(8);
+        return view('pages.products')->withProducts($products);
     }
 
     public function getResidents(){
-        return view('pages.residents');
+        $residents=Resident::orderBy('id', 'desc')->paginate(8);
+        return view('pages.residents')->withResidents($residents);
+    }
+
+    public function getSingleResident($id){
+        $resident=Resident::find($id);
+        return view('pages.getSingleResident')->withResident($resident);
     }
 
     public function getContact(){

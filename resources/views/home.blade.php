@@ -19,7 +19,7 @@
                 <div class="col-md-9" id="col-81">
                     <p>Технопарк — Это территориальная, научная, технологическая и техническая база для реализации инновационных проектов. Технопарк- имущественный комплекс, в котором объединены научно-исследовательские институты, объекты индустрии, деловые центры, выставочные площадки, учебные заведения, а также обслуживающие объекты: средства транспорта, подъездные пути, жилые поселки, охрана. Международная ассоциация технологических парков даёт своё определение объекту инновационной инфраструктуры. По мнению ассоциации, технопарк — это организация, управляемая специалистами, главной целью которых является увеличение благосостояния местного сообщества посредством продвижения инновационной культуры, а также состязательности инновационного бизнеса и научных организаций. Для достижения этих целей технопарк стимулирует и управляет потоками знаний и технологий между университетами, научно-исследовательскими институтами, компаниями и рынками. Он упрощает создание и рост инновационным компаниям с помощью инкубационных процессов и процессов выведения новых компаний из существующих (spin-off processes). Технопарк помимо высококачественных площадей обеспечивает другие услуги...
                         <a href="{{url('/preference-yic')}}" id="readmore">
-                            < Читать дальше>
+                           Читать дальше
                         </a>
                     </p>
                 </div>
@@ -44,122 +44,32 @@
                             <div class="carousel-inner">
                                 <div class="item active">
                                     <div class="row">
+                                        @foreach($products as $home_product)
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                            <div class="products thumbnail" style="background-image: url('images/products/{{$home_product->product_image}}') ">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
+                                                    <div class="product-text">{{$home_product->product_name_ru}}</div>
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url('{{asset('images/photos/artel.jpg')}}')">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
+                                         @endforeach
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="row">
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
+                                        @foreach($products as $home_product)
+                                            <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                                <div class="products thumbnail" style="background-image: url('images/products/{{$home_product->product_image}}') ">
+                                                </div>
+                                                <div class="readmore-box">
+                                                    <a href="html/products-single.html">
+                                                        <div class="product-text">{{$home_product->product_name_ru}}</div>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url("../images/photos/artel.jpg")">
-                                            </div>
-                                            <div class="readmore-box">
-                                                <a href="html/products-single.html">
-                                                    <div class="product-text">Hello World</div>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -286,178 +196,50 @@
 
                 <div class="col-md-8">
                     <div class="row">
+                        @foreach($posts as $post)
                         <div class="col-md-6 col-sm-12 news-column">
-
-                            <div class="news thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                            <div class="news thumbnail" style="background-image: url('{{asset('images/posts/'.$post->image)}}') ">
                             </div>
                             <div class="content">
-                                <time datetime="2014-01-20"><h3>02/20/2014</h3></time>
+                                <time datetime="2014-01-20"><h5><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></h5></time>
                                 <p class="news-text">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
                                 </p>
-
                             </div>
                             <div class="hidden-md hidden-lg">
-                                <button class="btn btn-primary pull-right">Читать дальше</button>
+                                <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>
                             </div>
-
-
                         </div>
-                        <div class="col-md-6 col-sm-12 news-column">
-
-                            <div class="news thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                            </div>
-                            <div class="content">
-                                <time datetime="2014-01-20"><h3>02/20/2014</h3></time>
-                                <p class="news-text" >
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-
-                            </div>
-                            <div class="hidden-md hidden-lg">
-                                <button class="btn btn-primary pull-right">Читать дальше</button>
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 col-sm-12 news-column">
-
-                            <div class="news thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                            </div>
-                            <div class="content">
-                                <time datetime="2014-01-20"><h3>02/20/2014</h3></time>
-                                <p class="news-text" >
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                                <div class="hidden-md hidden-lg">
-                                    <button class="btn btn-primary pull-right">Читать дальше</button>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 col-sm-12 news-column">
-
-                            <div class="news thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                            </div>
-                            <div class="content">
-                                <time datetime="2014-01-20"><h3>02/20/2014</h3></time>
-                                <p class="news-text" >
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                                <div class="hidden-md hidden-lg">
-                                    <button class="btn btn-primary pull-right">Читать дальше</button>
-                                </div>
-
-                            </div>
-
-                        </div>
-
+                            @endforeach
                     </div>
                 </div>
+
+
                 <div class="col-md-4">
                     <div class="widget-sidebar">
                         <h2 class="title-widget-sidebar">// Последние новости</h2>
                         <div class="content-widget-sidebar">
                             <ul>
+                                @foreach($posts as $post)
                                 <li class="recent-post">
                                     <a href="">
                                         <div class="news-column1">
-                                            <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                            <div class="news1 thumbnail" style="background-image: url('images/posts/{{$post->image}}') ">
                                             </div>
                                         </div>
-                                        <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    </a>
-
-                                </li>
-                                <hr>
-                                <li class="recent-post">
-                                    <a href="">
-                                        <div class="news-column1">
-                                            <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                            </div>
-                                        </div>
-                                        <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
+                                        <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-center news1-text">{{$post->title_ru}}</h5></a>
                                     </a>
                                 </li>
                                 <hr>
-                                <li class="recent-post">
-                                    <a href="">
-                                        <div class="news-column1">
-                                            <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                            </div>
-                                        </div>
-                                        <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    </a>
-                                </li>
-                                <hr>
-                                <li class="recent-post">
-                                    <a href="">
-                                        <div class="news-column1">
-                                            <div class="news1 thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                            </div>
-                                        </div>
-                                        <a href="#"><h5 class="text-center news1-text">Excepteur sint occaecat cupi non proident laborum.</h5></a>
-                                    </a>
-                                </li>
-                                <hr>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
-                <!--                <div class="col-lg-8">-->
-                <!--                    <div class="row">-->
-                <!--                        @foreach($posts as $post)-->
-                <!--                            <div class="col-md-6 col-sm-12 news-col">-->
-                <!--                                <div class="news thumbnail" style="background-image: url('{{url('/images/'.$post->title)}}')">-->
-                <!--                                </div>-->
-                <!--                                <div class="content">-->
-                <!--                                    <time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time>-->
-                <!--                                    <p class="news-text" style="position: relative;">-->
-                <!--                                        {{substr($post->body, 0, 245)}}{{strlen($post->body)>50 ? "...":""}}-->
-                <!--                                    </p>-->
-                <!--                                    <div>-->
-                <!--                                        <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>-->
-                <!--                                    </div>-->
-                <!--                                </div>-->
-                <!--                            </div>-->
-                <!--                        @endforeach-->
-                <!--                    </div>-->
-                <!--                    {!! $posts->links()!!}-->
-                <!--                </div>-->
-
-                <!--///////////////////////////////////////////////////// RECENT POST  ///////////////////////////////////////////-->
-<!--                <div class="col-lg-4">-->
-<!--                    <div class="widget-sidebar">-->
-<!--                        <h2 class="title-widget-sidebar">// Последние новости</h2>-->
-<!--                        <div class="content-widget-sidebar">-->
-<!--                            <ul>-->
-<!--                                @foreach($posts as $post)-->
-<!--                                <li class="recent-post">-->
-<!--                                    <div class="post-img">-->
-<!--                                        <a href="{{url('/news/'.$post->slug)}}"><img src="{{asset('images/'.$post->image)}}" class="img-responsive"></a>-->
-<!--                                    </div>-->
-<!--                                    <a href="{{url('/news/'.$post->slug)}}"><h5>{{$post->title}}</h5></a>-->
-<!--                                    <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> </small></p>-->
-<!--                                </li>-->
-<!--                                <hr>-->
-<!--                                @endforeach-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!---->
-<!---->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 
     <!-- ///////////////////////////////////////////// end container-fluid5 ////////////////////////////////////////////  -->
     <!-- ///////////////////////////////////////////// container-fluid6 /////////////////////////////////////////////////  -->
@@ -471,55 +253,17 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <div class="row">
+                                    @foreach($residents as $resident)
                                     <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/residents/'. $resident->resident_logo)}}')">
                                         </div>
                                         <div class="readmore-box-residents">
                                             <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
+                                                <div class="product-text">{{$resident->resident_info_uz}}</div>                                            </a>
                                         </div>
                                     </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 residents-column">
-                                        <div class="residents thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                                        </div>
-                                        <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
-                                                <div class="product-text">Читать дальше</div>                                            </a>
-                                        </div>
-                                    </div>
-                                    </div>
+                                    @endforeach
+                                </div>
                                 <!--.row-->
                             </div>
                         </div>

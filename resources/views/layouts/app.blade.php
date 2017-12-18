@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
-
+    <link rel="shortcut icon" href="{{ asset('images/photos/yash.png')}}" type="image/png">
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
     @yield('scripts')
@@ -57,7 +57,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#myPage"><img src="{{asset('images/photos/logo.png')}}" id="logo"></a>
+                <a class="navbar-brand" href="#myPage"><img src="{{asset('images/photos/yash.png')}}" id="logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right hidden-xs">
@@ -78,13 +78,13 @@
                     <li class="dropdown dropdown1">
                         <a class="navbar-elements1" data-toggle="dropdown" href="#">Регистрация</a>
                         <ul class="dropdown-menu dropdown-menu1">
-                            <li><a class="dropdown-elements1" href="{{url('beresident')}}">Как стать резидентом?</a></li>
+                            <li><a class="dropdown-elements1" href="{{url('/beresident')}}">Как стать резидентом?</a></li>
                             <li class="divider"></li>
                             <li><a class="dropdown-elements1" href="{{url('/how-to-join')}}">Как вступить?</a></li>
                             <li class="divider"></li>
                             <li><a class="dropdown-elements1" href="{{url('/questions')}}">Вопросы и ответы</a></li>
                             <li class="divider"></li>
-                            <li><a class="dropdown-elements1" href="{{url('request')}}">Подать заявку</a></li>
+                            <li><a class="dropdown-elements1" href="{{url('/request')}}">Подать заявку</a></li>
                         </ul>
                     </li>
                     <li>
@@ -96,7 +96,7 @@
                     <li class="dropdown dropdown1">
                         <a class="navbar-elements1" data-toggle="dropdown" href="#">Пресса</a>
                         <ul class="dropdown-menu dropdown-menu1">
-                            <li><a class="dropdown-elements1" href="{{url('/news')}}">Новости</a></li>
+                            <li><a class="dropdown-elements1" href="{{url('/news/')}}">Новости</a></li>
                             <li class="divider"></li>
                             <li><a class="dropdown-elements1" href="{{url('/popular-info')}}">СМИ о нас</a></li>
                         </ul>
@@ -217,7 +217,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="{{asset('images/photos/logo.png')}}" id="footer-logo">
+                <img src="{{asset('images/photos/yash.png')}}" id="footer-logo">
                 <p>
                     <br> © 2017 Инновационный технопарк "Яшнабад".
                     <br> Все права защищены.

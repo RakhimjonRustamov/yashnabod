@@ -43,8 +43,8 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array(
-            'title_uz'=> 'required|max:300',
-            'title_ru'=> 'required|max:300',
+            'title_uz'=> 'required',
+            'title_ru'=> 'required',
             'body_uz'=>'required',
             'body_ru'=>'required',
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
@@ -66,7 +66,7 @@ class PostController extends Controller
             $image=$request->file('featured_image');
             $filename=time().'.'.$image->getClientOriginalExtension();
             $location=public_path('images/posts/'. $filename);
-            Image::make($image)->resize(800,400)->save($location);
+            Image::make($image)->save($location);
             $post->image=$filename;
         }
         $post->save();
@@ -95,8 +95,8 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, array(
-            'title_uz'=> 'required|max:300',
-            'title_ru'=> 'required|max:300',
+            'title_uz'=> 'required',
+            'title_ru'=> 'required',
             'body_uz'=>'required',
             'body_ru'=>'required',
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'

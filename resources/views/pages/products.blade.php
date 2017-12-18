@@ -15,84 +15,21 @@
     <div class="container" id="products-container-fluid1">
         <h1>Наши продукции</h1>
         <div class="row">
+            @foreach($products as $product)
             <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
+                <div class="products thumbnail" style="background-image: url('{{ asset('images/products/'. $product->product_image)}}')">
                 </div>
                 <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
+                    <a href="{{url('products/'.$product->id)}}">
+                        <div class="product-text">{{$product->product_info_ru}}</div>
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail" style="background-image: url('{{ asset('images/photos/artel.jpg') }}')">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                <div class="products thumbnail">
-                </div>
-                <div class="readmore-box">
-                    <a href="">
-                        <div class="product-text">Читать дальше</div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        {{$products->links()}}
     </div>
 </div>
-
 @endsection
 
 

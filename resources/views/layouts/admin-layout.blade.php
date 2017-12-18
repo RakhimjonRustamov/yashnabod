@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Admin</title>
     <!-- Styles -->
-    <link rel="shortcut icon" href="{{ asset('images/Marck-Design-Logo.png')}}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('images/photos/tuftalogo.png')}}" type="image/png">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
     @yield('stylesheets')
@@ -39,8 +39,9 @@
                         <li class="{{ Request::is('admin/posts')?"active":""}}" ><a href="{{ url('admin/posts')}}">Posts</a></li>
                         <li class="{{ Request::is('admin/receptions')?"active":""}}" ><a href="{{ url('admin/receptions')}}">Receptions</a></li>
                         <li class="{{ Request::is('admin/posts/create')?"active":""}}" ><a href="{{ url('admin/posts/create')}}">Add New Post</a></li>
-                        <li class="{{ Request::is('admin/empoyees')?"active":""}}" ><a href="{{ url('admin/employees')}}">Employees</a></li>
+                        <li class="{{ Request::is('admin/employees')?"active":""}}" ><a href="{{ url('admin/employees')}}">Employees</a></li>
                         <li class="{{ Request::is('admin/offers')?"active":""}}" ><a href="{{ url('admin/offers')}}">Offers</a></li>
+                        <li class="{{ Request::is('admin/popularity')?"active":""}}" ><a href="{{route('popularity.index')}}">Popularity</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
