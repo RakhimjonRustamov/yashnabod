@@ -24,13 +24,13 @@
                 <tbody>
                 @foreach($popularities as $popularity)
                     <tr>
-                        <div class="col-md-8">
                             <td>{{ $popularity->id}}</td>
                             <td>{{ substr(strip_tags($popularity->popular_info_ru), 0, 50)}}{{ strlen(strip_tags($popularity->popular_info_ru)) >20 ? "...":""}}</td>
+                            <td>{{$popularity->link}}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($popularity->created_at))}}</td>
                             <td>
                             <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $popularity->id}}" id="b2"><span class="glyphicon glyphicon-eye-open"></span>View</button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $popularity->id}}" id="b2">View</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="{{ $popularity->id }}" role="dialog">
                                     <div class="modal-dialog">
@@ -45,11 +45,15 @@
                                             <div class="modal-footer">
                                                 <div class="row">
                                                     <div class="col-md-6">
+                                                        {{ Form::open(['method' => 'DELETE', 'route' => ['popularity.destroy', $popularity->id]]) }}
+                                                        {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                                                        {{ Form::close() }}
+                                                        {{--
                                                         <form action="{{url('admin/popularity/'.$popularity->id)}}" method='post'>
                                                             {{ method_field('DELETE') }}
                                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                             <button type="submit" class="btn btn-danger btn-block mybtn">Delete</button>
-                                                        </form>
+                                                        </form>--}}
                                                     </div>
                                                     <div class="col-md-6">
                                                         <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
@@ -61,7 +65,7 @@
                                 </div>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $popularity->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $popularity->id}}" id="b2">&nbspEdit&nbsp &nbsp;</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="edit-{{ $popularity->id }}" role="dialog">
                                     <div class="modal-dialog">
@@ -95,11 +99,11 @@
                                     </div>
                                 </div>
                             </td>
-                        </div>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
+            {!! $popularities->links()!!}
         </div>
 
         <!-- Begining of FORM -->
@@ -119,7 +123,7 @@
                 </form>
             </div>
             <div class="text-center">
-                {!! $popularities->links()!!}
+
             </div>
         </div> <!-- End of the Create Popularity-->
     </div>

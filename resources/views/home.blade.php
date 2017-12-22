@@ -281,7 +281,7 @@
                                 <li class="recent-post">
                                     <a href="{{url('/news/'.$post->slug)}}">
                                         <div class="news-column1">
-                                            <div class="news1 thumbnail" style="background-image: url('images/posts/{{$post->image}}') ">
+                                            <div class="news1 thumbnail" style="background-image: url('{{asset('images/posts/'.$post->image)}}') ">
                                             </div>
                                         </div>
                                         <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-center news1-text">{{$post->title_ru}}</h5></a>

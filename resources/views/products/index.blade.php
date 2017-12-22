@@ -25,15 +25,14 @@
                  <tbody>
                  @foreach($products as $product)
                     <tr>
-                        <div class="col-md-8">
                             <td>{{ $product->id}}</td>
                             <td>{{ strip_tags($product->product_name_ru)}}</td>
                             <td>{{ substr(strip_tags($product->product_info_ru), 0, 20)}}{{ strlen(strip_tags($product->product_info_ru)) >20 ? "...":""}}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($product->created_at))}}</td>
                             <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $product->id}}" id="b2"><span class="glyphicon glyphicon-eye-open"></span>View</button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#delete-{{ $product->id}}" id="b2">View</button>
                                 <!-- Modal -->
-                                <div class="modal fade" id="{{ $product->id }}" role="dialog">
+                                <div class="modal fade" id="delete-{{ $product->id }}" role="dialog">
                                     <div class="modal-dialog">
 
                                         <!-- Modal content-->
@@ -46,11 +45,15 @@
                                             <div class="modal-footer">
                                                <div class="row">
                                                    <div class="col-md-6">
-                                                <form action="{{url('admin/products/'.$product->id)}}" method='post'>
+                                                       {{ Form::open(['method' => 'DELETE', 'route' => ['products.destroy', $product->id]]) }}
+                                                       {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                                                       {{ Form::close() }}
+
+                                               {{-- <form action="{{url('admin/products/'.$product->id)}}" method='post'>
                                                     {{ method_field('DELETE') }}
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                     <button type="submit" class="btn btn-danger btn-block mybtn">Delete</button>
-                                                </form>
+                                                </form>--}}
                                                    </div>
                                                    <div class="col-md-6">
                                                    <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
@@ -62,7 +65,7 @@
                                 </div>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $product->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $product->id}}" id="b2">&nbsp;Edit&nbsp;</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="edit-{{ $product->id }}" role="dialog">
                                     <div class="modal-dialog">
@@ -98,11 +101,11 @@
                                     </div>
                                 </div>
                             </td>
-                        </div>
                     </tr>
                  @endforeach
                  </tbody>
                 </table>
+            {!! $products->links()!!}
         </div>
 
 
@@ -125,7 +128,7 @@
                 </form>
             </div>
             <div class="text-center">
-                {!! $products->links()!!}
+
             </div>
         </div> <!-- End of the Create Product-->
     </div>

@@ -15,12 +15,11 @@
                 <tbody>
                 @foreach($residents as $resident)
                     <tr>
-                        <div class="col-md-8">
                             <td>{{ $resident->id}}</td>
                             <td>{{ strip_tags($resident->resident_name_ru)}}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($resident->created_at))}}</td>
                             <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $resident->id}}" id="b2"><span class="glyphicon glyphicon-eye-open"></span>View</button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $resident->id}}" id="b2">View</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="{{ $resident->id }}" role="dialog">
                                     <div class="modal-dialog">
@@ -37,11 +36,16 @@
                                             <div class="modal-footer">
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <form action="{{url('admin/residents/'.$resident->id)}}" method='post'>
+
+                                                        {{ Form::open(['method' => 'DELETE', 'route' => ['residents.destroy', $resident->id]]) }}
+                                                        {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                                                        {{ Form::close() }}
+
+                                                        {{--<form action="{{url('admin/residents/'.$resident->id)}}" method='post'>
                                                             {{ method_field('DELETE') }}
                                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                             <button type="submit" class="btn btn-danger btn-block mybtn">Delete</button>
-                                                        </form>
+                                                        </form>--}}
                                                     </div>
                                                     <div class="col-md-6">
                                                         <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
@@ -53,7 +57,7 @@
                                 </div>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $resident->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $resident->id}}" id="b2">&nbspEdit&nbsp &nbsp;</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="edit-{{$resident->id}}" role="dialog">
                                     <div class="modal-dialog">
@@ -89,7 +93,6 @@
                                     </div>
                                 </div>
                             </td>
-                        </div>
                     </tr>
                 @endforeach
                 </tbody>

@@ -23,14 +23,13 @@
                 <tbody>
                 @foreach($employees as $employee)
                     <tr>
-                        <div class="col-md-8">
                             <td>{{ $employee->id}}</td>
                             <td>{{ $employee->full_name_ru}}</td>
                             <td>{{ $employee->position_ru }}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($employee->created_at))}}</td>
                             <td>
                             <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $employee->id}}" id="b2"><span class="glyphicon glyphicon-eye-open"></span>View</button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#{{ $employee->id}}" id="b2">View</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="{{ $employee->id }}" role="dialog">
                                     <div class="modal-dialog">
@@ -45,11 +44,14 @@
                                             <div class="modal-footer">
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <form action="{{url('admin/employees/'.$employee->id)}}" method='post'>
+                                                        {{ Form::open(['method' => 'DELETE', 'route' => ['employees.destroy', $employee->id]]) }}
+                                                        {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                                                        {{ Form::close() }}
+                                                        {{--<form action="{{url('admin/employees/'.$employee->id)}}" method='post'>
                                                             {{ method_field('DELETE') }}
                                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                             <button type="submit" class="btn btn-danger btn-block mybtn">Delete</button>
-                                                        </form>
+                                                        </form>--}}
                                                     </div>
                                                     <div class="col-md-6">
                                                         <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
@@ -61,7 +63,7 @@
                                 </div>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $employee->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-{{ $employee->id}}" id="b2">&nbspEdit&nbsp;</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="edit-{{ $employee->id }}" role="dialog">
                                     <div class="modal-dialog">
@@ -96,13 +98,12 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </td>
-                        </div>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
+            {!! $employees->links()!!}
         </div>
 
         <!-- Begining of FORM -->
@@ -123,7 +124,7 @@
                 </form>
             </div>
             <div class="text-center">
-                {!! $employees->links()!!}
+
             </div>
         </div> <!-- End of the Create Product-->
     </div>

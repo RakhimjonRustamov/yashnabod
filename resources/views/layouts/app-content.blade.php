@@ -11,6 +11,7 @@
     @yield('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
+    <link rel="shortcut icon" href="{{ asset('images/photos/yash.png')}}" type="image/png">
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
     @yield('scripts')

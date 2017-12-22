@@ -1,8 +1,6 @@
 <?php
 namespace App\Http\Controllers;
 use App\Post;
-use DateTime;
-use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
@@ -16,8 +14,8 @@ class BlogController extends Controller
     }
 
     public function getNews(){
-        $posts=Post::orderBy('id'. 'desc')->take(4);
-        $post=Post::orderBy('id', 'desc')->take(1);
+        $posts=Post::orderBy('id', 'desc')->take(4)->get();
+        $post=Post::orderBy('id', 'desc')->take(1)->get();
         return view('pages.news')->withPost($post)->withPosts($posts);
     }
 

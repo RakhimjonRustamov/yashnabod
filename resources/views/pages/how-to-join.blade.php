@@ -3,13 +3,13 @@
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/howtoenter.css') }}">
 @endsection
-
 @section('content')
+
 @section('page-title')
-<h1>Как вступить?</h1>
+    <h1>Как вступить?</h1>
 @endsection
 
-    <div class="container-fluid dotted">
+<div class="container-fluid dotted">
         <div class="container" id="howtoenter-container-fluid1">
             <h1>Как вступить?</h1>
             <p>Получить статуса резидента Центра могут юридические лица, независимо от их места государственной регистрации на территории Республики Узбекистан.</p>

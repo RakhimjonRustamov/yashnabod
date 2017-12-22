@@ -14,13 +14,12 @@
 @endsection
 @section('content')
     @include('partials._message')
-
     <div class="row">
         <div class="col-md-10">
             <h1 align="center">Все новости</h1>
         </div>
         <div class="col-md-2">
-            <a href="{{route('posts.create')}}" class="btn btn-success btn-block"><span class=" glyphicon glyphicon-plus"></span>Создать новость</a>
+            <a href="{{route('posts.create')}}" class="btn btn-success btn-block">Создать новость</a>
         </div>
     </div>
     <div class="row">
@@ -35,18 +34,15 @@
                 <tbody>
                 @foreach($posts as $post)
                     <tr>
-
-                        <div class="col-md-8">
                         <td>{{ $post->id}}</td>
                         <td>{{ strip_tags($post->title_ru)}}</td>
                         <td>{{ substr(strip_tags($post->body_ru), 0, 50)}}{{ strlen(strip_tags($post->body_ru)) >50 ? "...":""}}</td>
                         <td>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</td>
-                        </div>
 
                         <div class="col-md-4">
-                        <td><a href="{{ route('blog.single', ['slug'=>$post->slug])}}" class="btn btn-warning" id="b1" ><span class=" glyphicon glyphicon-eye-open"></span>View&nbsp;&nbsp </a></td>
+                        <td><a href="{{ route('blog.single', ['slug'=>$post->slug])}}" class="btn btn-warning" id="b1" >View&nbsp;&nbsp </a></td>
                         <td>
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#{{$post->id}}" id="b2"><span class="glyphicon glyphicon-edit"></span>&nbspEdit&nbsp &nbsp;</button>
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#{{$post->id}}" id="b2">&nbspEdit&nbsp &nbsp;</button>
                             <!-- Modal -->
                             <div class="modal fade" id="{{$post->id}}" role="dialog">
                                 <div class="modal-dialog">
@@ -87,11 +83,15 @@
                             </div>
                         </td>
                           <td>
-                              <form action="{{url('admin/posts/'.$post->id)}}" method='post'>
+                              {{ Form::open(['method' => 'DELETE', 'route' => ['posts.destroy', $post->id]]) }}
+                              {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                              {{ Form::close() }}
+
+                             {{-- <form action="{{url('admin/posts/'.$post->id)}}" method='post'>
                                   {{ method_field('DELETE') }}
                                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                  <button type="submit" class="btn btn-danger mybtn"><span class="glyphicon glyphicon-trash"></span>Delete</button>
-                              </form>
+                                  <button type="submit" class="btn btn-danger mybtn">Delete</button>
+                              </form>--}}
                           </td>
 
                         </div>

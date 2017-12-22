@@ -12,7 +12,7 @@
     <!-- Styles -->
     <link rel="shortcut icon" href="{{ asset('images/photos/tuftalogo.png')}}" type="image/png">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
     @yield('stylesheets')
 
