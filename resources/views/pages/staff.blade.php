@@ -22,38 +22,14 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach($employees as $employee)
                 <tr>
-                    <td>1.</td>
-                    <td><img src="../photos/director.jpg" class=" my-image"></td>
-                    <td>Ахмеджанов Надирджан Уткурджанович
-                    </td>
-                    <td>Директор
-                    </td>
+                    <td>{{$employee->id}}</td>
+                    <td><img src="{{asset('images/employees/'. $employee->image)}}" class=" my-image"></td>
+                    <td>{{$employee->full_name_ru}}</td>
+                    <td>{{$employee->position_ru}}</td>
                 </tr>
-                <tr>
-                    <td>1.</td>
-                    <td><img src="../photos/director.jpg" class=" my-image"></td>
-                    <td>Ахмеджанов Надирджан Уткурджанович
-                    </td>
-                    <td>Директор
-                    </td>
-                </tr>
-                <tr>
-                    <td>1.</td>
-                    <td><img src="../photos/director.jpg" class=" my-image"></td>
-                    <td>Ахмеджанов Надирджан Уткурджанович
-                    </td>
-                    <td>Директор
-                    </td>
-                </tr>
-                <tr>
-                    <td>1.</td>
-                    <td><img src="../photos/director.jpg" class=" my-image"></td>
-                    <td>Ахмеджанов Надирджан Уткурджанович
-                    </td>
-                    <td>Директор
-                    </td>
-                </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

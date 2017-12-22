@@ -80,11 +80,13 @@
                         <li>Презентация инновационного проекта</li>
                         <li>Заявления на получение статуса резидента</li>
                     </ul>
-
-
-
-
-
+                    <div class="col-md-12">
+                        <div class="link ">
+                            <a class="form-control form-group btn-primary download " href="{{url('/download')}}">
+                                <i class="fa fa-download " aria-hidden="true "></i> Скачать файлы (шаблоны) для отправки заявок
+                            </a>
+                        </div>
+                    </div>
                     <div class="col-lg-12 col-sm-12 col-12">
                         <div class="input-group">
                             <label class="input-group-btn">
@@ -99,13 +101,6 @@
 
                 <button type="submit" class="button send_req"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Отправить заявку</button>
 
-                    <div class="col-md-12">
-                        <div class="link ">
-                            <a class="form-control form-group btn-primary download " href="{{url('/download')}}">
-                                <i class="fa fa-download " aria-hidden="true "></i> Скачать файлы (шаблоны) для отправки заявок
-                            </a>
-                        </div>
-                    </div>
 
                 </div>
                 </form>

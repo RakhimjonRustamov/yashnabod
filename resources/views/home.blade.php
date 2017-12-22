@@ -44,32 +44,90 @@
                             <div class="carousel-inner">
                                 <div class="item active">
                                     <div class="row">
-                                        @foreach($products as $home_product)
+
                                         <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                            <div class="products thumbnail" style="background-image: url('images/products/{{$home_product->product_image}}') ">
+                                            <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[0]->product_image)}}') ">
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="html/products-single.html">
-                                                    <div class="product-text">{{$home_product->product_name_ru}}</div>
+                                                    <div class="product-text">{{$products[0]->product_name_ru}}</div>
                                                 </a>
                                             </div>
                                         </div>
-                                         @endforeach
+
+                                            <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                                <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[1]->product_image)}}') ">
+                                                </div>
+                                                <div class="readmore-box">
+                                                    <a href="html/products-single.html">
+                                                        <div class="product-text">{{$products[1]->product_name_ru}}</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                                <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[2]->product_image)}}') ">
+                                                </div>
+                                                <div class="readmore-box">
+                                                    <a href="html/products-single.html">
+                                                        <div class="product-text">{{$products[2]->product_name_ru}}</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                                <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[3]->product_image)}}') ">
+                                                </div>
+                                                <div class="readmore-box">
+                                                    <a href="html/products-single.html">
+                                                        <div class="product-text">{{$products[3]->product_name_ru}}</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="row">
-                                        @foreach($products as $home_product)
                                             <div class="col-md-3 col-sm-3 col-md-3 products-column">
-                                                <div class="products thumbnail" style="background-image: url('images/products/{{$home_product->product_image}}') ">
+                                                <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[4]->product_image)}}') ">
                                                 </div>
                                                 <div class="readmore-box">
                                                     <a href="html/products-single.html">
-                                                        <div class="product-text">{{$home_product->product_name_ru}}</div>
+                                                        <div class="product-text">{{$products[4]->product_name_ru}}</div>
                                                     </a>
                                                 </div>
                                             </div>
-                                        @endforeach
+                                            <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                                <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[5]->product_image)}}') ">
+                                                </div>
+                                                <div class="readmore-box">
+                                                    <a href="html/products-single.html">
+                                                        <div class="product-text">{{$products[5]->product_name_ru}}</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                                <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[6]->product_image)}}') ">
+                                                </div>
+                                                <div class="readmore-box">
+                                                    <a href="html/products-single.html">
+                                                        <div class="product-text">{{$products[6]->product_name_ru}}</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-md-3 products-column">
+                                                <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[7]->product_image)}}') ">
+                                                </div>
+                                                <div class="readmore-box">
+                                                    <a href="html/products-single.html">
+                                                        <div class="product-text">{{$products[7]->product_name_ru}}</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -206,14 +264,13 @@
                                     {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
                                 </p>
                             </div>
-                            <div class="hidden-md hidden-lg">
+                            <div class="">
                                 <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>
                             </div>
                         </div>
                             @endforeach
                     </div>
                 </div>
-
 
                 <div class="col-md-4">
                     <div class="widget-sidebar">
@@ -222,7 +279,7 @@
                             <ul>
                                 @foreach($posts as $post)
                                 <li class="recent-post">
-                                    <a href="">
+                                    <a href="{{url('/news/'.$post->slug)}}">
                                         <div class="news-column1">
                                             <div class="news1 thumbnail" style="background-image: url('images/posts/{{$post->image}}') ">
                                             </div>

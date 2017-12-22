@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Employee;
 use Mail;
 use Session;
 use App\Post;
@@ -17,7 +18,8 @@ class PagesController extends Controller
     }
 
     public function getStaff(){
-        return view('pages.staff');
+        $employees=Employee::all();
+        return view('pages.staff')->withEmployees($employees);
     }
 
     public function getBeresident(){
