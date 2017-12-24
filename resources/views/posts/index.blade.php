@@ -70,11 +70,11 @@
                                         <div class="modal-footer">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                {{ Form::submit('Save Changes', ['class'=>'btn btn-success btn-block'])}}
+                                                {{ Form::submit('Сохранить изменения', ['class'=>'btn btn-success btn-block'])}}
                                                 {!! Form::close()!!}
                                                 </div>
                                                 <div class="col-md-6">
-                                                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Отмена</button>
                                                 </div>
                                             </div>
                                         </div>

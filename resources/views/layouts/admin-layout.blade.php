@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Admin</title>
+    <title>Администратор</title>
 
     <!-- Styles -->
     <link rel="shortcut icon" href="{{ asset('images/photos/tuftalogo.png')}}" type="image/png">
@@ -39,16 +39,16 @@
                 <!-- Items -->
                 <div class="collapse navbar-collapse" id="topNavBar">
                     <ul class="nav navbar-nav">
-                        <li class="{{ Request::is('admin')?"active":""}}" ><a href="{{ url('admin')}}">Admin</a>
+                        <li class="{{ Request::is('admin')?"active":""}}" ><a href="{{ url('admin')}}">Администратор</a>
                         </li>
-                        <li class="{{ Request::is('admin/residents')?"active":""}}" ><a href="{{ url('admin/residents')}}">Residents</a></li>
-                        <li class="{{ Request::is('admin/products')?"active":""}}" ><a href="{{ url('admin/products')}}">Products</a></li>
-                        <li class="{{ Request::is('admin/posts')?"active":""}}" ><a href="{{ url('admin/posts')}}">Posts</a></li>
-                        <li class="{{ Request::is('admin/receptions')?"active":""}}" ><a href="{{ url('admin/receptions')}}">Receptions</a></li>
-                        <li class="{{ Request::is('admin/posts/create')?"active":""}}" ><a href="{{ url('admin/posts/create')}}">Add New Post</a></li>
-                        <li class="{{ Request::is('admin/employees')?"active":""}}" ><a href="{{ url('admin/employees')}}">Employees</a></li>
-                        <li class="{{ Request::is('admin/offers')?"active":""}}" ><a href="{{ url('admin/offers')}}">Offers</a></li>
-                        <li class="{{ Request::is('admin/popularity')?"active":""}}" ><a href="{{route('popularity.index')}}">Popularity</a></li>
+                        <li class="{{ Request::is('admin/residents')?"active":""}}" ><a href="{{ url('admin/residents')}}">Резиденты</a></li>
+                        <li class="{{ Request::is('admin/products')?"active":""}}" ><a href="{{ url('admin/products')}}">Продукты</a></li>
+                        <li class="{{ Request::is('admin/posts')?"active":""}}" ><a href="{{ url('admin/posts')}}">Новости</a></li>
+                        <li class="{{ Request::is('admin/receptions')?"active":""}}" ><a href="{{ url('admin/receptions')}}">Приемные</a></li>
+                        <li class="{{ Request::is('admin/posts/create')?"active":""}}" ><a href="{{ url('admin/posts/create')}}">Добавить новость</a></li>
+                        <li class="{{ Request::is('admin/employees')?"active":""}}" ><a href="{{ url('admin/employees')}}">Сотрудники</a></li>
+                        <li class="{{ Request::is('admin/offers')?"active":""}}" ><a href="{{ url('admin/offers')}}">Предложения</a></li>
+                        <li class="{{ Request::is('admin/popularity')?"active":""}}" ><a href="{{route('popularity.index')}}">Популярность</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

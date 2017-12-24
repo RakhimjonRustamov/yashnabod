@@ -42,6 +42,7 @@ Route::get('/residents/{resident}', 'PagesController@getSingleResident')->name('
 
 
 Route::get('/products', 'PagesController@getProducts');
+Route::get('/products/{single}', 'ProductController@productsSingle');
 
 // reception
 Route::get('/reception', 'PagesController@getReception');

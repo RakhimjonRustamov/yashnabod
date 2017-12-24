@@ -15,12 +15,12 @@
             <table class="table">
                 <thead>
                 <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Position</th>
-                <th>Region</th>
-                <th>Email</th>
-                <th>Created At</th>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Должность</th>
+                <th>Область</th>
+                <th>Эл. адрес</th>
+                <th>Создан в</th>
                 <th></th>
                 <th></th>
                 </thead>
@@ -37,7 +37,7 @@
                             <td><a href="{{url('admin/offers/download/'.$offer->id)}}" class="btn btn-primary">Download</a>
                             <td>
                                 {{ Form::open(['method' => 'DELETE', 'route' => ['offers.destroy', $offer->id]]) }}
-                                {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                                {{ Form::submit('Удалить', ['class' => 'btn btn-danger btn-block']) }}
                                 {{ Form::close() }}
                                 {{--<form action="{{url('admin/offers/'.$offer->id)}}" method='post'>
                                     {{ method_field('DELETE') }}

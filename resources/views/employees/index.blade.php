@@ -45,7 +45,7 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         {{ Form::open(['method' => 'DELETE', 'route' => ['employees.destroy', $employee->id]]) }}
-                                                        {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                                                        {{ Form::submit('УДАЛИТЬ', ['class' => 'btn btn-danger btn-block']) }}
                                                         {{ Form::close() }}
                                                         {{--<form action="{{url('admin/employees/'.$employee->id)}}" method='post'>
                                                             {{ method_field('DELETE') }}
@@ -54,7 +54,7 @@
                                                         </form>--}}
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">ОТМЕНА</button>
                                                     </div>
                                                 </div>
                                             </div>

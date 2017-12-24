@@ -8,11 +8,11 @@
             <table class="table">
                 <thead>
                 <th>#</th>
-                <th>Full Name:</th>
-                <th>Date Appointment</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Project Info</th>
+                <th>Полное имя:</th>
+                <th>Назначение даты</th>
+                <th>Телефон</th>
+                <th>Эл. адрес</th>
+                <th>Информация о проекте</th>
                 </thead>
                 <tbody>
                 @foreach($receptions as $reception)
@@ -40,7 +40,7 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         {{ Form::open(['method' => 'DELETE', 'route' => ['receptions.destroy', $reception->id]]) }}
-                                                        {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                                                        {{ Form::submit('Удалить', ['class' => 'btn btn-danger btn-block']) }}
                                                         {{ Form::close() }}
                                                      {{--   <form action="{{url('admin/receptions/'.$reception->id)}}" method='post'>
                                                             {{ method_field('DELETE') }}
@@ -49,7 +49,7 @@
                                                         </form>--}}
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Отмена</button>
                                                     </div>
                                                 </div>
                                             </div>

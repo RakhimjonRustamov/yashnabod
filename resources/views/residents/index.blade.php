@@ -7,8 +7,8 @@
             <table class="table">
                 <thead>
                 <th>#</th>
-                <th>Resident name in Russian</th>
-                <th>Created At </th>
+                <th>Имя резидента</th>
+                <th> </th>
                 <th></th>
                 <th></th>
                 </thead>

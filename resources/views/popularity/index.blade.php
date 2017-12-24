@@ -1,5 +1,5 @@
 @extends('layouts.admin-layout')
-@section('title', '| Popular Info')
+@section('title', '| Популярная информация')
 <style>
     .mybtn1 li{
         display:inline-block;
@@ -16,9 +16,9 @@
             <table class="table">
                 <thead>
                 <th>#</th>
-                <th>Popular Info</th>
-                <th>Popular Link</th>
-                <th>Craeted At</th>
+                <th>Популярная информация</th>
+                <th>Популярная ссылка</th>
+                <th>Создан в</th>
                 <th></th>
                 </thead>
                 <tbody>
@@ -46,7 +46,7 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         {{ Form::open(['method' => 'DELETE', 'route' => ['popularity.destroy', $popularity->id]]) }}
-                                                        {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                                                        {{ Form::submit('Удалить', ['class' => 'btn btn-danger btn-block']) }}
                                                         {{ Form::close() }}
                                                         {{--
                                                         <form action="{{url('admin/popularity/'.$popularity->id)}}" method='post'>
@@ -56,7 +56,7 @@
                                                         </form>--}}
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Отмена</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -74,7 +74,7 @@
                                         <div class="modal-content">
                                             <div class="modal-body">
                                                 {!! Form::model($popularity, ['route'=> ['popularity.update', $popularity->id], 'method'=>'PUT', 'files'=>true])!!}
-                                                {{ Form::label('link', 'Link:')}}
+                                                {{ Form::label('link', 'Ссылка:')}}
                                                 {{ Form::text('link', null, ['class'=>'form-control'])}}
                                                 <label name="featured_image" style="margin-top:10px">Загрузить новое изображение</label>
                                                 <input type="file" name="featured_image">
@@ -115,10 +115,10 @@
                     <label>Информация о популярности:</label>
                     <textarea name="popular_info_uz" class="form-control" rows="7" placeholder="Узбек" required="required"></textarea>
                     <textarea name="popular_info_ru" class="form-control" rows="7" placeholder="Pусский" required="required"></textarea>
-                    <label>Upload Featured Image:</label>
+                    <label>Загрузить изображение:</label>
                     <input type="file" name="featured_image" class="form-control">
-                    <label>Popularity Link</label>
-                    <input type="text" class="form-control" name="link" placeholder="link" required="required">
+                    <label>Ссылка популярности</label>
+                    <input type="text" class="form-control" name="link" placeholder="ссылка" required="required">
                     <button type="submit" class="btn btn-success btn-block">Сохранить</button>
                 </form>
             </div>

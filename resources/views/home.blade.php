@@ -49,7 +49,7 @@
                                             <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[0]->product_image)}}') ">
                                             </div>
                                             <div class="readmore-box">
-                                                <a href="html/products-single.html">
+                                                <a href="{{url('products/'.$products[0]->id)}}">
                                                     <div class="product-text">{{$products[0]->product_name_ru}}</div>
                                                 </a>
                                             </div>
@@ -59,7 +59,7 @@
                                                 <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[1]->product_image)}}') ">
                                                 </div>
                                                 <div class="readmore-box">
-                                                    <a href="html/products-single.html">
+                                                    <a href="{{url('products/'.$products[1]->id)}}">
                                                         <div class="product-text">{{$products[1]->product_name_ru}}</div>
                                                     </a>
                                                 </div>
@@ -69,7 +69,7 @@
                                                 <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[2]->product_image)}}') ">
                                                 </div>
                                                 <div class="readmore-box">
-                                                    <a href="html/products-single.html">
+                                                    <a href="{{url('products/'.$products[2]->id)}}">
                                                         <div class="product-text">{{$products[2]->product_name_ru}}</div>
                                                     </a>
                                                 </div>
@@ -79,7 +79,7 @@
                                                 <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[3]->product_image)}}') ">
                                                 </div>
                                                 <div class="readmore-box">
-                                                    <a href="html/products-single.html">
+                                                    <a href="{{url('products/'.$products[3]->id)}}">
                                                         <div class="product-text">{{$products[3]->product_name_ru}}</div>
                                                     </a>
                                                 </div>
@@ -93,7 +93,7 @@
                                                 <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[4]->product_image)}}') ">
                                                 </div>
                                                 <div class="readmore-box">
-                                                    <a href="html/products-single.html">
+                                                    <a href="{{url('products/'.$products[4]->id)}}">
                                                         <div class="product-text">{{$products[4]->product_name_ru}}</div>
                                                     </a>
                                                 </div>
@@ -102,7 +102,7 @@
                                                 <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[5]->product_image)}}') ">
                                                 </div>
                                                 <div class="readmore-box">
-                                                    <a href="html/products-single.html">
+                                                    <a href="{{url('products/'.$products[5]->id)}}">
                                                         <div class="product-text">{{$products[5]->product_name_ru}}</div>
                                                     </a>
                                                 </div>
@@ -112,7 +112,7 @@
                                                 <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[6]->product_image)}}') ">
                                                 </div>
                                                 <div class="readmore-box">
-                                                    <a href="html/products-single.html">
+                                                    <a href="{{url('products/'.$products[6]->id)}}">
                                                         <div class="product-text">{{$products[6]->product_name_ru}}</div>
                                                     </a>
                                                 </div>
@@ -122,7 +122,7 @@
                                                 <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[7]->product_image)}}') ">
                                                 </div>
                                                 <div class="readmore-box">
-                                                    <a href="html/products-single.html">
+                                                    <a href="{{url('products/'.$products[7]->id)}}">
                                                         <div class="product-text">{{$products[7]->product_name_ru}}</div>
                                                     </a>
                                                 </div>
@@ -315,7 +315,7 @@
                                         <div class="residents thumbnail" style="background-image: url('{{ asset('images/residents/'. $resident->resident_logo)}}')">
                                         </div>
                                         <div class="readmore-box-residents">
-                                            <a href="html/products-single.html">
+                                            <a href="{{url('residents/'.$resident->id)}}">
                                                 <div class="product-text">{{$resident->resident_info_uz}}</div>                                            </a>
                                         </div>
                                     </div>

@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except'=>'productsIndex']);
+        $this->middleware('auth', ['except'=>'productsSingle']);
     }
 
     // this index function display all products to admin panel
@@ -24,8 +24,9 @@ class ProductController extends Controller
 
 
     // this index function display all products to home page
-    public function productsIndex(){
-
+    public function productsSingle($id){
+        $product=Product::where('id', '=', $id)->first();
+        return view('pages.getSingleProduct')->withProduct($product);
     }
 
     public function store(Request $request){

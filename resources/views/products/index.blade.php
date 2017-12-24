@@ -1,5 +1,5 @@
 @extends('layouts.admin-layout')
-@section('title', '| All Products')
+@section('title', '| Все продукты')
 <style>
     .mybtn1 li{
         display:inline-block;
@@ -16,9 +16,9 @@
                 <table class="table">
                     <thead>
                     <th>#</th>
-                    <th>Product name</th>
-                    <th>Product Info</th>
-                    <th>Craeted At</th>
+                    <th>Наименование товара</th>
+                    <th>Информация о продукте</th>
+                    <th>Создан в</th>
                     <th></th>
                     <th></th>
                     </thead>
@@ -46,7 +46,7 @@
                                                <div class="row">
                                                    <div class="col-md-6">
                                                        {{ Form::open(['method' => 'DELETE', 'route' => ['products.destroy', $product->id]]) }}
-                                                       {{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) }}
+                                                       {{ Form::submit('Удалить', ['class' => 'btn btn-danger btn-block']) }}
                                                        {{ Form::close() }}
 
                                                {{-- <form action="{{url('admin/products/'.$product->id)}}" method='post'>
@@ -56,7 +56,7 @@
                                                 </form>--}}
                                                    </div>
                                                    <div class="col-md-6">
-                                                   <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cancel</button>
+                                                   <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Отмена</button>
                                                    </div>
                                                </div>
                                             </div>
@@ -116,12 +116,12 @@
                 <h3 align="center"> Создать новый продукт</h3>
                 <form action="{{ route('products.store')}}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                    <label>Product Name:</label>
+                    <label>Наименование товара:</label>
                     <input type="text" name="product_name_uz" class="form-control" placeholder="Узбек" required="required">
                     <input type="text" name="product_name_ru" class="form-control"  placeholder="Pусский" required="required">
-                    <label>Upload Featured Image:</label>
+                    <label>Загрузить изображение:</label>
                     <input type="file" name="featured_image" class="form-control">
-                    <label>Product Info</label>
+                    <label>Информация о продукте</label>
                     <textarea name="product_info_uz" class="form-control" rows="7" placeholder="Узбек" required="required"></textarea>
                     <textarea name="product_info_ru" class="form-control" rows="7" placeholder="Pусский" required="required"></textarea>
                     <button type="submit" class="btn btn-success btn-block">Сохранить продукт</button>
