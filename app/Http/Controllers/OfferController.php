@@ -43,7 +43,7 @@ class OfferController extends Controller
         if($request->hasFile('documents')){
             $file=$request->file('documents');
             $fileName=time().'.'.$file->getClientOriginalExtension();
-            $request->documents->move(public_path('/offers'), $fileName);
+            $request->documents->move(public_path('images/offers'), $fileName);
             $offer->documents=$fileName;
         }
         $offer->save();
@@ -55,7 +55,7 @@ class OfferController extends Controller
     public function download($id){
         $offer=Offer::find($id);
         $filename=$offer->documents;
-        return response()->download(public_path('offers/'.$filename));
+        return response()->download(public_path('images/offers/'.$filename));
     }
 
     public function destroy($id)

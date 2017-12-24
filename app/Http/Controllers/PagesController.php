@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Document;
 use App\Employee;
 use Mail;
 use Session;
@@ -32,8 +33,16 @@ class PagesController extends Controller
     }
 
     public function getNormative(){
-        return view('pages.normative');
+        $normatives=Document::orderBy('id', 'asc')->take(3)->get();
+        return view('pages.normative')->withNormatives($normatives);
     }
+
+    public function downloadNormative($id){
+        $normative=Document::find($id);
+        $filename=$normative->name;
+        return response()->download(public_path('normatives/'.$filename));
+    }
+
 
     public function getReception(){
         return view('pages.reception');

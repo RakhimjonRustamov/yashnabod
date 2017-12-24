@@ -20,6 +20,7 @@ Route::get('/zones', 'PagesController@getZones');
 Route::get('/popular-info', 'PagesController@getPopularInfo');
 Route::get('/beresident', 'PagesController@getBeresident');
 Route::get('/normative', 'PagesController@getNormative');
+Route::get('/normative/download/{normative}', 'PagesController@downloadNormative')->name('normative.download');
 Route::get('/reester', 'PagesController@getReester');
 
 

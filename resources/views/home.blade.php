@@ -2,13 +2,10 @@
 @section('title','IndexPage')
 
 @section('stylesheets')
-
 <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
-
 @endsection
 
 @section('content')
-
     <!-- /////////////////////////////////////// container-fluid1 ////////////////////////////////////////// -->
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid1">
@@ -340,21 +337,21 @@
             <h1>Полезные сайты</h1>
             <div class="row">
                 <div class="col-md-6">
-                    <a href="">
+                    <a href="http://google.com">
                         <div id="facebook">
                         </div>
                     </a>
-                    <a href="">
+                    <a href="http://google.com">
                         <div id="google">
                         </div>
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <a href="">
+                    <a href="http://google.com">
                         <div id="telegram">
                         </div>
                     </a>
-                    <a href="">
+                    <a href="http://google.com">
                         <div id="instagram">
                         </div>
                     </a>
