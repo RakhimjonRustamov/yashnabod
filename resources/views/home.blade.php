@@ -228,19 +228,23 @@
     <div class="container-fluid" id="container-fluid4">
         <div class="row" id="container-fluid4-row">
             <div class="col-md-3 countup-item">
-                <div class="counter slideanim" data-count="150">0</div>
+                <div class="counter slideanim" data-count="{{$counter[0]->counter1}}"></div>
+                <h3>Поступившие заявки</h3>
+            </div>
+            <div class="col-md-2 countup-item">
+                <div class="counter slideanim" data-count="{{$counter[0]->counter2}}"></div>
+                <h3>Поступившие заявки</h3>
+            </div>
+            <div class="col-md-2 countup-item">
+                <div class="counter slideanim" data-count="{{$counter[0]->counter3}}"></div>
+                <h3>Поступившие заявки</h3>
+            </div>
+            <div class="col-md-2 countup-item">
+                <div class="counter slideanim" data-count="{{$counter[0]->counter4}}"></div>
                 <h3>Поступившие заявки</h3>
             </div>
             <div class="col-md-3 countup-item">
-                <div class="counter slideanim" data-count="85">0</div>
-                <h3>Поступившие заявки</h3>
-            </div>
-            <div class="col-md-3 countup-item">
-                <div class="counter slideanim" data-count="2200">0</div>
-                <h3>Поступившие заявки</h3>
-            </div>
-            <div class="col-md-3 countup-item">
-                <div class="counter slideanim" data-count="0">0</div>
+                <div class="counter slideanim" data-count="{{$counter[0]->counter5}}"></div>
                 <h3>Поступившие заявки</h3>
             </div>
         </div>

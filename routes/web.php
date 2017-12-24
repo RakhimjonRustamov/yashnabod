@@ -58,6 +58,7 @@ Route::post('/request', 'OfferController@postOffer')->name('offer.request');
 
 
 Route::get('/admin', 'AdminController@admin')->name('admin');
+Route::get('/admin/counter/edit/{counter}', 'AdminController@edit')->name('counter.edit');
 Route::post('/admin', 'AdminController@counter')->name('counter.store');
 Route::put('/admin/counter/{id}', 'AdminController@updateCounter')->name('counter.update');
 

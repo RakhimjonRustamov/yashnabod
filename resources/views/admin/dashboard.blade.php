@@ -4,17 +4,10 @@
     @include('partials._message')
     <div class="col-md-12">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-10">
                 </div>
-                <div class="col-md-4">
-                    <form action="{{route('counter.store')}}" method="POST">
-                        {{ csrf_field() }}
-                        <input type="text" name="counter1" class="form-control" required="required" placeholder="Counter 1">
-                        <input type="text" name="counter2" class="form-control" required="required" placeholder="Counter 2">
-                        <input type="text" name="counter3" class="form-control" required="required" placeholder="Counter 3">
-                        <input type="text" name="counter4" class="form-control" required="required" placeholder="Counter 4">
-                        <button type="submit" class="btn btn-success btn-block">Save Counters</button>
-                    </form>
+                <div class="col-md-2">
+                    <a href="{{route('counter.edit', ['counter'=>$counter[0]->id])}}" class="btn btn-primary btn-block">Изменить номера</a>
                 </div>
             </div>
     </div>

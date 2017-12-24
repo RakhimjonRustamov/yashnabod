@@ -26,8 +26,8 @@
                  @foreach($products as $product)
                     <tr>
                             <td>{{ $product->id}}</td>
-                            <td>{{ strip_tags($product->product_name_ru)}}</td>
-                            <td>{{ substr(strip_tags($product->product_info_ru), 0, 20)}}{{ strlen(strip_tags($product->product_info_ru)) >20 ? "...":""}}</td>
+                            <td>{{ $product->product_name_ru}}</td>
+                            <td>{{ substr(($product->product_info_ru), 0, 30)}}{{ strlen($product->product_info_ru) >30 ? "...":""}}</td>
                             <td>{{ date('M j, Y H:ia',strtotime($product->created_at))}}</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#delete-{{ $product->id}}" id="b2">View</button>

@@ -19,6 +19,7 @@ class CreateCountersTable extends Migration
             $table->integer('counter2');
             $table->integer('counter3');
             $table->integer('counter4');
+            $table->integer('counter5');
             $table->timestamps();
         });
     }
