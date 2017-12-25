@@ -14,8 +14,10 @@
     <h1>Product Single</h1>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div id="products-single" class="thumbnail"></div>
+            <div class="col-md-4 col-sm-4 col-md-4 products-column">
+                <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$product->product_image)}}')">
+                </div>
+
             </div>
             <div class="col-md-8">
                 <h2>{{App::isLocale ('ru')? $product->product_name_ru: $product->product_name_uz}}</h2>
