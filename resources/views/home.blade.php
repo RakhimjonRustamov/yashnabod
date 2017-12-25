@@ -269,7 +269,7 @@
                                 <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>
                             </div>
                         </div>
-                            @endforeach
+                        @endforeach
                     </div>
                 </div>
 

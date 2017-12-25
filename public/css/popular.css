@@ -21,19 +21,16 @@ html>body {
 }
 
 
-
-
-
-
 .products-column
 {
-
     height: 250px;
     position: absolute;
     margin-bottom: 20px;
+
 }
 .products
 {
+
     background-repeat:no-repeat;
     background-position: center center;
     background-size: 100%;
@@ -42,34 +39,14 @@ html>body {
     text-align: center;
     background-size: cover;
 }
-
-.readmore-box
+.title
 {
-  margin: auto;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: rgba(98, 141, 181, 0.8);
-  overflow: hidden;
-  width: 90%;
-  height:0;
-  transition: .5s ease;
+    font-weight: bold;
+    color: black;
 }
-
-.products-column:hover .readmore-box {
-  bottom: 0;
-  height: 100%;
-}
-
-.product-text {
-  white-space: nowrap;
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+.popular-text
+{
+    color: #727A7E;
+    font-size: 17px;
+    text-align: justify;
 }

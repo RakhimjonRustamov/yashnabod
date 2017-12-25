@@ -12,8 +12,9 @@
         <h1>Новости</h1>
         <div class="row">
             <div class="col-md-8">
-                <div class="news-photo">
-                    <img class="img-responsive thumbnail" src="{{asset('images/posts/'. $post->image)}}">
+                <div class="news-column">
+                    <div class="news thumbnail" style="background-image: url('{{ asset('images/posts/'. $post->image) }}')">
+                    </div>
                 </div>
                 <div class="news-text">
                     <h1>{{$post->title_uz}}</h1>
@@ -27,13 +28,13 @@
                         <ul>
                             @foreach($posts as $post)
                                 <li class="recent-post">
-                                    <div class="post-img">
-                                        <a href="{{url('/news/'.$post->slug)}}"><img src="{{asset('images/posts/'.$post->image)}}" class="img-responsive"></a>
-                                    </div>
-                                    <a href="{{url('/news/'.$post->slug)}}"></a>
-                                    {{ date('M j, Y H:ia',strtotime($post->created_at))}}
-                                    <p><small><i class="fa fa-calendar" data-original-title="{{ date('M j, Y H:ia',strtotime($post->created_at))}}" title="{{$post->title_uz}}"></i> </small></p>
-                                </li>
+                                    <a href="{{url('/news/'.$post->slug)}}">
+                                        <div class="news-column1">
+                                            <div class="news1 thumbnail" style="background-image: url('{{asset('images/posts/'.$post->image)}}') ">
+                                            </div>
+                                        </div>
+                                        <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-center news1-text">{{$post->title_ru}}</h5></a>
+                                    </a></li>
                                 <hr>
                             @endforeach
                         </ul>
