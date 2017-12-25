@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-4 col-md-4 products-column">
-                <div class="products thumbnail" style="background-image: url()">
+                <div class="products thumbnail" style="background-image: url('{{ asset('images/residents/'. $resident->resident_logo)}}')">
                 </div>
 
             </div>
