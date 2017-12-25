@@ -84,7 +84,8 @@ class PagesController extends Controller
 
 
     public function getReester(){
-        return view('pages.reester');
+        $residents=Resident::orderBy('id', 'asc')->get();
+        return view('pages.reester')->withResidents($residents);
     }
 
     public function getCoordination(){

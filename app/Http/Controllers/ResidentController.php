@@ -21,18 +21,28 @@ class ResidentController extends Controller
 
     public function store(Request $request){
         $this->validate($request, array(
-            'resident_name_uz'=> 'required|max:300',
-            'resident_name_ru'=> 'required|max:300',
+            'reg_number'=>'required',
+            'ownership_uz'=>'required',
+            'ownership_ru'=>'required',
+            'resident_name_uz'=> 'required',
+            'resident_name_ru'=> 'required',
+            'code'=>'required',
+            'email'=>'required|email',
             'resident_info_uz'=> 'required',
             'resident_info_ru'=> 'required',
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
 
         ));
         $resident= new Resident;
-        $resident->resident_info_uz=$request->resident_info_uz;
-        $resident->resident_info_ru=$request->resident_info_ru;
+        $resident->reg_number=$request->reg_number;
+        $resident->ownership_uz=$request->ownership_uz;
+        $resident->ownership_ru=$request->ownership_ru;
         $resident->resident_name_uz=$request->resident_name_uz;
         $resident->resident_name_ru=$request->resident_name_ru;
+        $resident->code=$request->code;
+        $resident->email=$request->email;
+        $resident->resident_info_uz=$request->resident_info_uz;
+        $resident->resident_info_ru=$request->resident_info_ru;
 
         if($request->hasFile('featured_image')){
             $image=$request->file('featured_image');
@@ -49,18 +59,29 @@ class ResidentController extends Controller
 
     public function update(Request $request, $id){
         $this->validate($request, array(
-            'resident_name_uz'=> 'required|max:300',
-            'resident_name_ru'=> 'required|max:300',
+            'reg_number'=>'required',
+            'ownership_uz'=>'required',
+            'ownership_ru'=>'required',
+            'resident_name_uz'=> 'required',
+            'resident_name_ru'=> 'required',
+            'code'=>'required',
+            'email'=>'required',
             'resident_info_uz'=> 'required',
             'resident_info_ru'=> 'required',
             'featured_image'=>'required|mimes:jpg,jpeg,png,svg|max:8192'
 
+
         ));
         $resident=Resident::find($id);
-        $resident->resident_info_uz=$request->resident_info_uz;
-        $resident->resident_info_ru=$request->resident_info_ru;
+        $resident->reg_number=$request->reg_number;
+        $resident->ownership_uz=$request->ownership_uz;
+        $resident->ownership_ru=$request->ownership_ru;
         $resident->resident_name_uz=$request->resident_name_uz;
         $resident->resident_name_ru=$request->resident_name_ru;
+        $resident->code=$request->code;
+        $resident->email=$request->email;
+        $resident->resident_info_uz=$request->resident_info_uz;
+        $resident->resident_info_ru=$request->resident_info_ru;
 
         if($request->hasFile('featured_image')){
             $image=$request->file('featured_image');

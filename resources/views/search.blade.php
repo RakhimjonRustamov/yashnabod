@@ -20,7 +20,9 @@
 @endsection
 @section('content')
 @section('page-title')
-<h1>Новости</h1>
+
+
+
 @endsection
 
 
