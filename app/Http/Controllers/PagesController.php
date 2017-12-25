@@ -175,6 +175,10 @@ class PagesController extends Controller
 
         $residents=Resident::where('resident_name_uz', 'LIKE', "%$request->search%")
             ->orWhere('resident_name_ru', 'LIKE', "%$request->search%")
+            ->orWhere('ownership_uz')
+            ->orWhere('ownership_ru')
+            ->orWhere('resident_info_uz')
+            ->orWhere('resident_info_ru')
             ->orderBy('id', 'desc')
             ->paginate(8, ['*'], 'residents');
 
