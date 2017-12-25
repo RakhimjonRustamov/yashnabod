@@ -18,11 +18,11 @@ class ReceptionController extends Controller
     // Записаться на прием в Дирекцию
     public function postReception(Request $request){
         $this->validate($request, array(
-            'full_name'=>'required|max:200',
+            'full_name'=>'required|max:400',
             'date_appointment'=>'required|date',
             'phone'=>'required|min:9|numeric',
             'email'=>'required|email',
-            'project_info'=>'required|min:3'
+            'project_info'=>'required'
         ));
 
         $reception= new Reception;
@@ -33,15 +33,15 @@ class ReceptionController extends Controller
         $reception->project_info=$request->project_info;
         $reception->save();
 
-        Session::flash('success', 'The reception was successfully send');
+        Session::flash('success', 'Прием был успешно отправлен');
         return redirect()->route('reception');
     }
 
 
-    public function destroy($id)    {
+    public function destroy($id){
         $reception=Reception::find($id);
         $reception->delete();
-        Session::flash('success', "The reception was successfully deleted");
+        Session::flash('success', "Прием был успешно удален");
         return redirect()->route('receptions.index');
     }
 

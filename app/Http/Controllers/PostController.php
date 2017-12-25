@@ -70,7 +70,7 @@ class PostController extends Controller
             $post->image=$filename;
         }
         $post->save();
-        Session::flash('success', 'The post was successfully saved');
+        Session::flash('success', 'Сообщение успешно сэкономлено');
         return redirect()->route('posts.index');
     }
 
@@ -117,7 +117,7 @@ class PostController extends Controller
             $image=$request->file('featured_image');
             $filename=time().'.'.$image->getClientOriginalExtension();
             $location=public_path('images/posts/'. $filename);
-            Image::make($image)->resize(800,400)->save($location);
+            Image::make($image)->save($location);
             $oldFileName='/posts/'.$post->image;
             // update the database
             $post->image=$filename;
@@ -126,7 +126,7 @@ class PostController extends Controller
 
         }
         $post->save();
-        Session::flash('success', 'The post was successfully updated');
+        Session::flash('success', 'Сообщение успешно обновлено');
         return redirect()->route('posts.index');
     }
 
@@ -142,7 +142,7 @@ class PostController extends Controller
         $photo ='/posts/'.$post->image;
         Storage::delete($photo);
         $post->delete();
-        Session::flash('success', "The post was successfully deleted");
+        Session::flash('success', "Сообщение успешно удалено");
         return redirect()->route('posts.index');
     }
 }
