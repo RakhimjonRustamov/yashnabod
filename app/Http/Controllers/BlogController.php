@@ -14,9 +14,8 @@ class BlogController extends Controller
     }
 
     public function getNews(){
-        $posts=Post::orderBy('id', 'desc')->take(4)->get();
-        $post=Post::orderBy('id', 'desc')->take(1)->get();
-        return view('pages.news')->withPost($post)->withPosts($posts);
+        $posts=Post::orderBy('id', 'desc')->paginate(6);
+        return view('pages.news')->withPosts($posts);
     }
 
     public function getSingleNews($slug){
