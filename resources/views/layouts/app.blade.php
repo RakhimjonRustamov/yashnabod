@@ -162,7 +162,7 @@
         <h1>Инновационный технопарк "Яшнабад"<br>Мы приближаем будущее</h1>
         <div class="row">
             <div class="submit-wrapper">
-                <a href="{{url('/request')}}">Подать заявку</a>
+                <a href="{{url('/request')}}">{{ __('main.request') }}</a>
             </div>
         </div>
         <div class="row hidden-sm hidden-xs" id="icons-row">

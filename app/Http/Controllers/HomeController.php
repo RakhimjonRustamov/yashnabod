@@ -13,11 +13,17 @@ class HomeController extends Controller
         $residents=Resident::orderBy('id', 'desc')->take(6)->get();
         $products=Product::orderBy('id', 'desc')->take(8)->get();
         $posts=Post::orderBy('id', 'desc')->take(4)->get();
+        $count=4;
+        $postsp=Post::where('id', '>',$count)
+                     ->orderBy('id', 'desc')
+                     ->take(4)
+                     ->get();
         return view('home')
             ->withPosts($posts)
             ->withProducts($products)
             ->withResidents($residents)
-            ->withCounter($counter);
+            ->withCounter($counter)
+            ->withPostsp($postsp);
     }
     public function downloadZip(){
         $docs=glob(public_path('documents/*'));

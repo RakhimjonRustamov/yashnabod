@@ -34,7 +34,7 @@ class PagesController extends Controller
     }
 
     public function getNormative(){
-        $normatives=Document::orderBy('id', 'asc')->take(3)->get();
+        $normatives=Document::orderBy('id', 'asc')->take(6)->get();
         return view('pages.normative')->withNormatives($normatives);
     }
 

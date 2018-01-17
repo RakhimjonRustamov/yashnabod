@@ -47,11 +47,10 @@
                                             </div>
                                             <div class="readmore-box">
                                                 <a href="{{url('products/'.$products[0]->id)}}">
-                                                    <div class="product-text">{{$products[0]->product_name_ru}}</div>
+                                                    <div class="product-text">{{App::isLocale('ru') ? $products[0]->product_name_ru : $products[0]->product_name_uz}}</div>
                                                 </a>
                                             </div>
                                         </div>
-
                                             <div class="col-md-3 col-sm-3 col-md-3 products-column">
                                                 <div class="products thumbnail" style="background-image: url('{{asset('images/products/'.$products[1]->product_image)}}') ">
                                                 </div>
@@ -283,24 +282,24 @@
                         <h2 class="title-widget-sidebar">// Последние новости</h2>
                         <div class="content-widget-sidebar">
                             <ul>
-                                @foreach($posts as $post)
+                                @foreach($postsp as $postp)
                                 <li class="recent-post">
-                                    <a href="{{url('/news/'.$post->slug)}}">
+                                    <a href="{{url('/news/'.$postp->slug)}}">
 
                                         <div class="post">
-                                            <div class="post-img-content1" style="background-image: url('{{asset('images/posts/'.$post->image)}}')">
+                                            <div class="post-img-content1" style="background-image: url('{{asset('images/posts/'.$postp->image)}}')">
 
                                             </div>
                                             <div class="content">
                                                 <div class="author">
-                                                    <time datetime="2014-01-20"><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></time>
+                                                    <time datetime="2014-01-20"><time>{{ date('M j, Y H:ia',strtotime($postp->created_at))}}</time></time>
                                                 </div>
                                                 <div class="text-justify">
-                                                    <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-justfy news1-text">{{$post->title_ru}}</h5></a>
+                                                    <a href="{{url('/news/'.$postp->slug)}}"><h5 class="text-justfy news1-text">{{$postp->title_ru}}</h5></a>
                                                 </div>
                                             </div>
                                         </div>
-
+                                    </a>
                                 </li>
                                 <hr>
                                 @endforeach
