@@ -5,19 +5,8 @@
 @endsection
 @section('content')
 @section('page-title')
-    @foreach($products as $product)
-        <h1>{{$product}}</h1>
-    @endforeach
-    @foreach($posts as $post)
-        <h1>{{$post}}</h1>
-    @endforeach
-    {!! $posts->links()!!}
 
 @endsection
-
-
-
-
 
 <div class="container-fluid dotted">
     <div class="container">
@@ -43,60 +32,24 @@
                     <h1 class="title">Продукты</h1>
                     <div class="container">
                         <div class="row">
+                            @foreach($products as $product)
                             <div class="col-sm-4 col-md-4">
                                 <div class="post">
-                                    <div class="post-img-content" style="background-image: url('https://i.pinimg.com/736x/1d/b5/bb/1db5bb67e1f6e031e146366aa19142b1--kids-photography-girls-fall-family-photography.jpg')">
+                                    <div class="post-img-content" style="background-image: url('{{ asset('images/products/'. $product->product_image)}}')">
 
                                     </div>
                                     <div class="content">
 
                                         <div class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            {{$product->product_info_ru}}
                                         </div>
                                         <div>
-                                            <a href="" class="btn btn-primary btn-sm button-read">Читать дальше</a>
+                                            <a href="{{url('products/'.$product->id)}}" class="btn btn-primary btn-sm button-read">Читать дальше</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="post">
-                                    <div class="post-img-content" style="background-image: url('https://i.pinimg.com/736x/1d/b5/bb/1db5bb67e1f6e031e146366aa19142b1--kids-photography-girls-fall-family-photography.jpg')">
-
-                                    </div>
-                                    <div class="content">
-
-                                        <div class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        </div>
-                                        <div>
-                                            <a href="" class="btn btn-primary btn-sm button-read">Читать дальше</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="post">
-                                    <div class="post-img-content" style="background-image: url('https://i.pinimg.com/736x/1d/b5/bb/1db5bb67e1f6e031e146366aa19142b1--kids-photography-girls-fall-family-photography.jpg')">
-
-                                    </div>
-                                    <div class="content">
-
-                                        <div class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        </div>
-                                        <div>
-                                            <a href="" class="btn btn-primary btn-sm button-read">Читать дальше</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -104,61 +57,25 @@
                     <h1 class="title">Резиденты</h1>
                     <div class="container">
                         <div class="row">
+                            @foreach($residents as $resident)
                             <div class="col-sm-4 col-md-4">
                                 <div class="post">
-                                    <div class="post-img-content" style="background-image: url('https://i.pinimg.com/736x/1d/b5/bb/1db5bb67e1f6e031e146366aa19142b1--kids-photography-girls-fall-family-photography.jpg')">
+                                    <div class="post-img-content" style="background-image: url('{{ asset('images/residents/'. $resident->resident_logo)}}')">
 
                                     </div>
                                     <div class="content">
 
                                         <div class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            {{$resident->resident_info_uz}}
                                         </div>
                                         <div>
-                                            <a href="" class="btn btn-primary btn-sm button-read">Читать дальше</a>
+                                            <a href="{{url('residents/'.$resident->id)}}" class="btn btn-primary btn-sm button-read">Читать дальше</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="post">
-                                    <div class="post-img-content" style="background-image: url('https://i.pinimg.com/736x/1d/b5/bb/1db5bb67e1f6e031e146366aa19142b1--kids-photography-girls-fall-family-photography.jpg')">
-
-                                    </div>
-                                    <div class="content">
-
-                                        <div class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        </div>
-                                        <div>
-                                            <a href="" class="btn btn-primary btn-sm button-read">Читать дальше</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="post">
-                                    <div class="post-img-content" style="background-image: url('https://i.pinimg.com/736x/1d/b5/bb/1db5bb67e1f6e031e146366aa19142b1--kids-photography-girls-fall-family-photography.jpg')">
-
-                                    </div>
-                                    <div class="content">
-
-                                        <div class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        </div>
-                                        <div>
-                                            <a href="" class="btn btn-primary btn-sm button-read">Читать дальше</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
+                          </div>
                     </div>
                 </div>
 
@@ -166,65 +83,26 @@
                     <h1 class="title">Новости</h1>
                     <div class="container">
                         <div class="row">
+                            @foreach($posts as $post)
                             <div class="col-sm-4 col-md-4">
                                 <div class="post">
-                                    <div class="post-img-content" style="background-image: url('https://i.pinimg.com/736x/1d/b5/bb/1db5bb67e1f6e031e146366aa19142b1--kids-photography-girls-fall-family-photography.jpg')">
+                                    <div class="post-img-content" style="background-image: url('{{asset('images/posts/'.$post->image)}}')">
                                     </div>
                                     <div class="content">
                                         <div class="author">
-                                            <time datetime="2014-01-20">January 20th, 2014</time>
+                                            <time datetime="2014-01-20">{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time>
                                         </div>
                                         <div class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
                                         </div>
                                         <div>
-                                            <a href="" class="btn btn-primary btn-sm button-read">Читать дальше</a>
+                                            <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">Читать дальше</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="post">
-                                    <div class="post-img-content" style="background-image: url('https://i.pinimg.com/736x/1d/b5/bb/1db5bb67e1f6e031e146366aa19142b1--kids-photography-girls-fall-family-photography.jpg')">
-
-                                    </div>
-                                    <div class="content">
-                                        <div class="author">
-                                            <time datetime="2014-01-20">January 20th, 2014</time>
-                                        </div>
-                                        <div class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        </div>
-                                        <div>
-                                            <a href="" class="btn btn-primary btn-sm button-read">Читать дальше</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="post">
-                                    <div class="post-img-content" style="background-image: url('https://i.pinimg.com/736x/1d/b5/bb/1db5bb67e1f6e031e146366aa19142b1--kids-photography-girls-fall-family-photography.jpg')">
-
-                                    </div>
-                                    <div class="content">
-                                        <div class="author">
-                                            <time datetime="2014-01-20">January 20th, 2014</time>
-                                        </div>
-                                        <div class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        </div>
-                                        <div>
-                                            <a href="" class="btn btn-primary btn-sm button-read">Читать дальше</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            {!! $posts->links()!!}
                         </div>
                     </div>
 
@@ -234,18 +112,5 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @endsection

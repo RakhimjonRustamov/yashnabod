@@ -6,6 +6,7 @@ use Mail;
 use Session;
 use App\Post;
 use App\Product;
+use App\Popularity;
 use App\Resident;
 use Illuminate\Http\Request;
 class PagesController extends Controller
@@ -24,12 +25,12 @@ class PagesController extends Controller
     }
 
     public function getBeresident(){
-
         return view('pages.beresident');
     }
 
     public function getPopularInfo(){
-        return view('pages.popular');
+        $popularities=Popularity::orderBy('id', 'desc')->paginate(8);
+        return view('pages.popular')->withPopularities($popularities);
     }
 
     public function getNormative(){
@@ -173,19 +174,19 @@ class PagesController extends Controller
             ->orderBy('id', 'desc')
             ->paginate(8,['*'], 'products');
 
-        /*$residents=Resident::where('resident_name_uz', 'LIKE', "%$request->search%")
+        $residents=Resident::where('resident_name_uz', 'LIKE', "%$request->search%")
             ->orWhere('resident_name_ru', 'LIKE', "%$request->search%")
             ->orWhere('ownership_uz')
             ->orWhere('ownership_ru')
             ->orWhere('resident_info_uz')
             ->orWhere('resident_info_ru')
             ->orderBy('id', 'desc')
-            ->paginate(8, ['*'], 'residents');*/
+            ->paginate(8, ['*'], 'residents');
 
         return view('search')
             ->withPosts($posts)
-            ->withProducts($products);
-        //    ->withResidents($residents);
+            ->withProducts($products)
+            ->withResidents($residents);
     }
 
 }
