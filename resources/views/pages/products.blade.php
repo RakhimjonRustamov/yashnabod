@@ -24,8 +24,12 @@
                 </div>
             </div>
             @endforeach
+
         </div>
-        {{$products->links()}}
+
+        <div class="pagination text-center" style="float: right;">
+            {{$products->links()}}
+        </div>
     </div>
 </div>
 @endsection

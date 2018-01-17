@@ -253,27 +253,32 @@
             <h1>Новости</h1>
             <div class="row">
 
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <div class="row">
                         @foreach($posts as $post)
-                        <div class="col-md-6 col-sm-12 news-column">
-                            <div class="news thumbnail" style="background-image: url('{{asset('images/posts/'.$post->image)}}') ">
-                            </div>
-                            <div class="content">
-                                <time datetime="2014-01-20"><h5><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></h5></time>
-                                <p class="news-text">
-                                    {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
-                                </p>
-                            </div>
-                            <div class="">
-                                <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm">Read more</a>
+                        <div class="col-sm-6 col-md-6 column">
+                            <div class="post">
+                                <div class="post-img-content" style="background-image: url('{{asset('images/posts/'.$post->image)}}')">
+                                </div>
+                                <div class="content">
+                                    <div class="author">
+                                        <time datetime="2014-01-20"><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></time>
+                                        <hr>
+                                    </div>
+                                    <div class="text-justify">
+                                        {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
+                                    </div>
+                                    <div>
+                                        <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">Читать дальше</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         @endforeach
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="widget-sidebar">
                         <h2 class="title-widget-sidebar">// Последние новости</h2>
                         <div class="content-widget-sidebar">
@@ -281,12 +286,21 @@
                                 @foreach($posts as $post)
                                 <li class="recent-post">
                                     <a href="{{url('/news/'.$post->slug)}}">
-                                        <div class="news-column1">
-                                            <div class="news1 thumbnail" style="background-image: url('{{asset('images/posts/'.$post->image)}}') ">
+
+                                        <div class="post">
+                                            <div class="post-img-content1" style="background-image: url('{{asset('images/posts/'.$post->image)}}')">
+
+                                            </div>
+                                            <div class="content">
+                                                <div class="author">
+                                                    <time datetime="2014-01-20"><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></time>
+                                                </div>
+                                                <div class="text-justify">
+                                                    <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-justfy news1-text">{{$post->title_ru}}</h5></a>
+                                                </div>
                                             </div>
                                         </div>
-                                        <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-center news1-text">{{$post->title_ru}}</h5></a>
-                                    </a>
+
                                 </li>
                                 <hr>
                                 @endforeach
@@ -294,6 +308,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

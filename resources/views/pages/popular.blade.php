@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn-primary ">Читать дальше</button>
+                    <button class="btn btn-primary">Читать дальше</button>
 
                 </div>
             </div>

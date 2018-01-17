@@ -7,11 +7,11 @@
 @section('page-title')
 <h1>Новости</h1>
 @endsection
-
-    <div class="container dotted" id="news-container-fluid1">
+<div class="container-fluid dotted">
+    <div class="container" id="news-container-fluid1">
         <h1>Новости</h1>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="news-column">
                     <div class="news thumbnail" style="background-image: url('{{ asset('images/posts/'. $post->image) }}')">
                     </div>
@@ -21,20 +21,30 @@
                     <p>{{$post->body_uz}}</p></div>
                 <span class="blog-date">{{ date('M j, Y H:ia',strtotime($post->created_at))}}</span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="widget-sidebar">
                     <h2 class="title-widget-sidebar">// Последние новости</h2>
                     <div class="content-widget-sidebar">
                         <ul>
                             @foreach($posts as $post)
-                                <li class="recent-post">
-                                    <a href="{{url('/news/'.$post->slug)}}">
-                                        <div class="news-column1">
-                                            <div class="news1 thumbnail" style="background-image: url('{{asset('images/posts/'.$post->image)}}') ">
+                            <li class="recent-post">
+                                <a href="{{url('/news/'.$post->slug)}}">
+
+                                    <div class="post">
+                                        <div class="post-img-content1" style="background-image: url('{{asset('images/posts/'.$post->image)}}')">
+
+                                        </div>
+                                        <div class="content">
+                                            <div class="author">
+                                                <time datetime="2014-01-20"><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></time>
+                                            </div>
+                                            <div class="text-justify">
+                                                <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-justfy news1-text">{{$post->title_ru}}</h5></a>
                                             </div>
                                         </div>
-                                        <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-center news1-text">{{$post->title_ru}}</h5></a>
-                                    </a></li>
+                                    </div>
+
+                            </li>
                                 <hr>
                             @endforeach
                         </ul>
@@ -43,4 +53,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection
