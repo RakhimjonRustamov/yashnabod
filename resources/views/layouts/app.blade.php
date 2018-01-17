@@ -62,7 +62,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right hidden-xs">
                     <li class="dropdown dropdown1">
-                        <a class="navbar-elements1" data-toggle="dropdown" href="#">О нас </a>
+                        <a class="navbar-elements1" data-toggle="dropdown" href="#">О нас <i class="fa fa-chevron-down" aria-hidden="true"></i> </a>
                         <ul class="dropdown-menu dropdown-menu1">
                             <li><a class="dropdown-elements1" href="{{url('/preference-yic')}}" style="">Почему Яшнабад</a></li>
                             <li class="divider"></li>
@@ -76,7 +76,7 @@
                         </ul>
                     </li>
                     <li class="dropdown dropdown1">
-                        <a class="navbar-elements1" data-toggle="dropdown" href="#">Регистрация</a>
+                        <a class="navbar-elements1" data-toggle="dropdown" href="#">Регистрация <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu dropdown-menu1">
                             <li><a class="dropdown-elements1" href="{{url('/beresident')}}">Как стать резидентом?</a></li>
                             <li class="divider"></li>
@@ -94,7 +94,7 @@
                         <a class="navbar-elements1" href="{{url('/zones')}}">Зоны производства</a>
                     </li>
                     <li class="dropdown dropdown1">
-                        <a class="navbar-elements1" data-toggle="dropdown" href="#">Пресса</a>
+                        <a class="navbar-elements1" data-toggle="dropdown" href="#">Пресса <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu dropdown-menu1">
                             <li><a class="dropdown-elements1" href="{{url('/news/')}}">Новости</a></li>
                             <li class="divider"></li>

@@ -3,18 +3,14 @@
 $(window).scroll(function() {
     if ($(this).scrollTop() > 20) {
         $('#navbar').css({ 'background-color': 'rgba(255, 255, 255, 1)', 'border-bottom': '1px solid #24B24B' });
-
     } else {
         $('#navbar').css({ 'background-color': 'rgba(0,0,0,0)', 'transition': '.5s ease', 'border-bottom': '0' });
-
     }
 
     if ($(this).scrollTop() > 20) {
         $('.dropdown-content ').css({ 'background-color': 'rgba(255, 255, 255, 1)' });
-
     } else {
         $('.dropdown-content ').css({ 'background-color': 'rgba(0,0,0,0)', 'transition': '.5s ease', 'border-bottom': '0', 'color': 'black' });
-
     }
 
 });
@@ -53,18 +49,18 @@ $(window).bind('mousewheel', function(e) {
 
 
 // ---------------------------------------- slideanim ---------------------------------------------
-$(window).scroll(function() {
-    $(".slideanim").each(function() {
-        var pos = $(this).offset().top;
-
-        var winTop = $(window).scrollTop();
-        if (pos < winTop + 730) {
-            $(this).addClass("slide");
-        } else {
-            $(this).removeClass('slide');
-        }
-    });
-});
+// $(window).scroll(function() {
+//     $(".slideanim").each(function() {
+//         var pos = $(this).offset().top;
+//
+//         var winTop = $(window).scrollTop();
+//         if (pos < winTop + 730) {
+//             $(this).addClass("slide");
+//         } else {
+//             $(this).removeClass('slide');
+//         }
+//     });
+// });
 
 // --------------------------------------- end of slideanim ------------------------------------------------
 
@@ -165,5 +161,9 @@ $(document).ready(function()
 });
 
 
-
+$('ul.nav li.dropdown1').hover(function() {
+    $(this).find('.dropdown-menu1').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+    $(this).find('.dropdown-menu1').stop(true, true).delay(200).fadeOut(500);
+});
 

@@ -26,7 +26,7 @@ html>body {
 .dropdown-elements1
 {
     color: #24B24B !important;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: ease 0.5s;
     font-size: 15px;
     padding: 0px;
@@ -37,7 +37,7 @@ html>body {
 .dropdown-elements1
 {
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
     font-size: 10px;
 
@@ -108,6 +108,32 @@ html>body {
 
 
 
+.fa-chevron-down {
+    margin-left: 6px;
+    font-size: 10px;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    visibility: hidden;
+    transition: ease 0.15s;
+}
+
+a:hover .fa-chevron-down
+{
+    visibility: visible;
+}
+
+.dropdown1:hover .fa-chevron-down
+{
+    visibility: visible;
+    color: #0072BC;
+}
+.dropdown1:hover .navbar-elements1
+{
+    color: #0072BC !important;
+}
 
 
 

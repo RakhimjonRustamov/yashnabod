@@ -3,7 +3,7 @@
 
  $(document).ready(function() {
     $("#container-fluid").backgroundCycle({
-        imageUrls: 
+        imageUrls:
         [
             '../images/Wallpapers/Wallpaper1.jpg',
             '../images/Wallpapers/Wallpaper2.jpg',
@@ -19,12 +19,12 @@ var currentImageIndex = 0;
 var imageIds = new Array();
 var fadeSpeed;
 
-var SCALING_MODE_NONE = 0; 
-var SCALING_MODE_STRETCH = 1; 
+var SCALING_MODE_NONE = 0;
+var SCALING_MODE_STRETCH = 1;
 var SCALING_MODE_COVER = 2;
 var SCALING_MODE_CONTAIN = 3;
 
-$.fn.backgroundCycle = function(options) 
+$.fn.backgroundCycle = function(options)
 {
     var settings = $.extend({
         imageUrls: [],
@@ -40,8 +40,8 @@ $.fn.backgroundCycle = function(options)
     var marginBottom = this.css('margin-bottom');
     var marginLeft = this.css('margin-left');
 
-    if 
-      (!this.is("#container-fluid")) 
+    if
+      (!this.is("#container-fluid"))
     {
         this.css({
             position: 'relative'
@@ -117,7 +117,7 @@ $.fn.backgroundCycle = function(options)
     $('.cycle-bg-image').hide();
     $('#' + imageIds[0]).show();
     setInterval(cycleToNextImage, settings.duration);
-};              
+};
 
 function cycleToNextImage() {
     var previousImageId = imageIds[currentImageIndex];

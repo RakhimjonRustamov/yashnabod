@@ -34,7 +34,7 @@
                         <ol class="carousel-indicators">
                             <li data-target="#Carousel" data-slide-to="0" class="active"></li>
                             <li data-target="#Carousel" data-slide-to="1"></li>
-                            <li data-target="#Carousel" data-slide-to="3"></li>
+
                         </ol>
                         <!-- Carousel items -->
                         <div class="carousel-inner">
@@ -225,23 +225,23 @@
     <div class="container-fluid" id="container-fluid4">
         <div class="row" id="container-fluid4-row">
             <div class="col-md-3 countup-item">
-                <div class="counter slideanim" data-count="{{$counter[0]->counter1}}"></div>
+                <div class="counter" data-count="{{$counter[0]->counter1}}"></div>
                 <h3>Поступившие заявки</h3>
             </div>
             <div class="col-md-2 countup-item">
-                <div class="counter slideanim" data-count="{{$counter[0]->counter2}}"></div>
+                <div class="counter" data-count="{{$counter[0]->counter2}}"></div>
                 <h3>Поступившие заявки</h3>
             </div>
             <div class="col-md-2 countup-item">
-                <div class="counter slideanim" data-count="{{$counter[0]->counter3}}"></div>
+                <div class="counter" data-count="{{$counter[0]->counter3}}"></div>
                 <h3>Поступившие заявки</h3>
             </div>
             <div class="col-md-2 countup-item">
-                <div class="counter slideanim" data-count="{{$counter[0]->counter4}}"></div>
+                <div class="counter" data-count="{{$counter[0]->counter4}}"></div>
                 <h3>Поступившие заявки</h3>
             </div>
             <div class="col-md-3 countup-item">
-                <div class="counter slideanim" data-count="{{$counter[0]->counter5}}"></div>
+                <div class="counter" data-count="{{$counter[0]->counter5}}"></div>
                 <h3>Поступившие заявки</h3>
             </div>
         </div>
