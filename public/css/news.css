@@ -138,6 +138,8 @@
     background-color: #FFF;
     overflow: hidden;
     box-shadow: 0 0 1px #CCC;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
 }
 .post .content
 {
@@ -174,4 +176,10 @@
 
 .column{
     margin-bottom: 50px;
+}
+.button-read
+{
+    margin-top: 15px;
+    border-radius: 15px !important;
+
 }
