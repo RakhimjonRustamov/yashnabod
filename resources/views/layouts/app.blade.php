@@ -163,7 +163,7 @@
         <div class="row">
             <div class="submit-wrapper">
                 <a href="{{url('/request')}}">{{ __('main.request') }}</a>
-            </div>
+        </div>
         </div>
         <div class="row hidden-sm hidden-xs" id="icons-row">
             <div class="col-md-3">
