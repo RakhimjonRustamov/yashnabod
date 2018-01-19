@@ -23,13 +23,13 @@
                     </div>
                     <div class="process-step">
                         <button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#menu3"><i class="fa fa-newspaper-o fa-3x"></i></button>
-                        <p class="text-under">Новости</p>
+                        <p class="text-under">@lang('Новости')</p>
                     </div>
                 </div>
             </div>
             <div class="tab-content">
                 <div id="menu1" class="tab-pane fade active in">
-                    <h1 class="title">Продукты</h1>
+                    <h1 class="title">@lang('Продукты')</h1>
                     <div class="container">
                         <div class="row">
                             @foreach($products as $product)
@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div id="menu2" class="tab-pane fade">
-                    <h1 class="title">Резиденты</h1>
+                    <h1 class="title">@lang('Резиденты')</h1>
                     <div class="container">
                         <div class="row">
                             @foreach($residents as $resident)

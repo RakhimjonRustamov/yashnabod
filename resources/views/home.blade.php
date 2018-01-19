@@ -9,14 +9,14 @@
     <!-- /////////////////////////////////////// container-fluid1 ////////////////////////////////////////// -->
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid1">
-            <h1>О нас</h1>
+            <h1>{{__('main.about2')}}</h1>
             <div class="row">
                 <div class="col-md-3 thumbnail" id="col-82">
                 </div>
                 <div class="col-md-9" id="col-81">
-                    <p>Технопарк — Это территориальная, научная, технологическая и техническая база для реализации инновационных проектов. Технопарк- имущественный комплекс, в котором объединены научно-исследовательские институты, объекты индустрии, деловые центры, выставочные площадки, учебные заведения, а также обслуживающие объекты: средства транспорта, подъездные пути, жилые поселки, охрана. Международная ассоциация технологических парков даёт своё определение объекту инновационной инфраструктуры. По мнению ассоциации, технопарк — это организация, управляемая специалистами, главной целью которых является увеличение благосостояния местного сообщества посредством продвижения инновационной культуры, а также состязательности инновационного бизнеса и научных организаций. Для достижения этих целей технопарк стимулирует и управляет потоками знаний и технологий между университетами, научно-исследовательскими институтами, компаниями и рынками. Он упрощает создание и рост инновационным компаниям с помощью инкубационных процессов и процессов выведения новых компаний из существующих (spin-off processes). Технопарк помимо высококачественных площадей обеспечивает другие услуги...
+                    <p>{{__('main.technoP')}}
                         <a href="{{url('/preference-yic')}}" id="readmore">
-                           Читать дальше
+                          {{__('main.next')}}
                         </a>
                     </p>
                 </div>
@@ -27,7 +27,7 @@
     <!-- ////////////////////////////////////////// container-fluid2 ///////////////////////////////////// -->
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid2">
-            <h1>Наши продукции</h1>
+            <h1>{{__('main.product')}}</h1>
             <div class="row">
                 <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">
@@ -142,7 +142,7 @@
     <!-- ////////////////////////////////////////// container-fluid3 /////////////////////////////////////////-->
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid3">
-            <h1>Возможности</h1>
+            <h1>@lang('main.Возможности')</h1>
             <div class="row">
                 <div class="col-md-2 cols">
                     <div class="sub-div">
@@ -151,7 +151,7 @@
                                 <span class="fa fa-calendar sub-icon"></span>
                             </div>
                             <div class="text">
-                                <p>«Налоговые каникулы» для резидентов технопарка.</p>
+                                <p>@lang('main.«Налоговые каникулы» для резидентов технопарка.')</p>
                             </div>
                         </a>
                     </div>
@@ -163,7 +163,7 @@
                                 <span class="fa fa-credit-card sub-icon"></span>
                             </div>
                             <div class="text">
-                                <p>Льготное кредитование.</p>
+                                <p>@lang('main.Льготное кредитование.')</p>
                             </div>
                         </a>
                     </div>
@@ -175,7 +175,7 @@
                                 <span class="fa fa-map sub-icon"></span>
                             </div>
                             <div class="text">
-                                <p>Доступные производственные площади.</p>
+                                <p>@lang('main.Доступные производственные площади.')</p>
                             </div>
                         </a>
                     </div>
@@ -187,7 +187,7 @@
                                 <span class="fa fa-handshake-o sub-icon"></span>
                             </div>
                             <div class="text">
-                                <p>Содействие в прохождении разрешительных процедур.</p>
+                                <p>@lang('main.Содействие в прохождении разрешительных процедур.')</p>
                             </div>
                         </a>
                     </div>
@@ -199,7 +199,7 @@
                                 <span class="fa fa-money sub-icon"></span>
                             </div>
                             <div class="text">
-                                <p>Привлечение спонсоров и инвесторов для реализации проектов.</p>
+                                <p>@lang('main.Привлечение спонсоров и инвесторов для реализации проектов.')</p>
                             </div>
                         </a>
                     </div>
@@ -211,7 +211,7 @@
                                 <span class="fa fa-shield sub-icon"></span>
                             </div>
                             <div class="text">
-                                <p>Защита авторских прав на объекты интеллектуальной собственности.</p>
+                                <p>@lang('main.Защита авторских прав на объекты интеллектуальной собственности.')</p>
                             </div>
                         </a>
                     </div>
@@ -225,23 +225,23 @@
         <div class="row" id="container-fluid4-row">
             <div class="col-md-3 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter1}}"></div>
-                <h3>Поступившие заявки</h3>
+                <h3>@lang('main.Поступившие заявки')</h3>
             </div>
             <div class="col-md-2 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter2}}"></div>
-                <h3>Поступившие заявки</h3>
+                <h3>@lang('main.Поступившие заявки')</h3>
             </div>
             <div class="col-md-2 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter3}}"></div>
-                <h3>Поступившие заявки</h3>
+                <h3>@lang('main.Поступившие заявки')</h3>
             </div>
             <div class="col-md-2 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter4}}"></div>
-                <h3>Поступившие заявки</h3>
+                <h3>@lang('main.Поступившие заявки')</h3>
             </div>
             <div class="col-md-3 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter5}}"></div>
-                <h3>Поступившие заявки</h3>
+                <h3>@lang('main.Поступившие заявки')</h3>
             </div>
         </div>
     </div>
@@ -249,7 +249,7 @@
     <!-- ///////////////////////////////////////////// container-fluid5 ////////////////////////////////////////////  -->
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid5">
-            <h1>Новости</h1>
+            <h1>{{__('main.news')}}</h1>
             <div class="row">
 
                 <div class="col-md-9">
@@ -268,7 +268,7 @@
                                         {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
                                     </div>
                                     <div>
-                                        <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">Читать дальше</a>
+                                        <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">{{__('main.next')}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +279,7 @@
 
                 <div class="col-md-3">
                     <div class="widget-sidebar">
-                        <h2 class="title-widget-sidebar">// Последние новости</h2>
+                        <h2 class="title-widget-sidebar">@lang('main.Последние новости')</h2>
                         <div class="content-widget-sidebar">
                             <ul>
                                 @foreach($postsp as $postp)
@@ -317,7 +317,7 @@
     <!-- ///////////////////////////////////////////// container-fluid6 /////////////////////////////////////////////////  -->
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid6">
-            <h1>Наши резиденты</h1>
+            <h1>{{__('main.ourresident')}}</h1>
             <div class="row">
                 <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">
@@ -348,7 +348,7 @@
     <!-- ///////////////////////////////////////////// container-fluid7 /////////////////////////////////////////////////  -->
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid7">
-            <h1>Полезные сайты</h1>
+            <h1>@lang('main.Полезные сайты')</h1>
             <div class="row">
                 <div class="col-md-6">
                     <a href="http://google.com">
