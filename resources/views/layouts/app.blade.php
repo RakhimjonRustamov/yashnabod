@@ -159,7 +159,7 @@
         <li><a href=""><i class="fa fa-instagram container-fluid-icon" id="fa-instagram" aria-hidden="true"></i></a></li>
     </ul>
     <div class="container" id="fade-container">
-        <h1>{{__('main.H1')}}</h1>
+        <h1>{!!__('main.H1')!!}</h1>
         <div class="row">
             <div class="submit-wrapper">
                 <a href="{{url('/request')}}">{{__('main.request')}}</a>
