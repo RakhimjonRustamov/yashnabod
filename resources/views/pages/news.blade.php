@@ -5,12 +5,12 @@
 @endsection
 @section('content')
 @section('page-title')
-<h1>Новости</h1>
+<h1>{{__('news.title-news')}}</h1>
 @endsection
 
 <div class="container-fluid  dotted">
     <div class="container" id="news-container-fluid1">
-        <h1>Новости</h1>
+        <h1>{{__('news.title-news1')}}</h1>
 
             <div class="row">
                 @foreach($posts as $post)
@@ -27,7 +27,7 @@
                                 {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
                             </div>
                             <div>
-                                <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">Читать дальше</a>
+                                <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">{{__('news.read-more')}}</a>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                 {!! $posts->links()!!}
             </div>
 
-
+    </div>
 
 </div>
 

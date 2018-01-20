@@ -93,7 +93,7 @@ Route::post('admin/popularity', 'PopularityController@store')->name('popularity.
 Route::delete('admin/popularity/{popularity}', array('uses'=>'PopularityController@destroy', 'as'=>'popularity.destroy'));
 Route::put('admin/popularity/{popularity}', 'PopularityController@update')->name('popularity.update');
 
-Route::get('');
+
 
 
 Route::get('/download', 'HomeController@downloadZip');
