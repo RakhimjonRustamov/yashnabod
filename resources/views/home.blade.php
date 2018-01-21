@@ -225,23 +225,23 @@
         <div class="row" id="container-fluid4-row">
             <div class="col-md-3 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter1}}"></div>
-                <h3>@lang('main.Поступившие заявки')</h3>
+                <h3>@lang('main.Поступившие заявки1')</h3>
             </div>
             <div class="col-md-2 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter2}}"></div>
-                <h3>@lang('main.Поступившие заявки')</h3>
+                <h3>@lang('main.Поступившие заявки2')</h3>
             </div>
             <div class="col-md-2 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter3}}"></div>
-                <h3>@lang('main.Поступившие заявки')</h3>
+                <h3>@lang('main.Поступившие заявки3')</h3>
             </div>
             <div class="col-md-2 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter4}}"></div>
-                <h3>@lang('main.Поступившие заявки')</h3>
+                <h3>@lang('main.Поступившие заявки4')</h3>
             </div>
             <div class="col-md-3 countup-item">
                 <div class="counter" data-count="{{$counter[0]->counter5}}"></div>
-                <h3>@lang('main.Поступившие заявки')</h3>
+                <h3>@lang('main.Поступившие заявки5')</h3>
             </div>
         </div>
     </div>

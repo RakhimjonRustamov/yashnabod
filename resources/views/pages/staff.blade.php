@@ -7,18 +7,18 @@
 
 @section('content')
 @section('page-title')
-<h1>Сотрудники</h1>
+<h1>{{__('staff.title-staff')}}</h1>
 @endsection
     <div class="container-fluid dotted">
         <div class="container" id="staff-container-fluid1">
-            <h1>Сотрудники</h1>
+            <h1>{{__('staff.title-staff')}}</h1>
             <table class="table table-bordered">
                 <thead>
                 <tr class="active">
-                    <th>No</th>
-                    <th>Фото</th>
-                    <th>Ф.И.О.</th>
-                    <th>Должность</th>
+                    <th>#</th>
+                    <th>{{__('staff.foto-staff')}}</th>
+                    <th>{{__('staff.name-staff')}}</th>
+                    <th>{{__('staff.position-staff')}}</th>
                 </tr>
                 </thead>
                 <tbody>

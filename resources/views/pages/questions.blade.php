@@ -1,17 +1,17 @@
 @extends('layouts.app-content')
-@section('title','Preference-yic')
+@section('title', Lang::get('questions.title'))
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/questionsanswers.css') }}">
 @endsection
 @section('content')
 @section('page-title')
-<h1>Вопросы и ответы</h1>
+<h1>@lang('questions.Вопросы и ответы')</h1>
 @endsection
     <div class="container-fluid dotted">
         <div class="container" id="container-fluid-questionsanswer1">
-            <h1>Вопросы и ответы</h1>
+            <h1>@lang('questions.Вопросы и ответы')</h1>
             <div class="last-post">
-                <button class="accordion">Кто может стать резидентом Яшнабад?</button>
+                <button class="accordion">@lang('questions.Кто может стать резидентом Яшнабад?')</button>
                 <div class="panel">
                     <div class="recent-post">
                         <p>Компании, осуществляющие одно из следующих видов деятельности согласно Общегосударственному классификатору видов экономической деятельности Республики Узбекистан (ОКЭД), утвержденному постановлением Кабинета Министров от 24 августа 2016 года № 275:</p>

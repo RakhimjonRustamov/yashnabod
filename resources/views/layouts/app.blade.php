@@ -159,7 +159,7 @@
         <li><a href=""><i class="fa fa-instagram container-fluid-icon" id="fa-instagram" aria-hidden="true"></i></a></li>
     </ul>
     <div class="container" id="fade-container">
-        <h1>{{__('main.H1')}}</h1>
+        <h1>{!!__('main.H1')!!}</h1>
         <div class="row">
             <div class="submit-wrapper">
                 <a href="{{url('/request')}}">{{__('main.request')}}</a>
@@ -216,26 +216,16 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <img src="{{asset('images/photos/yash.png')}}" id="footer-logo">
                 <p>
-                        <br> @lang('main.© 2017 Инновационный технопарк "Яшнабад".')
-                        <br> @lang('main.Все права защищены.')
-                    </p>
-                <div class="footer-social">
-                    <ul>
-                        <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href=""><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                        <li><a href=""><i class="fa fa-send" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
+                </p>
             </div>
-            <div class="col-md-2 footer-col">
+            <div class="col-md-3 footer-col">
                 <h2 class="footer-h1">{{__('main.about')}}</h2>
                 <ul>
                     <li><a href="{{url('/preference-yic')}}">{{__('main.preference')}}</a></li>
-                    <li><a href="{{url('/aim')}}">Главная информация</a></li>
+                    <li><a href="{{url('/aim')}}">{{__('main.maininfo')}}</a></li>
                     <li><a href="{{url('/coordinated-consulting')}}">{{__('main.cordination')}}</a></li>
                     <li><a href="{{url('/products')}}">{{__('main.product')}}</a></li>
                     <li><a href="{{url('/staff')}}">{{__('main.staff')}}</a></li>
@@ -265,14 +255,14 @@
                     <li class="address">@lang('main.Яшнабадский район')</li>
                     <li class="address">@lang('main.Улица Мажнунтол 5')</li>
                     <li class="address">@lang('main.Тел:')
-                                                                <br>+99871 296 04 22
-                                                                <br>+99893 652 42 50</li>
+                        <br>+99871 296 04 22
+                        <br>+99893 652 42 50</li>
                 </ul>
             </div>
         </div>
         <hr>
         <div class="row text-center">
-            <a href="">@lang('main.IUTLab.All rights reserved.')</a>
+            <a href="">IUTLab. All rights reserved.</a>
         </div>
     </div>
 </footer>
