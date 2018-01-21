@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title', 'Reester')
+@section('title', Lang::get('reestr.title'))
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/reester.css') }}">
@@ -7,25 +7,25 @@
 
 @section('content')
 @section('page-title')
-<h1>Реестер</h1>
+<h1>@lang('reestr.Реестер')</h1>
 @endsection
 
     <div class="container-fluid dotted">
         <div class="container"  id="container-fluid-reception">
-            <h1>Реестер</h1>
+            <h1>@lang('reestr.Реестер')</h1>
             <div class="row">
                 <div class="col-xs-12">
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <th>№</th>
-                                <th>Reyestr raqami</th>
-                                <th>Mulk Shakli</th>
-                                <th>Yuridik Shaxs nomi</th>
-                                <th>IFUT kodi</th>
-                                <th>Pochta Manzili</th>
-                                <th>E-mail</th>
-                                <th>Kiritilgan Sana</th>
+                                <th>@lang('reestr.Reyestr raqami')</th>
+                                <th>@lang('reestr.Mulk Shakli')</th>
+                                <th>@lang('reestr.Yuridik Shaxs nomi')</th>
+                                <th>@lang('reestr.IFUT kodi')</th>
+                                <th>@lang('reestr.Pochta Manzili')</th>
+                                <th>@lang('reestr.E-mail')</th>
+                                <th>@lang('reestr.Kiritilgan Sana')</th>
                             </thead>
                             <tbody>
                             @php($i=1)
