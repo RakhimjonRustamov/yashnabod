@@ -19,7 +19,7 @@
                 <div class="news-text">
                     <h1>{{$post->title_uz}}</h1>
                     <p>{{$post->body_uz}}</p></div>
-                <span class="blog-date">{{ date('M j, Y H:ia',strtotime($post->created_at))}}</span>
+                <span class="blog-date">{{ $post->created_at->format('d m Y')}}</span>
             </div>
             <div class="col-md-3">
                 <div class="widget-sidebar">
@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="content">
                                             <div class="author">
-                                                <time datetime="2014-01-20"><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></time>
+                                                <time datetime="2014-01-20"><time>{{ $post->created_at->format('d m Y')}}</time></time>
                                             </div>
                                             <div class="text-justify">
                                                 <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-justfy news1-text">{{$post->title_ru}}</h5></a>
