@@ -10,7 +10,7 @@
 
 <div class="container-fluid  dotted">
     <div class="container" id="news-container-fluid1">
-        <h1>{{__('news.title-news1')}}</h1>
+        <h1>{{__('news.title-news')}}</h1>
 
             <div class="row">
                 @foreach($posts as $post)
