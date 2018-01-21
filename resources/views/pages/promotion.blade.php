@@ -20,7 +20,7 @@
                     <li class="interval-promotion">{!!__('promotion.text-prom1.3')!!}</li>
                     <li class="interval-promotion">{!!__('promotion.text-prom1.4')!!}</li>
                     <li class="interval-promotion">{!!__('promotion.text-prom1.5')!!}</li>
-                    <li class="interval-promotion">{!!__('promotion.text-prom1.')!!}</li>
+                    <li class="interval-promotion">{!!__('promotion.text-prom1.6')!!}</li>
                 </ul>
 
         </div>
