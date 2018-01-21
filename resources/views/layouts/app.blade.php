@@ -43,7 +43,6 @@
           </span>
                 </li>
                 <a href="{{route('lang.switch', ['locale'=>'ru'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>Russian</span></a>
-                <a href="{{route('lang.switch', ['locale'=>'en'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>English</span></a>
                 <a href="{{route('lang.switch', ['locale'=>'uz'])}}"><i class="fa fa-globe" id="fa-globe"></i><span>Uzbek</span></a>
             </ul>
         </div>
