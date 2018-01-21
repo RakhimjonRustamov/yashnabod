@@ -95,7 +95,6 @@ Route::put('admin/popularity/{popularity}', 'PopularityController@update')->name
 
 
 
-
 Route::get('/download', 'HomeController@downloadZip');
 
 // Language set up

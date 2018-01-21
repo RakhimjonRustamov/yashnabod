@@ -24,13 +24,6 @@
 
 <body>
 
-
-
-
-
-
-
-
 <!-- /////////////////////////////////////// Navbar //////////////////////////////////// -->
 <nav class="navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top" id="navbar">
     <!-- top nav -->
