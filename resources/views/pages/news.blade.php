@@ -20,7 +20,7 @@
                         </div>
                         <div class="content">
                             <div class="author">
-                                <time datetime="2014-01-20"><time>{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time></time>
+                                <time datetime="2014-01-20"><time>{{ $post->created_at->format('d m Y')}}</time></time>
                                 <hr>
                             </div>
                             <div class="text-justify">
