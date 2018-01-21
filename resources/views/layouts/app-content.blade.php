@@ -167,7 +167,7 @@
         <hr width="50px">
         <div class="row">
             <div class="submit-wrapper">
-                <a href="#">@lang('main.language')</a>
+                <a href="#">{{__('main.request')}}</a>
             </div>
         </div>
     </div>
