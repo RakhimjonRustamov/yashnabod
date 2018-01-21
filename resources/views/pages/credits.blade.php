@@ -6,18 +6,17 @@
 @endsection
 @section('content')
 @section('page-title')
-<h1>Льготное кредитование</h1>
+<h1>{!!__('credits.title-credits')!!}</h1>
 @endsection
 
     <div class="container-fluid container-fluid-credits dotted" >
         <div class="container" >
-            <h1 class="title">Льготное кредитование</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1 class="title">{!!__('credits.title-credits')!!}</h1>
+            <ul>
+                <li class="interval-credits">{!!__('credits.text-credits1')!!}</li>
+                <li class="interval-credits">{!!__('credits.text-credits2')!!}</li>
+                <li class="interval-credits">{!!__('credits.text-credits3')!!}</li>
+            </ul>
         </div>
     </div>
 
