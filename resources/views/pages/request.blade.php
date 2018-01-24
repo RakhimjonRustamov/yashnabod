@@ -1,13 +1,13 @@
 @extends('layouts.app-content')
-@section('title', Lang::get('request.title'))@stop
+@section('title', Lang::get('request.title'))
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/application.css') }}">
 @endsection
 
 @section('content')
-@section('page-title')
-<h1>@lang('request.Подать заявку')</h1>
-@endsection
+    @section('page-title')
+        <h1>@lang('request.Подать заявку')</h1>
+    @endsection
     <div class="container-fluid dotted" id="application-container-fluid1">
         <h1>@lang('request.Подать заявку')</h1>
         <div class="container" id="container">

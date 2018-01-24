@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title', Lang::get('news.title'))@stop
+@section('title', Lang::get('news.title'))
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/news.css') }}">
 @endsection
