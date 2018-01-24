@@ -1,7 +1,8 @@
 <?php
 return[
-  'title-staff'=>"Ҳодимлар",
-   'foto-staff'=>"Фото",
+    'title'=>"Ходимлар",
+    'title-staff'=>"Ҳодимлар",
+    'foto-staff'=>"Фото",
     'name-staff'=>"Ф.И.Ш",
     'position-staff'=>"Лавозим",
 ];

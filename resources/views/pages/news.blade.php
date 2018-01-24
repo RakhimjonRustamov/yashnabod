@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title'| 'News')@stop
+@section('title', Lang::get('news.title'))@stop
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/news.css') }}">
 @endsection
@@ -27,7 +27,7 @@
                                 {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
                             </div>
                             <div>
-                                <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">{{__('news.read-more')}}</a>
+                                <a href="{{url('/news/'.$post->slug)}}"class="btn btn-primary btn-sm button-read">{{__('news.read-more')}}</a>
                             </div>
                         </div>
                     </div>

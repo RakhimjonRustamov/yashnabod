@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title', 'Credits')
+@section('title', Lang::get('taxes.title'))
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/taxes.css')}}">

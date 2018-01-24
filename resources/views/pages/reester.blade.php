@@ -33,10 +33,10 @@
                             <tr>
                                 <td>{{$i++}}</td>
                                 <td>{{$resident->reg_number}}</td>
-                                <td>{{$resident->ownership_ru}}</td>
-                                <td>{{$resident->resident_name_ru}}</td>
+                                <td>{{App::isLocale ('ru')? $resident->ownership_ru: $resident->ownership_uz}}</td>
+                                <td>{{App::isLocale ('ru')? $resident->resident_name_ru: $resident->resident_name_uz}}</td>
                                 <td>{{$resident->code}}</td>
-                                <td>{{$resident->resident_info_ru}}</td>
+                                <td>{{App::isLocale ('ru')? $resident->resident_info_ru: $resident->resident_info_uz}}</td>
                                 <td>{{$resident->email}}</td>
                                 <td>{{$resident->created_at}}</td>
                             </tr>

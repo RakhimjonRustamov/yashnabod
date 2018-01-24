@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title', 'Zones')
+@section('title', Lang::get('zones.title'))
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/zones.css')}}">

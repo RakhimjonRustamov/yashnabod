@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title'| 'Coordination')@stop
+@section('title', Lang::get('cordination.title'))@stop
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/coordinating-council.css') }}">
 @endsection

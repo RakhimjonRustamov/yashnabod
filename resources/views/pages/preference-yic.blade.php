@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title','Preference-yic')
+@section('title', Lang::get('preference.title'))
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/whyYIC.css')}}">
 @endsection

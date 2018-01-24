@@ -20,9 +20,9 @@
 
             </div>
             <div class="col-md-8">
-                <h2>{{$resident->resident_name_ru}}</h2>
+                <h2>{{App::isLocale ('ru')? $resident->resident_name_ru: $resident->resident_name_uz}}</h2>
                 <p class="product-information">
-                    {{$resident->resident_info_ru}}
+                    {{App::isLocale ('ru')? $resident->resident_name_ru: $resident->resident_info_uz}}
                 </p>
             </div>
         </div>

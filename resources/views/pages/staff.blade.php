@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title', 'Staff')
+@section('title', Lang::get('staff.title'))
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/staff.css')}}">
@@ -26,8 +26,8 @@
                 <tr>
                     <td>{{$employee->id}}</td>
                     <td><img src="{{asset('images/employees/'. $employee->image)}}" class=" my-image"></td>
-                    <td>{{$employee->full_name_ru}}</td>
-                    <td>{{$employee->position_ru}}</td>
+                    <td>{{App::isLocale ('ru')? $employee->full_name_ru : $employee->full_name_uz}}</td>
+                    <td>{{App::isLocale ('ru')? $employee->position_ru : $employee->position_uz}}</td>
                 </tr>
                 @endforeach
                 </tbody>

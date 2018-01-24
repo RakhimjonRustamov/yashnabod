@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title', 'Normative')
+@section('title', Lang::get('normative.title'))
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/normative.css') }}">

@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title'| 'Contact')@stop
+@section('title', Lang::get('contact.title'))@stop
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/contact.css') }}">
 @endsection

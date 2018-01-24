@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title', 'Popular')
+@section('title', Lang::get('popular.title'))
 
 @section('stylesheets')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/popular.css') }}">

@@ -1,5 +1,5 @@
 @extends('layouts.app-content')
-@section('title'| 'Products')@stop
+@section('title', Lang::get('products.title'))@stop
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/products.css') }}">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="readmore-box">
                     <a href="{{url('products/'.$product->id)}}">
-                        <div class="product-text">{{$product->product_info_ru}}</div>
+                        <div class="product-text">{{App::isLocale ('ru')? $product->product_info_ru: $product->product_info_uz}}</div>
                     </a>
                 </div>
             </div>
