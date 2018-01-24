@@ -6,11 +6,11 @@
 
 @section('content')
 @section('page-title')
-<h1>Наши резиденты</h1>
+<h1>@lang('residents.Наши резиденты')</h1>
 @endsection
 <div class="container-fluid dotted">
     <div class="container" id="products-container-fluid1">
-        <h1>Наши резиденты</h1>
+        <h1>@lang('residents.Наши резиденты')</h1>
         <div class="row">
             @foreach($residents as $resident)
             <div class="col-md-3 col-sm-3 col-md-3 products-column">
