@@ -155,7 +155,7 @@
     <!-- ////////////////////////////////// fade container ///////////////////////////////////////// -->
     <div class="container" id="fade-container">
         <h1>@yield('page-title')</h1>
-        <hr width="400px">
+        <hr width="300px">
         <hr width="50px">
         <div class="row">
             <div class="submit-wrapper">
