@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','IndexPage')
+@section('title', Lang::get('main.title'))
 
 @section('stylesheets')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">

@@ -38,7 +38,7 @@
                 <li>
                         <span class="glyphicon glyphicon-search" id="glyphicon-search">
             <form action="{{route('search')}}" autocomplete="off">
-             <input id="search" name="search" type="text" placeholder="Что ищем?"><input id="search_submit" value="Rechercher" type="submit">
+             <input id="search" name="search" type="text" placeholder="{{__('main.search')}}"><input id="search_submit" value="Rechercher" type="submit">
             </form>
           </span>
                 </li>
@@ -254,14 +254,14 @@
                     <li class="address">@lang('main.Яшнабадский район')</li>
                     <li class="address">@lang('main.Улица Мажнунтол 5')</li>
                     <li class="address">@lang('main.Тел:')
-                        <br>+99871 296 04 22
+                        <br>+99871 296 49 51
                         <br>+99893 652 42 50</li>
                 </ul>
             </div>
         </div>
         <hr>
         <div class="row text-center">
-            <a href="">IUTLab. All rights reserved.</a>
+            <a href="">IUTLab.All rights reserved.</a>
         </div>
     </div>
 </footer>
