@@ -56,7 +56,7 @@
                                                 </div>
                                                 <div class="readmore-box">
                                                     <a href="{{url('products/'.$products[1]->id)}}">
-                                                        <div class="product-text">{{$products[1]->product_name_ru}}</div>
+                                                        <div class="product-text">{{App::isLocale('ru') ? $products[1]->product_name_ru : $products[1]->product_name_uz}}</div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -66,7 +66,7 @@
                                                 </div>
                                                 <div class="readmore-box">
                                                     <a href="{{url('products/'.$products[2]->id)}}">
-                                                        <div class="product-text">{{$products[2]->product_name_ru}}</div>
+                                                        <div class="product-text">{{App::isLocale('ru') ? $products[2]->product_name_ru : $products[2]->product_name_uz}}</div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -76,7 +76,7 @@
                                                 </div>
                                                 <div class="readmore-box">
                                                     <a href="{{url('products/'.$products[3]->id)}}">
-                                                        <div class="product-text">{{$products[3]->product_name_ru}}</div>
+                                                        <div class="product-text">{{App::isLocale('ru') ? $products[3]->product_name_ru : $products[3]->product_name_uz}}</div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -90,7 +90,7 @@
                                                 </div>
                                                 <div class="readmore-box">
                                                     <a href="{{url('products/'.$products[4]->id)}}">
-                                                        <div class="product-text">{{$products[4]->product_name_ru}}</div>
+                                                        <div class="product-text">{{App::isLocale('ru') ? $products[4]->product_name_ru : $products[4]->product_name_uz}}</div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -99,7 +99,7 @@
                                                 </div>
                                                 <div class="readmore-box">
                                                     <a href="{{url('products/'.$products[5]->id)}}">
-                                                        <div class="product-text">{{$products[5]->product_name_ru}}</div>
+                                                        <div class="product-text">{{App::isLocale('ru') ? $products[5]->product_name_ru : $products[5]->product_name_uz}}</div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -109,7 +109,7 @@
                                                 </div>
                                                 <div class="readmore-box">
                                                     <a href="{{url('products/'.$products[6]->id)}}">
-                                                        <div class="product-text">{{$products[6]->product_name_ru}}</div>
+                                                        <div class="product-text">{{App::isLocale('ru') ? $products[6]->product_name_ru : $products[6]->product_name_uz}}</div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -119,7 +119,7 @@
                                                 </div>
                                                 <div class="readmore-box">
                                                     <a href="{{url('products/'.$products[7]->id)}}">
-                                                        <div class="product-text">{{$products[7]->product_name_ru}}</div>
+                                                        <div class="product-text">{{App::isLocale('ru') ? $products[7]->product_name_ru : $products[7]->product_name_uz}}</div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -265,7 +265,7 @@
                                         <hr>
                                     </div>
                                     <div class="text-justify">
-                                        {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
+                                        {{App::isLocale('ru') ? (substr($post->body_ru, 0, 50)) : (substr($post->body_uz, 0, 50))}}
                                     </div>
                                     <div>
                                         <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">{{__('main.next')}}</a>

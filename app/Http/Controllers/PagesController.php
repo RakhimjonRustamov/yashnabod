@@ -147,7 +147,7 @@ class PagesController extends Controller
 
         Mail::send('emails.contact', $data, function($message)use ($data){
             $message->from($data['email']);
-            $message->to('omonibrokhimov96@gmail.com');
+            $message->to('info@yait.uz');
             $message->subject($data['subject']);
         });
         Session::flash('success', '  ваше письмо успешно отправлено');

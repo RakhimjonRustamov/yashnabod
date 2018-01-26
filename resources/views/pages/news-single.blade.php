@@ -17,8 +17,8 @@
                     </div>
                 </div>
                 <div class="news-text">
-                    <h1>{{App::isLocale ('ru')? $post->title_ru: $post->title_uz}}</h1>
-                    <p>{{App::isLocale ('ru')? $post->body_ru: $post->body_uz}}</p></div>
+                    <h1>{{$post->title_uz}}</h1>
+                    <p>{{$post->body_uz}}</p></div>
                 <span class="blog-date">{{ $post->created_at->format('d m Y')}}</span>
             </div>
             <div class="col-md-3">
@@ -39,7 +39,7 @@
                                                 <time datetime="2014-01-20"><time>{{ $post->created_at->format('d m Y')}}</time></time>
                                             </div>
                                             <div class="text-justify">
-                                                <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-justfy news1-text">{{App::isLocale ('ru')? $post->title_ru:$post->title_uz}}</h5></a>
+                                                <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-justfy news1-text">{{ App::isLocale('ru') ? $post->title_ru : $post->title_uz}}</h5></a>
                                             </div>
                                         </div>
                                     </div>

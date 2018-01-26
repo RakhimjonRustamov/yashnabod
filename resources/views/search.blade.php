@@ -41,7 +41,7 @@
                                     <div class="content">
 
                                         <div class="text-justify">
-                                            {{$product->product_info_ru}}
+                                            {{ App::isLocale('ru') ? $product->product_info_ru : $product->product_info_uz}}
                                         </div>
                                         <div>
                                             <a href="{{url('products/'.$product->id)}}" class="btn btn-primary btn-sm button-read">Читать дальше</a>
@@ -66,7 +66,7 @@
                                     <div class="content">
 
                                         <div class="text-justify">
-                                            {{$resident->resident_info_uz}}
+                                            {{ App::isLocale('ru') ? $resident->resident_info_ru : $resident->resident_info_uz }}
                                         </div>
                                         <div>
                                             <a href="{{url('residents/'.$resident->id)}}" class="btn btn-primary btn-sm button-read">Читать дальше</a>
@@ -90,10 +90,10 @@
                                     </div>
                                     <div class="content">
                                         <div class="author">
-                                            <time datetime="2014-01-20">{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time>
+                                            <time datetime="2014-01-20">{{ $post->created_at->format('d m Y')}}</time>
                                         </div>
                                         <div class="text-justify">
-                                            {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
+                                            {{App::isLocale('ru') ? (substr($post->body_ru, 0, 50)) : (substr($post->body_uz, 0, 50))}}
                                         </div>
                                         <div>
                                             <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">Читать дальше</a>
