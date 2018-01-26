@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="author">
-                                            <time datetime="2014-01-20">{{ date('M j, Y H:ia',strtotime($post->created_at))}}</time>
+                                            <time datetime="2014-01-20">{{ $post->created_at->format('d m Y')}}</time>
                                         </div>
                                         <div class="text-justify">
                                             {{App::isLocale('ru') ? (substr($post->body_ru, 0, 50)) : (substr($post->body_uz, 0, 50))}}
