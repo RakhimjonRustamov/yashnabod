@@ -39,7 +39,7 @@
                                                 <time datetime="2014-01-20"><time>{{ $post->created_at->format('d m Y')}}</time></time>
                                             </div>
                                             <div class="text-justify">
-                                                <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-justfy news1-text">{{$post->title_ru}}</h5></a>
+                                                <a href="{{url('/news/'.$post->slug)}}"><h5 class="text-justfy news1-text">{{ App::isLocale('ru') ? $post->title_ru : $post->title_uz}}</h5></a>
                                             </div>
                                         </div>
                                     </div>

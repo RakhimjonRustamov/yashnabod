@@ -1,3 +1,5 @@
-<h1>{{$name}}</h1>
+<h1>Ф.И.О:{{$name}}</h1>
 <hr>
-<p>{{$bodyMessage}}</p>
+<p>Тема:{{$subject}}</p>
+<hr>
+<p>Сообщение:{{$bodyMessage}}</p>

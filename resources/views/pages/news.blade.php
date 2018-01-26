@@ -24,7 +24,7 @@
                                 <hr>
                             </div>
                             <div class="text-justify">
-                                {{substr($post->body_ru, 0, 245)}}{{strlen($post->body_ru)>50 ? "...":""}}
+                                {{App::isLocale('ru') ? $post->body_ru : $post->body_uz}}
                             </div>
                             <div>
                                 <a href="{{url('/news/'.$post->slug)}}"class="btn btn-primary btn-sm button-read">{{__('news.read-more')}}</a>
