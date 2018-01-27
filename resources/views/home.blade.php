@@ -265,7 +265,7 @@
                                         <hr>
                                     </div>
                                     <div class="text-justify">
-                                        {{App::isLocale('ru') ? (substr($post->body_ru, 0, 50)) : (substr($post->body_uz, 0, 50))}}
+                                        {{App::isLocale('ru') ? (str_limit($post->body_ru, 20, '...')) :(str_limit($post->body_uz, 20, '...')) }}
                                     </div>
                                     <div>
                                         <a href="{{url('/news/'.$post->slug)}}" class="btn btn-primary btn-sm button-read">{{__('main.next')}}</a>
@@ -331,7 +331,7 @@
                                         </div>
                                         <div class="readmore-box-residents">
                                             <a href="{{url('residents/'.$resident->id)}}">
-                                                <div class="product-text">{{$resident->resident_info_uz}}</div>                                            </a>
+                                                <div class="product-text">{{(str_limit($resident->resident_info_uz, 20, '...'))}}</div>                                            </a>
                                         </div>
                                     </div>
                                     @endforeach

@@ -5,7 +5,6 @@ use App\Post;
 use App\Product;
 use App\Resident;
 use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     public function index()
@@ -13,6 +12,7 @@ class HomeController extends Controller
         $residents=Resident::orderBy('id', 'desc')->take(6)->get();
         $products=Product::orderBy('id', 'desc')->take(8)->get();
         $posts=Post::orderBy('id', 'desc')->take(4)->get();
+        
         $count=4;
         $postsp=Post::where('id', '>',$count)
                      ->orderBy('id', 'desc')

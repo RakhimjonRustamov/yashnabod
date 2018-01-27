@@ -24,7 +24,7 @@
                                 <hr>
                             </div>
                             <div class="text-justify">
-                                {{App::isLocale('ru') ? $post->body_ru : $post->body_uz}}
+                                {{App::isLocale('ru') ?  (str_limit($post->body_ru, 38, '...')) : (str_limit($post->body_uz, 38, '...'))}}
                             </div>
                             <div>
                                 <a href="{{url('/news/'.$post->slug)}}"class="btn btn-primary btn-sm button-read">{{__('news.read-more')}}</a>

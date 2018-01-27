@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
     @yield('stylesheets')
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
     <link rel="shortcut icon" href="{{ asset('images/photos/yash.png')}}" type="image/png">
@@ -19,6 +20,7 @@
     <script type='text/javascript' src='{{asset('js/jquery-3.2.1.min.js')}}'></script>
     <script type='text/javascript' src='{{  asset('js/bootstrap.min.js')}}'></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
 </head>
 <!--///////////////////////////////////// body start /////////////////////////////////////////// -->
 
@@ -155,11 +157,11 @@
     <!-- ////////////////////////////////// fade container ///////////////////////////////////////// -->
     <div class="container" id="fade-container">
         <h1>@yield('page-title')</h1>
-        <hr width="400px">
+        <hr width="300px">
         <hr width="50px">
         <div class="row">
             <div class="submit-wrapper">
-                <a href="#">{{__('main.request')}}</a>
+                <a href="{{url('/request')}}">{{__('main.request')}}</a>
             </div>
         </div>
     </div>
@@ -221,7 +223,7 @@
             </div>
         </div>
         <hr>
-        <div class="row text-center">
+        <div class="text-center">
             <a href="">IUTLab. All rights reserved.</a>
         </div>
     </div>

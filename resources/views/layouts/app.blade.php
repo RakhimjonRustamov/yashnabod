@@ -31,7 +31,7 @@
         <div class="container">
             <!-- left nav top -->
             <ul class="nav navbar-nav pull-left">
-                <li><a href="#"><span class="navbar-elements1">{{__('main.phone')}}</span></a></li>
+                <li><a href=""><span class="navbar-elements1">{{__('main.phone')}}</span></a></li>
             </ul>
             <!-- right nav top -->
             <ul class="nav navbar-nav pull-right">

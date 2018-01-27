@@ -22,7 +22,7 @@
                     </div>
                     <div class="popular-text">
                         <div class="text-div">
-                            <p class="popular-text">{{App::isLocale('ru') ? (substr($popularity->popular_info_ru, 0, 50)) : (substr($popularity->popular_info_uz, 0, 50)) }}</p>
+                            <p class="popular-text">{{App::isLocale('ru') ?  (str_limit($popularity->popular_info_ru, 60, '...')) : (str_limit($popularity->popular_info_uz, 60, '...')) }}</p>
                         </div>
                     </div>
                     <a href="https://{{ $popularity->link  }}" class="btn btn-primary button-read">{{__('popular.read-more')}}</a>

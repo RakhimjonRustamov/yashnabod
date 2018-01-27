@@ -3,9 +3,6 @@ html>body {
     font-weight: bold;
 }
 
-
-
-
 #navbar {
     background-color: rgba(0, 0, 0, 0);
     z-index: 5;
@@ -261,7 +258,6 @@ a.navbar-brand
 #glyphicon-search>form>input[type="submit"] {
     display: inline-block;
     color: red;
-    float: right;
     text-indent: -10000px;
     border: none;
     position: absolute;

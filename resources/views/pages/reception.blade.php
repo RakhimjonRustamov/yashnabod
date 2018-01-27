@@ -54,7 +54,7 @@
                 </div>
                     <div class="row row-contacts">
                         <div class="col-md-4" class="contacts-form">
-                            <button type="submit" class="btn" id="contact-us-button">@lang('reception.Отправить')</button>
+                            <button type="submit" class="btn btn-success" id="contact-us-button">@lang('reception.Отправить')</button>
                         </div>
                     </div>
                 </form>

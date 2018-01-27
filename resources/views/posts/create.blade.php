@@ -20,4 +20,15 @@
             </form>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+            
+            </div>
+            <div class="row text-center">
+                <a href="">IUTLab.All rights reserved.</a>
+            </div>
+        </div>            
+    </footer>  
 @endsection
